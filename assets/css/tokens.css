@@ -1,0 +1,139 @@
+/* ============================================================================
+   MasteryForge Crafts — Design Tokens v1 (2026-07-17)
+   Single canonical token home. Source of truth: masteryforge_DESIGN.md
+   (same folder). Values extracted from THEME_LIVE_2026-07-17 (live store) with
+   drift resolved; previously-untokenized literals promoted to tokens.
+
+   USAGE
+   - Shopify Liquid section: paste the block below INSIDE the section's style
+     scope. Prefer scoping under a wrapper class (e.g. #shopify-section-x .mf,
+     or the section's own id) — the live landings' bare :root leaks theme-wide
+     and is the drift source this file supersedes.
+   - Standalone HTML preview: link this file; :root scope is fine there.
+   - Never inline a literal hex in components: add a token here + changelog.
+   ========================================================================== */
+
+:root {
+  /* -------- Surfaces -------- */
+  --bg: #F6F2EC;            /* canvas — warm blueprint paper */
+  --bg2: #EFE8DE;           /* canvas-band — alternating sections */
+  --panel: #FFFFFF;         /* surface-card */
+  --panel2: #F3EDE3;        /* surface-soft — bonus art, stack total row */
+  --line: #DED5C6;          /* hairline — universal 1px separator */
+
+  /* -------- Ink / text -------- */
+  --paper: #1C1A17;         /* ink — headings, line-art strokes */
+  --ink2: #4A443C;          /* body text */
+  --muted: #756E62;         /* secondary text, was-prices, fine print/cites on
+                               LIGHT surfaces. AA margin is zero (4.52:1 on
+                               canvas) — never lighten */
+  --fine: #8A8276;          /* decorative/large text + dark surfaces ONLY —
+                               3.79:1 on white FAILS AA for normal text; use
+                               --muted there (A11y fix 2026-07-17) */
+
+  /* -------- Brand voltage (ember) -------- */
+  --ember: #CF5A22;         /* base — tints + gradients only, never body text */
+  --ember2: #B8430F;        /* strong — accent TEXT, prices, focus, hovers.
+                               LAW: ember2 is always DARKER than ember
+                               (supersedes .mfx inversion #E4692C) */
+  --ember-deep: #A8431A;    /* gradient bottoms, .off badge bg */
+  --ember-raise: #C24E1E;   /* CTA gradient top. SUPERSEDES live literal #D65A22:
+                               white on #D65A22 = 3.93:1 (AA fail); on #C24E1E =
+                               4.77:1 (pass) — computed 2026-07-17 */
+  --ember-soft: rgba(207,90,34,.10);
+  --ember-border: rgba(207,90,34,.45);   /* winner/offer borders */
+  --ember-dashed: rgba(207,90,34,.5);    /* candor dashed borders */
+  --accent-form: #C0450F;   /* checkbox / range accent-color */
+
+  /* -------- Technical / semantic -------- */
+  --steel: #33526B;         /* blueprint layer — chips, dims, grid motifs */
+  --grid-line: rgba(51,82,107,.12);      /* hero grid 40px */
+  --grid-line-soft: rgba(51,82,107,.09); /* figure grid 24px */
+  --ok: #2E7D46;            /* trust green — guarantees, checks, FREE.
+                               AA margin zero (4.55:1 on canvas) — never lighten */
+  --pulse: rgba(111,185,132,.7); /* live-dot keyframe ring (observed as-is) */
+  --star: #C9C2B6;          /* review stars — khaki, deliberately not gold */
+
+  /* -------- Dark sections -------- */
+  --deep: #141414;          /* footer + final CTA bg */
+  --deep-line: #262626;     /* dark hairline (was literal) */
+  --deep-text: #A9A296;     /* dark-section text (was literal) */
+  --final-raise: #B04818;   /* final CTA gradient top (was literal) */
+
+  /* -------- Craft accents (category ID only — NEVER on CTAs/prices) ----- */
+  --craft-metal: #3A5A74;
+  --craft-wood: #B5701F;
+  --craft-laser: #C2451E;   /* near-ember: forbidden on commercial surfaces */
+  --craft-clay: #7D8B5F;
+  --craft-leather: #8A5330;
+
+  /* -------- Typography -------- */
+  --display: "Oswald","Bahnschrift SemiCondensed","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+  --sans: system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono: ui-monospace,"SFMono-Regular","Cascadia Mono",Menlo,Consolas,monospace;
+
+  --fs-h1: clamp(2.1rem,7.2vw,3.6rem);   /* 700, uppercase, lh 1.08, ls .005em */
+  --fs-h2: clamp(1.55rem,4.6vw,2.4rem);  /* 600, uppercase, lh 1.08 */
+  --fs-h3: 1.1rem;                       /* 600, uppercase, ls .04em */
+  --fs-lede: clamp(1.02rem,2.2vw,1.2rem);/* max-width 52ch */
+  --fs-body: 1rem;                       /* lh 1.6, color var(--ink2) */
+  --fs-price-lg: 3rem;                   /* display 700 */
+  --fs-price: 1.6rem;                    /* display 700, color var(--ember2) */
+  --fs-cta: 1.14rem;                     /* display 600, ls .06em, uppercase */
+  --fs-cta-lg: 1.28rem;
+  --fs-cta-sm: .9rem;
+  --fs-eyebrow: .72rem;                  /* mono 600, ls .26em, uppercase */
+  --fs-chip: .74rem;                     /* mono, ls .08em, uppercase */
+  --fs-micro: .8rem;                     /* mono, ls .04em */
+  --fs-fine: .78rem;                     /* sans, lh 1.5 */
+
+  --ls-eyebrow: .26em;
+  --ls-chip: .08em;
+  --ls-cta: .06em;
+  --ls-h3: .04em;
+
+  /* -------- Layout -------- */
+  --maxw: 1080px;
+  --pad-container: clamp(1rem,4.5vw,2rem);
+  --pad-section: clamp(2.8rem,7vw,4.6rem);
+  --pad-hero: clamp(3rem,9vw,5.2rem);
+  --sp-xxs: 2px;  --sp-xs: 4px;  --sp-sm: 8px;  --sp-md: 12px;
+  --sp-base: 16px; --sp-lg: 24px; --sp-xl: 32px; --sp-xxl: 48px;
+  --sp-section: 64px;
+
+  /* -------- Radius ladder -------- */
+  --r-focus: 4px;   /* focus ring */
+  --r-badge: 6px;   /* badges, pay chips, logo */
+  --r-sm: 8px;      /* cta-sm, bump img */
+  --r-cta: 10px;    /* CTA, FAQ, proof-note */
+  --r-card: 12px;   /* standard cards, bumps */
+  --r-figure: 14px; /* stack, calc, hero-visual, plan-figure */
+  --r-offer: 16px;  /* offer-card, lightbox */
+  --r-pill: 999px;  /* chips only */
+  --r-dot: 50%;     /* dots (supersedes the odd 60%) */
+
+  /* -------- Elevation ("lifted paper", warm ink — never pure black) ----- */
+  --sh-cta: 0 12px 28px -12px rgba(207,90,34,.65);
+  --sh-frame: 0 28px 60px -30px rgba(28,26,23,.18);
+  --sh-offer: 0 34px 70px -34px rgba(28,26,23,.18);
+  --sh-hero: 0 18px 50px rgba(28,26,23,.14);
+  --sh-final: 0 24px 50px -24px rgba(28,26,23,.18);
+
+  /* -------- Motion -------- */
+  --t-micro: .15s ease;     /* hover lift / brightness / border-color */
+  --t-bar: .25s ease;       /* sticky-bar slide */
+  --t-reveal: .55s;         /* scroll reveal: opacity + translateY(14px) */
+  /* keyframe `pulse`: box-shadow ring var(--pulse) 0→7px→0, 2s / 1.65s */
+
+  /* -------- Focus -------- */
+  --focus-outline: 2px solid var(--ember2); /* landings canon (mfx used ember) */
+}
+
+/* Reduced motion — full honor (canonical, verified live) */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

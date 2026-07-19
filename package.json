@@ -1,0 +1,12 @@
+{
+  "name": "masteryforge-static-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "MasteryForge Crafts static offer site. No build step — deploy as-is. Vite is only a local preview server.",
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vite": "^5"
+  }
+}
