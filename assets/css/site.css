@@ -15,7 +15,9 @@
 
 /* ---------- Reset / base ---------- */
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;
+  scroll-padding-top:calc(3.2rem + 16px)} /* sticky .hdr ≈51px + 16px clearance (WCAG 2.4.11) */
+@media(max-width:720px){html{scroll-padding-top:calc(5.5rem + 16px)}} /* wrapped 2-row .hdr ≈87px + 16px */
 body{
   margin:0;background:var(--bg);color:var(--ink2);
   font-family:var(--sans);font-size:var(--fs-body);line-height:1.6;
@@ -41,6 +43,14 @@ small,.fine{font-size:var(--fs-fine);line-height:1.5;color:var(--muted)}
 .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad-container)}
 .section{padding-block:var(--pad-section)}
 .band{background:var(--bg2);border-block:1px solid var(--line)}
+/* AA contrast contexts — on --bg2 / ember-soft surfaces the base --muted,
+   --ember2 and --ok tokens fall under 4.5:1; descendants resolve the -strong
+   upgrades instead (A11y MANTRA 2026-07-20). Global token values untouched. */
+.band,.callout,.candor{
+  --muted:var(--muted-strong);
+  --ember2:var(--ember2-strong);
+  --ok:var(--ok-strong);
+}
 .grid2{display:grid;gap:var(--sp-xl)}
 @media(min-width:820px){.grid2{grid-template-columns:1fr 1fr;align-items:center}}
 .sec-head{max-width:62ch;margin-bottom:var(--sp-xl)}
@@ -77,7 +87,8 @@ small,.fine{font-size:var(--fs-fine);line-height:1.5;color:var(--muted)}
 /* Skip link */
 .skip{
   position:absolute;left:-999px;top:.5rem;z-index:200;
-  background:var(--ember);color:#fff;padding:.6rem 1rem;border-radius:var(--r-sm);
+  /* white on --ember = 4.09:1 FAIL → --ember-deep = 6.03:1 (A11y MANTRA 2026-07-20) */
+  background:var(--ember-deep);color:#fff;padding:.6rem 1rem;border-radius:var(--r-sm);
   font-family:var(--display);text-transform:uppercase;letter-spacing:var(--ls-cta);
   text-decoration:none;
 }
@@ -310,9 +321,17 @@ small,.fine{font-size:var(--fs-fine);line-height:1.5;color:var(--muted)}
 }
 .seal .num{font-family:var(--display);font-weight:700;font-size:56px;fill:var(--ember2)}
 .seal .days{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;fill:var(--muted)}
-.seal-spin{animation:sealrot 40s linear infinite;transform-origin:50% 50%}
+/* Seal rotation — WCAG 2.2.2 (A11y MANTRA 2026-07-20): one ≤5s ease-out turn
+   on load; further spin only user-initiated via :hover/:focus-visible;
+   fully disabled under reduced motion */
+.seal-spin{animation:sealrot 4.8s ease-out 1;transform-origin:50% 50%}
+.seal:hover .seal-spin,.seal:focus-visible .seal-spin,.seal:focus-within .seal-spin{
+  animation:sealrot 14s linear infinite;
+}
 @keyframes sealrot{to{transform:rotate(360deg)}}
-@media(prefers-reduced-motion:reduce){.seal-spin{animation:none}}
+@media(prefers-reduced-motion:reduce){
+  .seal-spin,.seal:hover .seal-spin,.seal:focus-visible .seal-spin,.seal:focus-within .seal-spin{animation:none}
+}
 .candor{
   border:1px dashed var(--ember-dashed);border-radius:var(--r-cta);
   background:var(--ember-soft);padding:var(--sp-lg);
@@ -357,6 +376,7 @@ small,.fine{font-size:var(--fs-fine);line-height:1.5;color:var(--muted)}
 .final .lede{color:var(--deep-text)}
 .final .price-now{color:var(--ember)}
 .final .microtrust{color:var(--deep-text)}
+.final .eyebrow{color:var(--ember)} /* --ember2 on --deep = 3.38:1 FAIL; --ember = 4.51:1 AA (A11y MANTRA 2026-07-20) */
 .final-in{display:flex;flex-wrap:wrap;gap:var(--sp-xl);align-items:center;justify-content:space-between}
 
 /* ---------- Footer ---------- */
@@ -379,6 +399,7 @@ small,.fine{font-size:var(--fs-fine);line-height:1.5;color:var(--muted)}
   font-size:var(--fs-fine);display:flex;flex-wrap:wrap;gap:.6rem 2rem;
   justify-content:space-between;
 }
+.footer .fine,.footer small{color:var(--fine)} /* --muted on --deep = 3.65:1 FAIL; --fine = 4.86:1 AA (A11y MANTRA 2026-07-20) */
 
 /* ---------- Sticky CTA bar (mobile only) ---------- */
 .stickybar{
@@ -392,10 +413,13 @@ small,.fine{font-size:var(--fs-fine);line-height:1.5;color:var(--muted)}
 .stickybar .sb-price{font-family:var(--display);font-weight:700;color:var(--ember2);font-size:1.2rem}
 @media(min-width:880px){.stickybar{display:none}}
 
-/* ---------- Scroll reveal ---------- */
-.reveal{opacity:0;transform:translateY(14px);transition:opacity var(--t-reveal) ease,transform var(--t-reveal) ease}
-.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+/* ---------- Scroll reveal ----------
+   Hidden initial state ONLY under html.js (set by the inline .js gate in
+   <head>): with JS off, all content renders fully visible (no-JS fallback). */
+.reveal{transition:opacity var(--t-reveal) ease,transform var(--t-reveal) ease}
+.js .reveal{opacity:0;transform:translateY(14px)}
+.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal,.js .reveal{opacity:1;transform:none;transition:none}}
 
 /* ---------- Utilities ---------- */
 .center{text-align:center}
