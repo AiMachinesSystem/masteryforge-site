@@ -24,9 +24,11 @@
 
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="preload" href="../assets/fonts/oswald-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="../assets/img/license-cert-780.webp" fetchpriority="high">
 <link rel="stylesheet" href="../assets/css/tokens.css">
 <link rel="stylesheet" href="../assets/css/site.css">
 <script src="../assets/js/site.js" defer></script>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <script type="speculationrules">
 {
   "prerender": [
@@ -66,7 +68,7 @@
 <!-- section: site-header -->
 <header class="hdr">
   <div class="wrap hdr-in">
-    <a class="brand" href="../index.html" aria-label="MasteryForge Crafts — home"><span class="notch" aria-hidden="true"></span>MasteryForge</a>
+    <a class="brand" href="../index.html" aria-label="MasteryForge Crafts — home"><img src="../assets/img/logo-64.webp" srcset="../assets/img/logo-64.webp 64w, ../assets/img/logo-128.webp 128w" width="28" height="28" alt="" aria-hidden="true" decoding="async"><span class="notch" aria-hidden="true"></span>MasteryForge</a>
     <nav class="nav" aria-label="Main">
       <ul>
         <li><a href="../library.html">Library</a></li>
@@ -96,26 +98,13 @@
       <p class="microtrust">Instant download · Lifetime updates · 30-day money-back guarantee</p>
     </div>
 
-    <figure class="hero-figure bp-grid--soft" aria-label="Technical drawing of the one-page license document with an approval seal">
-      <svg viewBox="0 0 640 480" width="640" height="480" role="img" aria-hidden="true">
-        <!-- document -->
-        <rect x="200" y="70" width="240" height="310" fill="none" stroke="var(--paper)" stroke-width="2.5"/>
-        <!-- header rule -->
-        <path d="M224 110 h192 M224 128 h192" stroke="var(--steel)" stroke-width="1.5"/>
-        <!-- text lines -->
-        <path d="M224 162 h150 M224 182 h192 M224 202 h192 M224 222 h120" stroke="var(--steel)" stroke-width="1"/>
-        <path d="M224 258 h192 M224 278 h150" stroke="var(--steel)" stroke-width="1"/>
-        <!-- signature line -->
-        <path d="M224 340 h110" stroke="var(--paper)" stroke-width="1.5"/>
-        <!-- seal -->
-        <circle cx="392" cy="330" r="34" fill="none" stroke="var(--steel)" stroke-width="1.5"/>
-        <path d="M376 330 l11 12 l22 -26" fill="none" stroke="var(--steel)" stroke-width="2"/>
-        <!-- dimension -->
-        <line x1="200" y1="424" x2="440" y2="424" stroke="var(--steel)" stroke-width="1"/>
-        <path d="M200 416 v16 M440 416 v16" stroke="var(--steel)" stroke-width="1"/>
-        <text x="320" y="448" text-anchor="middle" class="svg-dim">ONE PAGE · PLAIN ENGLISH</text>
-        <text x="320" y="34" text-anchor="middle" class="svg-title">LIFETIME RESALE RIGHTS</text>
-      </svg>
+    <figure class="hero-figure bp-grid--soft" aria-label="The MasteryForge Commercial License certificate — lifetime resale rights, one maker or shop up to 2 people">
+      <img src="../assets/img/license-cert-780.webp"
+           srcset="../assets/img/license-cert-390.webp 390w, ../assets/img/license-cert-780.webp 780w, ../assets/img/license-cert-1024.webp 1024w"
+           sizes="(max-width: 880px) 100vw, 460px"
+           width="780" height="804"
+           alt="MasteryForge Commercial License certificate"
+           fetchpriority="high" decoding="async">
     </figure>
   </div>
 </section>
@@ -258,6 +247,18 @@
   <a class="btn btn-ember btn-sm" href="https://masteryforgecrafts.com/cart/58133406679343:1">Get the License</a>
 </div>
 <!-- /section: sticky-cta -->
+
+<!-- section: leadpop — free sample popup, exit-intent/scroll fallback, once per session (site.js) -->
+<dialog class="leadpop" aria-modal="true" aria-labelledby="leadpop-title">
+  <p class="eyebrow">FREE · METAL BUILD PLAN · PDF</p>
+  <h2 id="leadpop-title">Get a real metal project plan — free.</h2>
+  <p class="leadpop-sub">The square fire pit starter plan: measured drawing, cut list, step sequence. Free download.</p>
+  <div class="leadpop-actions">
+    <a class="btn btn-ember" href="../free-sample.html">Get the free plan</a>
+    <button class="leadpop-no" type="button">No thanks</button>
+  </div>
+</dialog>
+<!-- /section: leadpop -->
 
 </body>
 </html>

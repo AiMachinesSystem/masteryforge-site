@@ -102,6 +102,7 @@ small,.fine{font-size:var(--fs-fine);line-height:1.5;color:var(--muted)}
   background:var(--ember);
   clip-path:polygon(0 0,100% 0,100% 55%,55% 100%,0 100%);
 }
+.brand img{display:block;width:28px;height:28px;border-radius:6px}
 .nav{margin-left:auto}
 .nav ul{
   display:flex;flex-wrap:wrap;gap:.1rem 1.15rem;list-style:none;margin:0;padding:0;
@@ -306,13 +307,10 @@ small,.fine{font-size:var(--fs-fine);line-height:1.5;color:var(--muted)}
 @media(min-width:880px){.trust-grid{grid-template-columns:auto 1fr;gap:3rem}}
 .seal{width:180px;height:180px;flex:none}
 .seal .ring-text{
-  font-family:var(--mono);font-size:12.5px;letter-spacing:.28em;fill:var(--steel);
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;fill:var(--steel);
 }
 .seal .num{font-family:var(--display);font-weight:700;font-size:56px;fill:var(--ember2)}
-.seal .days{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;fill:var(--muted)}
-.seal-spin{animation:sealrot 40s linear infinite;transform-origin:50% 50%}
-@keyframes sealrot{to{transform:rotate(360deg)}}
-@media(prefers-reduced-motion:reduce){.seal-spin{animation:none}}
+.seal .days{font-family:var(--mono);font-size:9px;letter-spacing:.12em;fill:var(--muted)}
 .candor{
   border:1px dashed var(--ember-dashed);border-radius:var(--r-cta);
   background:var(--ember-soft);padding:var(--sp-lg);
@@ -454,3 +452,25 @@ small,.fine{font-size:var(--fs-fine);line-height:1.5;color:var(--muted)}
 /* Compatibility strip (Relume logo3 [ADAPT] → tile testuali, zero loghi terzi) */
 .logo-strip{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;margin:var(--sp-lg) 0 0;padding:0}
 .logo-tile{font-family:var(--mono);font-size:var(--fs-chip);letter-spacing:var(--ls-chip);text-transform:uppercase;color:var(--steel);border:1px solid var(--line);border-radius:var(--r-pill);padding:.55em 1.1em}
+
+/* Lead popup (free sample — exit-intent desktop / 70% scroll touch, once per session) */
+.leadpop{
+  max-width:26rem;width:calc(100% - 2.5rem);margin:auto;padding:var(--sp-xl);
+  background:var(--bg);color:var(--ink2);
+  border:1px solid var(--line);border-radius:var(--r-card);box-shadow:var(--sh-offer);
+}
+.leadpop::backdrop{background:rgba(20,20,20,.55)}
+.leadpop h2{font-size:clamp(1.35rem,3.4vw,1.7rem)}
+.leadpop .leadpop-sub{margin:.9rem 0 0}
+.leadpop-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.9rem 1.2rem;margin-top:1.4rem}
+.leadpop-no{
+  background:none;border:0;border-bottom:1px solid var(--line);padding:.45rem 0;cursor:pointer;
+  font-family:var(--mono);font-size:var(--fs-chip);letter-spacing:var(--ls-chip);
+  text-transform:uppercase;color:var(--muted);
+  transition:color var(--t-micro),border-color var(--t-micro);
+}
+.leadpop-no:hover{color:var(--paper);border-color:var(--steel)}
+@media(prefers-reduced-motion:no-preference){
+  .leadpop[open]{animation:leadpop-in .28s ease}
+  @keyframes leadpop-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+}

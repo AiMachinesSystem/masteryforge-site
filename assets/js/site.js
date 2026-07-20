@@ -2,6 +2,7 @@
    1) scroll-reveal via IntersectionObserver
    2) sticky mobile CTA bar after 60% scroll
    3) current year in footer [data-year]
+   4) lead popup (free sample): exit-intent desktop / 70% scroll touch, once per session
    FAQ accordions are native <details> — no JS. */
 (function(){
   "use strict";
@@ -43,4 +44,47 @@
   document.querySelectorAll("[data-year]").forEach(function(el){
     el.textContent = String(new Date().getFullYear());
   });
+
+  /* 4) Lead popup — native <dialog>, never auto-opens, once per session */
+  var pop = document.querySelector("dialog.leadpop");
+  if (pop && typeof pop.showModal === "function") {
+    var KEY = "mf_leadpop", lastFocus = null, seen = false;
+    try { seen = !!sessionStorage.getItem(KEY); } catch (e) {}
+    function openPop(){
+      if (seen || pop.open) return;
+      seen = true;
+      try { sessionStorage.setItem(KEY, "1"); } catch (e) {}
+      lastFocus = document.activeElement;
+      pop.showModal();
+      var no = pop.querySelector(".leadpop-no");
+      if (no) no.focus();
+    }
+    if (!seen) {
+      if (window.matchMedia && window.matchMedia("(hover: none)").matches) {
+        /* touch / no-hover fallback: open after 70% page scroll */
+        var pTick = false;
+        window.addEventListener("scroll", function(){
+          if (pTick) return;
+          pTick = true;
+          requestAnimationFrame(function(){
+            pTick = false;
+            var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+            if (max > 0 && (h.scrollTop / max) >= 0.7) openPop();
+          });
+        }, { passive: true });
+      } else {
+        /* desktop exit-intent: pointer leaves the viewport toward the top */
+        document.addEventListener("mouseleave", function(ev){
+          if (ev.clientY <= 2) openPop();
+        });
+      }
+    }
+    pop.addEventListener("click", function(ev){
+      if (ev.target === pop) pop.close(); /* backdrop click */
+    });
+    pop.querySelector(".leadpop-no").addEventListener("click", function(){ pop.close(); });
+    pop.addEventListener("close", function(){
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    });
+  }
 })();

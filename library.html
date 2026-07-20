@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/site.css">
 <script src="assets/js/site.js" defer></script>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <script type="speculationrules">
 {
   "prerender": [
@@ -39,8 +40,6 @@
 /* Page-scoped styles (.p-library) — library.html only, shared CSS untouched */
 .p-library .mfx-lib-hero .hero-in{padding-block:calc(var(--pad-hero)*.55)}
 .p-library .mfx-lib-grid{display:grid;gap:var(--sp-lg);grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr))}
-.p-library .mfx-lib-motif{aspect-ratio:1/1;display:block;background:var(--bg2);border-bottom:1px solid var(--line)}
-.p-library .mfx-lib-motif svg{width:100%;height:100%;display:block}
 @media (prefers-reduced-motion:no-preference){
   .p-library .pcard{will-change:transform}
 }
@@ -52,7 +51,7 @@
 <!-- section: site-header -->
 <header class="hdr">
   <div class="wrap hdr-in">
-    <a class="brand" href="index.html" aria-label="MasteryForge Crafts — home"><span class="notch" aria-hidden="true"></span>MasteryForge</a>
+    <a class="brand" href="index.html" aria-label="MasteryForge Crafts — home"><img src="assets/img/logo-64.webp" srcset="assets/img/logo-64.webp 64w, assets/img/logo-128.webp 128w" width="28" height="28" alt="" aria-hidden="true" decoding="async"><span class="notch" aria-hidden="true"></span>MasteryForge</a>
     <nav class="nav" aria-label="Main">
       <ul>
         <li><a href="library.html" aria-current="page">Library</a></li>
@@ -129,16 +128,12 @@
       </article>
 
       <article class="pcard reveal">
-        <div class="mfx-lib-motif" role="img" aria-label="Blueprint motif: license document with approval check">
-          <svg viewBox="0 0 240 240" width="240" height="240" aria-hidden="true">
-            <path d="M0 60H240 M0 120H240 M0 180H240 M60 0V240 M120 0V240 M180 0V240" stroke="var(--grid-line)" stroke-width="1"/>
-            <rect x="70" y="38" width="100" height="132" fill="none" stroke="var(--steel)" stroke-width="1.5"/>
-            <path d="M86 64 h68 M86 80 h68 M86 96 h44" stroke="var(--steel)" stroke-width="1.25"/>
-            <circle cx="146" cy="140" r="20" fill="none" stroke="var(--steel)" stroke-width="1.5"/>
-            <path d="M137 140 l6 7 l12 -14" fill="none" stroke="var(--steel)" stroke-width="1.5"/>
-            <text x="120" y="212" text-anchor="middle" class="svg-label">LIFETIME · ONE MAKER / SHOP ≤2</text>
-          </svg>
-        </div>
+        <img src="assets/img/license-cert-780.webp"
+             srcset="assets/img/license-cert-390.webp 390w, assets/img/license-cert-780.webp 780w, assets/img/license-cert-1024.webp 1024w"
+             sizes="(max-width: 640px) 100vw, 330px"
+             width="780" height="804"
+             alt="MasteryForge Commercial License certificate"
+             loading="lazy" decoding="async">
         <div class="pcard-body">
           <p class="pcard-craft">License · Plain English</p>
           <h3>Commercial License</h3>
@@ -208,6 +203,18 @@
   </div>
 </footer>
 <!-- /section: site-footer -->
+
+<!-- section: leadpop — free sample popup, exit-intent/scroll fallback, once per session (site.js) -->
+<dialog class="leadpop" aria-modal="true" aria-labelledby="leadpop-title">
+  <p class="eyebrow">FREE · METAL BUILD PLAN · PDF</p>
+  <h2 id="leadpop-title">Get a real metal project plan — free.</h2>
+  <p class="leadpop-sub">The square fire pit starter plan: measured drawing, cut list, step sequence. Free download.</p>
+  <div class="leadpop-actions">
+    <a class="btn btn-ember" href="free-sample.html">Get the free plan</a>
+    <button class="leadpop-no" type="button">No thanks</button>
+  </div>
+</dialog>
+<!-- /section: leadpop -->
 
 </body>
 </html>

@@ -28,6 +28,7 @@
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/site.css">
 <script src="assets/js/site.js" defer></script>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <script type="speculationrules">
 {
   "prerender": [
@@ -62,8 +63,6 @@
 .p-home .final-in{display:block;max-width:32rem;margin-inline:auto;text-align:center}
 .p-home .final .eyebrow{align-items:center}
 .p-home .final .btn{margin-top:1.2rem}
-/* Video — overlay tag pinned to the lower half: the shipped clip carries burn-in text at the top */
-.p-home .video-tag{top:auto;bottom:.7rem}
 </style>
 
 <script type="application/ld+json">
@@ -92,7 +91,7 @@
 <!-- section: site-header -->
 <header class="hdr">
   <div class="wrap hdr-in">
-    <a class="brand" href="index.html" aria-label="MasteryForge Crafts — home"><span class="notch" aria-hidden="true"></span>MasteryForge</a>
+    <a class="brand" href="index.html" aria-label="MasteryForge Crafts — home"><img src="assets/img/logo-64.webp" srcset="assets/img/logo-64.webp 64w, assets/img/logo-128.webp 128w" width="28" height="28" alt="" aria-hidden="true" decoding="async"><span class="notch" aria-hidden="true"></span>MasteryForge</a>
     <nav class="nav" aria-label="Main">
       <ul>
         <li><a href="library.html">Library</a></li>
@@ -190,34 +189,12 @@
     </div>
     <div class="mfx-proof">
       <div class="plansheet reveal">
-        <svg viewBox="0 0 640 400" width="640" height="400" role="img" aria-label="Sample plan sheet: front and top views of the square fire pit with dimension lines">
-          <rect x="8" y="8" width="624" height="384" fill="none" stroke="var(--steel)" stroke-width="1.25"/>
-          <text x="24" y="38" class="svg-title">SQ. FIRE PIT — PLAN SHEET 1/2</text>
-          <text x="616" y="38" text-anchor="end" class="svg-label">SCALE 1:8 · IN / CM</text>
-          <line x1="8" y1="50" x2="632" y2="50" stroke="var(--line)" stroke-width="1"/>
-          <!-- front view -->
-          <rect x="80" y="120" width="200" height="100" fill="none" stroke="var(--paper)" stroke-width="2"/>
-          <line x1="72" y1="112" x2="288" y2="112" stroke="var(--paper)" stroke-width="2.25"/>
-          <path d="M104 220 l-8 58 M128 220 l8 58 M232 220 l-8 58 M256 220 l8 58" stroke="var(--paper)" stroke-width="2" fill="none"/>
-          <line x1="80" y1="96" x2="280" y2="96" stroke="var(--steel)" stroke-width=".9"/>
-          <path d="M80 89 v14 M280 89 v14" stroke="var(--steel)" stroke-width=".9"/>
-          <text x="180" y="86" text-anchor="middle" class="svg-dim">24 IN</text>
-          <line x1="304" y1="120" x2="304" y2="220" stroke="var(--steel)" stroke-width=".9"/>
-          <path d="M297 120 h14 M297 220 h14" stroke="var(--steel)" stroke-width=".9"/>
-          <text x="322" y="174" class="svg-dim" transform="rotate(90 322 174)" text-anchor="middle">12 IN</text>
-          <text x="180" y="306" text-anchor="middle" class="svg-label">FRONT</text>
-          <!-- top view -->
-          <rect x="400" y="96" width="150" height="150" fill="none" stroke="var(--paper)" stroke-width="2"/>
-          <rect x="418" y="114" width="114" height="114" fill="none" stroke="var(--steel)" stroke-width="1"/>
-          <line x1="400" y1="262" x2="550" y2="262" stroke="var(--steel)" stroke-width=".9"/>
-          <path d="M400 255 v14 M550 255 v14" stroke="var(--steel)" stroke-width=".9"/>
-          <text x="475" y="282" text-anchor="middle" class="svg-dim">24 IN</text>
-          <text x="475" y="306" text-anchor="middle" class="svg-label">TOP</text>
-          <!-- title block -->
-          <line x1="8" y1="336" x2="632" y2="336" stroke="var(--line)" stroke-width="1"/>
-          <text x="24" y="362" class="svg-label">MATERIAL: A36 STEEL PLATE · 8 ORDERED STEPS · WELD SYMBOLS INCLUDED</text>
-          <text x="616" y="362" text-anchor="end" class="svg-label">MASTERYFORGE</text>
-        </svg>
+        <img src="assets/img/plansheet-001-780.webp"
+             srcset="assets/img/plansheet-001-390.webp 390w, assets/img/plansheet-001-780.webp 780w, assets/img/plansheet-001-1024.webp 1024w"
+             sizes="(max-width: 820px) 100vw, 620px"
+             width="780" height="968"
+             alt="MasteryForge Plan 001 — square fire pit: top view, side elevation with weld symbols and full materials cut list"
+             loading="lazy" decoding="async">
         <table class="cutlist">
           <caption>Cut list — excerpt from the same sheet</caption>
           <thead><tr><th>QTY</th><th>ITEM</th><th>SIZE</th><th>FORMAT</th></tr></thead>
@@ -303,15 +280,15 @@
     </div>
     <figure class="video-frame reveal">
       <div class="video-shell">
-        <video preload="none" poster="assets/img/video-poster-1280.webp" muted playsinline controls
+        <video preload="none" poster="assets/img/video-clean-poster-1280.webp" muted playsinline controls
                width="1280" height="720"
-               aria-label="Shop footage: cutting and welding a steel project built from a MasteryForge plan sheet">
-          <source src="assets/video/build-hero-720.mp4" type="video/mp4">
+               aria-label="Shop footage: a gloved hand pressing a square steel tube frame at the MasteryForge bench, with welding sparks — 5 second clip">
+          <source src="assets/video/build-clean-720.mp4" type="video/mp4">
           Sorry, your browser does not support embedded video — the build photos above show the same project.
         </video>
         <span class="video-tag" aria-hidden="true">SHOP FOOTAGE · REAL BUILD</span>
       </div>
-      <figcaption>CUT · SQUARE · TACK · WELD — FILMED AT THE MASTERYFORGE BENCH</figcaption>
+      <figcaption>PRESS · FIT · WELD — FILMED AT THE MASTERYFORGE BENCH</figcaption>
     </figure>
   </div>
 </section>
@@ -424,11 +401,11 @@
         <defs><path id="sealring" d="M100 28 a72 72 0 1 1 -0.01 0"/></defs>
         <circle cx="100" cy="100" r="96" fill="none" stroke="var(--line)" stroke-width="1.5"/>
         <circle cx="100" cy="100" r="52" fill="none" stroke="var(--steel)" stroke-width="1"/>
-        <g class="seal-spin">
-          <text class="ring-text"><textPath href="#sealring">30-DAY MONEY-BACK GUARANTEE · MASTERYFORGE ·</textPath></text>
+        <g transform="rotate(-97.2 100 100)">
+          <text class="ring-text"><textPath href="#sealring">30-DAY MONEY-BACK GUARANTEE</textPath></text>
         </g>
         <text x="100" y="116" text-anchor="middle" class="num">30</text>
-        <text x="100" y="138" text-anchor="middle" class="days">DAYS · FULL REFUND</text>
+        <text x="100" y="136" text-anchor="middle" class="days">FULL REFUND</text>
       </svg>
       <div class="reveal">
         <p class="lede">Email us within 30 days of purchase and you get a full refund. No hostile questions, no hoops.</p>
@@ -592,6 +569,18 @@
   <a class="btn btn-ember btn-sm" href="https://masteryforgecrafts.com/cart/58091624431919:1">Get the Plans</a>
 </div>
 <!-- /section: sticky-cta -->
+
+<!-- section: leadpop — free sample popup, exit-intent/scroll fallback, once per session (site.js) -->
+<dialog class="leadpop" aria-modal="true" aria-labelledby="leadpop-title">
+  <p class="eyebrow">FREE · METAL BUILD PLAN · PDF</p>
+  <h2 id="leadpop-title">Get a real metal project plan — free.</h2>
+  <p class="leadpop-sub">The square fire pit starter plan: measured drawing, cut list, step sequence. Free download.</p>
+  <div class="leadpop-actions">
+    <a class="btn btn-ember" href="free-sample.html">Get the free plan</a>
+    <button class="leadpop-no" type="button">No thanks</button>
+  </div>
+</dialog>
+<!-- /section: leadpop -->
 
 </body>
 </html>

@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/site.css">
 <script src="assets/js/site.js" defer></script>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <script type="speculationrules">
 {
   "prerender": [
@@ -55,7 +56,7 @@
 <!-- section: site-header -->
 <header class="hdr">
   <div class="wrap hdr-in">
-    <a class="brand" href="index.html" aria-label="MasteryForge Crafts — home"><span class="notch" aria-hidden="true"></span>MasteryForge</a>
+    <a class="brand" href="index.html" aria-label="MasteryForge Crafts — home"><img src="assets/img/logo-64.webp" srcset="assets/img/logo-64.webp 64w, assets/img/logo-128.webp 128w" width="28" height="28" alt="" aria-hidden="true" decoding="async"><span class="notch" aria-hidden="true"></span>MasteryForge</a>
     <nav class="nav" aria-label="Main">
       <ul>
         <li><a href="library.html">Library</a></li>
@@ -92,11 +93,11 @@
         <defs><path id="sealring" d="M100 28 a72 72 0 1 1 -0.01 0"/></defs>
         <circle cx="100" cy="100" r="96" fill="none" stroke="var(--line)" stroke-width="1.5"/>
         <circle cx="100" cy="100" r="52" fill="none" stroke="var(--steel)" stroke-width="1"/>
-        <g class="seal-spin">
-          <text class="ring-text"><textPath href="#sealring">30-DAY MONEY-BACK GUARANTEE · MASTERYFORGE ·</textPath></text>
+        <g transform="rotate(-97.2 100 100)">
+          <text class="ring-text"><textPath href="#sealring">30-DAY MONEY-BACK GUARANTEE</textPath></text>
         </g>
         <text x="100" y="116" text-anchor="middle" class="num">30</text>
-        <text x="100" y="138" text-anchor="middle" class="days">DAYS · FULL REFUND</text>
+        <text x="100" y="136" text-anchor="middle" class="days">FULL REFUND</text>
       </svg>
     </div>
   </div>
@@ -242,6 +243,18 @@
   </div>
 </footer>
 <!-- /section: site-footer -->
+
+<!-- section: leadpop — free sample popup, exit-intent/scroll fallback, once per session (site.js) -->
+<dialog class="leadpop" aria-modal="true" aria-labelledby="leadpop-title">
+  <p class="eyebrow">FREE · METAL BUILD PLAN · PDF</p>
+  <h2 id="leadpop-title">Get a real metal project plan — free.</h2>
+  <p class="leadpop-sub">The square fire pit starter plan: measured drawing, cut list, step sequence. Free download.</p>
+  <div class="leadpop-actions">
+    <a class="btn btn-ember" href="free-sample.html">Get the free plan</a>
+    <button class="leadpop-no" type="button">No thanks</button>
+  </div>
+</dialog>
+<!-- /section: leadpop -->
 
 </body>
 </html>
