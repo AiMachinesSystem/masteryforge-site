@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Metalworking Project Plans — 500+ Build Plans (PDF)</title>
+<title>500+ Metalworking Build Plans (PDF) — MasteryForge</title>
 <meta name="description" content="500+ step-by-step metalworking build plans in PDF — checked dimensions, full cut lists, beginner-safe sequences. Instant download, lifetime updates. $37.">
 <link rel="canonical" href="https://masteryforgecrafts.com/">
 <meta name="robots" content="index,follow">
@@ -59,6 +59,14 @@
 @media(min-width:820px){.p-home .mfx-pair{grid-template-columns:.9fr 1.1fr;align-items:center}}
 .p-home .mfx-pair img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border:1px solid var(--line);border-radius:var(--r-figure)}
 .p-home .mfx-mid{display:flex;flex-direction:column;align-items:center;gap:.4rem}
+/* v3.2 — hero sub (old tagline), value math, category strip */
+.p-home .mfx-herosub{font-family:var(--mono);font-size:.95rem;letter-spacing:.04em;color:var(--steel);margin:.9rem 0 0}
+.p-home .mfx-valuemath{font-family:var(--mono);font-size:var(--fs-micro);letter-spacing:.04em;color:var(--muted);margin:.8rem 0 0}
+.p-home .mfx-cats{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem;list-style:none;margin:0;padding:0}
+@media(min-width:640px){.p-home .mfx-cats{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1024px){.p-home .mfx-cats{grid-template-columns:repeat(6,1fr)}}
+.p-home .mfx-cats li{font-family:var(--mono);font-size:var(--fs-chip);letter-spacing:var(--ls-chip);text-transform:uppercase;color:var(--steel);border:1px solid var(--line);border-radius:var(--r-sm);background:var(--panel);padding:.7em .9em;text-align:center}
+.p-home .mfx-cats-more{font-family:var(--mono);font-size:var(--fs-micro);letter-spacing:.06em;color:var(--muted);margin:1rem 0 0;text-align:center}
 /* Final CTA — cta25 rhythm: single centered narrow column on --deep (V3_BLUEPRINT §2.1d) */
 .p-home .final-in{display:block;max-width:32rem;margin-inline:auto;text-align:center}
 .p-home .final .eyebrow{align-items:center}
@@ -112,8 +120,9 @@
   <div class="wrap hero-in">
     <div>
       <p class="eyebrow">Metal · Build plans · PDF</p>
-      <h1>Steel projects that fit together the first time</h1>
-      <p class="lede mt-lg">500+ step-by-step build plans with checked dimensions, complete cut lists and an assembly order that follows how a build actually happens — clear enough to follow even if this is your first build. Measured for hand tools: no CNC, no CAD required. PDF, instant download, yours for life.</p>
+      <h1>500+ metalworking build plans in PDF, ready for the bench</h1>
+      <p class="mfx-herosub">Steel projects that fit together the first time</p>
+      <p class="lede mt-lg">Step-by-step build plans with checked dimensions, complete cut lists and an assembly order that follows how a build actually happens — clear enough to follow even if this is your first build. Measured for hand tools: no CNC, no CAD required. Instant download, yours for life.</p>
       <div class="hero-cta-row">
         <a class="btn btn-ember btn-lg" href="https://masteryforgecrafts.com/cart/58091624431919:1">Get the Metal Plans — $37</a>
         <a class="tlink" href="assets/downloads/free-sample-plan.pdf" download>Try the free sample plan first</a>
@@ -123,7 +132,7 @@
 
     <figure class="hero-figure bp-grid--soft mfx-heroimg" aria-label="The Metalworking Project Plans library binder: 500+ step-by-step metal build plans in PDF">
       <img src="assets/img/plans-hero-780.webp"
-           srcset="assets/img/plans-hero-390.webp 390w, assets/img/plans-hero-780.webp 780w, assets/img/plans-hero-1024.webp 1024w"
+           srcset="assets/img/plans-hero-390.webp 390w, assets/img/plans-hero-780.webp 780w, assets/img/plans-hero-1024.webp 1024w, assets/img/plans-hero-1560.webp 1560w"
            sizes="(max-width: 880px) 100vw, 460px"
            width="780" height="780"
            alt="The Metalworking Project Plans binder — 500+ step-by-step metal build plans in PDF"
@@ -171,6 +180,7 @@
           <li class="chip chip--ok">Instant download</li>
         </ul>
         <a class="btn btn-ember btn-full btn-lg" href="https://masteryforgecrafts.com/cart/58091624431919:1">Add the Plans to Cart — $37</a>
+        <p class="mfx-valuemath">500+ plans · about $0.07 per plan</p>
         <p class="microtrust">Instant download · Lifetime updates · 30-day money-back guarantee</p>
         <a class="tlink" href="assets/downloads/free-sample-plan.pdf" download>Not sure yet? Grab the free sample plan first</a>
       </div>
@@ -178,6 +188,25 @@
   </div>
 </section>
 <!-- /section: whats-inside -->
+
+<!-- section: categories -->
+<section class="section" id="categories">
+  <div class="wrap">
+    <div class="sec-head mfx-center reveal">
+      <p class="eyebrow eyebrow--steel">In the library · categories</p>
+    </div>
+    <ul class="mfx-cats reveal" aria-label="Build categories in the library">
+      <li>Fire pits</li>
+      <li>Welding carts</li>
+      <li>Workbenches</li>
+      <li>Gates</li>
+      <li>Shelving</li>
+      <li>Planters</li>
+    </ul>
+    <p class="mfx-cats-more reveal">+ hundreds more inside</p>
+  </div>
+</section>
+<!-- /section: categories -->
 
 <!-- section: plan-proof -->
 <section class="section">
@@ -190,7 +219,7 @@
     <div class="mfx-proof">
       <div class="plansheet reveal">
         <img src="assets/img/plansheet-001-780.webp"
-             srcset="assets/img/plansheet-001-390.webp 390w, assets/img/plansheet-001-780.webp 780w, assets/img/plansheet-001-1024.webp 1024w"
+             srcset="assets/img/plansheet-001-390.webp 390w, assets/img/plansheet-001-780.webp 780w, assets/img/plansheet-001-1024.webp 1024w, assets/img/plansheet-001-1560.webp 1560w"
              sizes="(max-width: 820px) 100vw, 620px"
              width="780" height="968"
              alt="MasteryForge Plan 001 — square fire pit: top view, side elevation with weld symbols and full materials cut list"
@@ -224,46 +253,46 @@
 <section class="section band">
   <div class="wrap">
     <div class="sec-head mfx-center reveal">
-      <p class="eyebrow eyebrow--steel">Built from these sheets</p>
-      <h2>Plans in, steel out</h2>
-      <p class="lede">Every build below started as a sheet like the one above: views, dimensions, cut list, steps. That is the whole trick — there isn't one.</p>
+      <p class="eyebrow eyebrow--steel">From sheet to steel</p>
+      <h2>What you'll be able to build</h2>
+      <p class="lede">Six of the categories in the library — every project ships as a sheet like the one above: views, dimensions, cut list, steps. That is the whole trick — there isn't one.</p>
     </div>
     <div class="mfx-builds reveal">
       <figure class="mfx-shot mfx-shot--wide">
         <img src="assets/img/build-1-firepit.webp" width="1152" height="864"
-             alt="Square steel fire pit welded from a dimensioned MasteryForge plan sheet"
+             alt="Square steel fire pit — one of the fire pit projects in the library"
              loading="lazy" decoding="async">
-        <figcaption>SQUARE FIRE PIT · STARTER PLAN 01</figcaption>
+        <figcaption>FIRE PIT</figcaption>
       </figure>
       <figure class="mfx-shot mfx-shot--wide">
         <img src="assets/img/build-2-weldingcart.webp" width="1152" height="864"
-             alt="Rolling welding cart assembled from a cut-listed MasteryForge plan"
+             alt="Rolling welding cart — one of the cart projects in the library"
              loading="lazy" decoding="async">
-        <figcaption>WELDING CART · CUT, SQUARE, TACK, WELD</figcaption>
+        <figcaption>WELDING CART</figcaption>
       </figure>
       <figure class="mfx-shot mfx-shot--wide">
         <img src="assets/img/build-3-workbench.webp" width="1152" height="864"
-             alt="Heavy steel workbench with a flat, square top, built from a dimensioned MasteryForge plan"
+             alt="Heavy steel workbench with a flat, square top — one of the bench projects in the library"
              loading="lazy" decoding="async">
-        <figcaption>STEEL WORKBENCH · FLAT BECAUSE MEASURED</figcaption>
+        <figcaption>WORKBENCH</figcaption>
       </figure>
       <figure class="mfx-shot mfx-shot--wide">
         <img src="assets/img/build-4-gate.webp" width="1152" height="864"
-             alt="Steel garden gate framed and welded from a MasteryForge plan sheet"
+             alt="Steel garden gate — one of the gate projects in the library"
              loading="lazy" decoding="async">
-        <figcaption>GARDEN GATE · EVERY PICKET ON THE SHEET</figcaption>
+        <figcaption>GARDEN GATE</figcaption>
       </figure>
       <figure class="mfx-shot mfx-shot--wide">
         <img src="assets/img/build-5-shelving.webp" width="1152" height="864"
-             alt="Steel shelving unit built from a MasteryForge cut list and assembly steps"
+             alt="Steel shelving unit — one of the shelving projects in the library"
              loading="lazy" decoding="async">
-        <figcaption>SHELVING UNIT · CUT LIST FIRST</figcaption>
+        <figcaption>SHELVING</figcaption>
       </figure>
       <figure class="mfx-shot mfx-shot--wide">
         <img src="assets/img/build-6-planter.webp" width="1152" height="864"
-             alt="Steel planter box welded from a dimensioned MasteryForge plan"
+             alt="Steel planter box — one of the planter projects in the library"
              loading="lazy" decoding="async">
-        <figcaption>PLANTER · DIMENSIONED, THEN BUILT</figcaption>
+        <figcaption>PLANTER</figcaption>
       </figure>
     </div>
   </div>
@@ -274,21 +303,21 @@
 <section class="section">
   <div class="wrap">
     <div class="sec-head reveal">
-      <p class="eyebrow eyebrow--steel">Shop footage · real build</p>
-      <h2>Watch a sheet become steel</h2>
-      <p class="lede">No voice-over, no music bed: just the bench, the plan and the cut. This is the same sheet standard you saw above.</p>
+      <p class="eyebrow eyebrow--steel">Shop clip · from the bench</p>
+      <h2>From the bench: tack welds and sparks</h2>
+      <p class="lede">Five seconds, no voice-over, no music bed: tack welds and sparks at the bench. The full projects are in the photos above.</p>
     </div>
     <figure class="video-frame reveal">
       <div class="video-shell">
         <video preload="none" poster="assets/img/video-clean-poster-1280.webp" muted playsinline controls
                width="1280" height="720"
-               aria-label="Shop footage: a gloved hand pressing a square steel tube frame at the MasteryForge bench, with welding sparks — 5 second clip">
+               aria-label="Shop clip: tack welds and sparks at the bench — 5 second clip">
           <source src="assets/video/build-clean-720.mp4" type="video/mp4">
           Sorry, your browser does not support embedded video — the build photos above show the same project.
         </video>
-        <span class="video-tag" aria-hidden="true">SHOP FOOTAGE · REAL BUILD</span>
+        <span class="video-tag" aria-hidden="true">SHOP CLIP · TACK WELDS &amp; SPARKS</span>
       </div>
-      <figcaption>PRESS · FIT · WELD — FILMED AT THE MASTERYFORGE BENCH</figcaption>
+      <figcaption>TACK WELDS &amp; SPARKS · 5-SECOND SHOP CLIP</figcaption>
     </figure>
   </div>
 </section>
@@ -327,22 +356,6 @@
 </section>
 <!-- /section: pillars -->
 
-<!-- section: stats -->
-<section class="section">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow eyebrow--steel">The library in numbers</p>
-      <h2>Every number here is real</h2>
-    </div>
-    <div class="stats-strip reveal">
-      <div class="stat"><p class="stat-num">500+</p><span class="stat-label">Step-by-step build plans (PDF)</span></div>
-      <div class="stat"><p class="stat-num">2</p><span class="stat-label">Fully worked starter plans</span></div>
-      <div class="stat"><p class="stat-num">30</p><span class="stat-label">Day money-back guarantee</span></div>
-    </div>
-  </div>
-</section>
-<!-- /section: stats -->
-
 <!-- section: free-sample -->
 <section class="section band">
   <div class="wrap">
@@ -360,34 +373,6 @@
   </div>
 </section>
 <!-- /section: free-sample -->
-
-<!-- section: companion -->
-<section class="section">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow">Pairs with</p>
-      <h2>Cutting with a plasma, laser or CNC table?</h2>
-    </div>
-    <div class="card reveal">
-      <div class="mfx-pair">
-        <img src="assets/img/cutfiles-hero-780.webp"
-             srcset="assets/img/cutfiles-hero-390.webp 390w, assets/img/cutfiles-hero-780.webp 780w, assets/img/cutfiles-hero-1024.webp 1024w"
-             sizes="(max-width: 820px) 100vw, 420px"
-             width="780" height="780"
-             alt="The Metal Cut-File Vault — 500+ machine-ready DXF and SVG files for plasma, laser and CNC"
-             loading="lazy" decoding="async">
-        <div>
-          <h3>Metal Cut-File Vault — DXF + SVG</h3>
-          <p class="mt-lg">The plans on this page are measured for hand tools. The Metal Cut-File Vault is the machine-side companion: 500+ ready <strong>DXF + SVG</strong> files for plasma, laser and CNC tables, loading straight into your CAD/CAM software. Same guarantee, same workshop.</p>
-          <p class="mt-lg mb-0"><span class="pcard-price">$19</span></p>
-          <p class="mt-lg mb-0"><a class="btn btn-ghost" href="products/metal-cut-file-vault.html">Browse the Cut-File Vault — $19</a></p>
-          <p class="fine mt-lg">Selling finished pieces? Add the <a class="tlink" href="products/commercial-license.html">Commercial License — $15</a>: lifetime resale rights on pieces you make, in plain English.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /section: companion -->
 
 <!-- section: trust -->
 <section class="section band">
@@ -466,6 +451,34 @@
   </div>
 </section>
 <!-- /section: trust -->
+
+<!-- section: companion — cross-sell, moved after trust per fix pack v3.2 -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Pairs with</p>
+      <h2>Cutting with a plasma, laser or CNC table?</h2>
+    </div>
+    <div class="card reveal">
+      <div class="mfx-pair">
+        <img src="assets/img/cutfiles-hero-780.webp"
+             srcset="assets/img/cutfiles-hero-390.webp 390w, assets/img/cutfiles-hero-780.webp 780w, assets/img/cutfiles-hero-1024.webp 1024w, assets/img/cutfiles-hero-1560.webp 1560w"
+             sizes="(max-width: 820px) 100vw, 420px"
+             width="780" height="780"
+             alt="The Metal Cut-File Vault — 500+ machine-ready DXF and SVG files for plasma, laser and CNC"
+             loading="lazy" decoding="async">
+        <div>
+          <h3>Metal Cut-File Vault — DXF + SVG</h3>
+          <p class="mt-lg">The plans on this page are measured for hand tools. The Metal Cut-File Vault is the machine-side companion: 500+ ready <strong>DXF + SVG</strong> files for plasma, laser and CNC tables, loading straight into your CAD/CAM software. Same guarantee, same workshop.</p>
+          <p class="mt-lg mb-0"><span class="pcard-price">$19</span></p>
+          <p class="mt-lg mb-0"><a class="btn btn-ghost" href="products/metal-cut-file-vault.html">Browse the Cut-File Vault — $19</a></p>
+          <p class="fine mt-lg">Selling finished pieces? Add the <a class="tlink" href="products/commercial-license.html">Commercial License — $15</a>: lifetime resale rights on pieces you make, in plain English.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /section: companion -->
 
 <!-- section: faq -->
 <section class="section">
