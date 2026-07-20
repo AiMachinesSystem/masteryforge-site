@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Accessibility Statement | MasteryForge Crafts</title>
+<meta name="description" content="Our accessibility commitment: WCAG 2.2 AA target, the concrete measures this site is built with, and how to report a barrier. Last reviewed July 20, 2026.">
+<link rel="canonical" href="https://masteryforgecrafts.com/accessibility.html">
+<meta name="robots" content="index,follow">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MasteryForge Crafts">
+<meta property="og:title" content="Accessibility Statement — MasteryForge Crafts">
+<meta property="og:description" content="WCAG 2.2 AA target, the concrete measures this site is built with, and how to report a barrier.">
+<meta property="og:url" content="https://masteryforgecrafts.com/accessibility.html">
+<meta property="og:image" content="https://masteryforgecrafts.com/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Accessibility Statement — MasteryForge Crafts">
+<meta name="twitter:description" content="WCAG 2.2 AA target, the concrete measures this site is built with, and how to report a barrier.">
+<meta name="twitter:image" content="https://masteryforgecrafts.com/assets/img/og.jpg">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preload" href="assets/fonts/oswald-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js" defer></script>
+<script type="speculationrules">
+{
+  "prerender": [
+    { "where": { "href_matches": "/*.html" }, "eagerness": "moderate" }
+  ]
+}
+</script>
+
+<style>
+/* Page-scoped styles (.p-accessibility) — same .leg-* classes as the legal pages */
+.p-accessibility .leg-doc{max-width:72ch}
+.p-accessibility .leg-meta{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:1.4rem 0 0;padding:0}
+.p-accessibility .leg-meta li{font-family:var(--mono);font-size:var(--fs-chip);letter-spacing:var(--ls-chip);text-transform:uppercase;color:var(--steel);border:1px solid var(--line);border-radius:var(--r-pill);padding:.4em 1em}
+.p-accessibility .leg-doc h2{display:flex;gap:.7rem;align-items:baseline;margin:var(--sp-xl) 0 .8rem;padding-top:var(--sp-lg);border-top:1px solid var(--line);font-size:var(--fs-h3);letter-spacing:var(--ls-h3)}
+.p-accessibility .leg-no{font-family:var(--mono);font-size:var(--fs-micro);letter-spacing:var(--ls-chip);color:var(--steel);flex:none}
+.p-accessibility .leg-doc p,.p-accessibility .leg-doc li{max-width:68ch}
+.p-accessibility .leg-list{margin:.4rem 0 1rem;padding-left:1.2em}
+.p-accessibility .leg-list li{margin:.45rem 0}
+</style>
+</head>
+<body class="p-accessibility">
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- section: site-header -->
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="index.html" aria-label="MasteryForge Crafts — home"><span class="notch" aria-hidden="true"></span>MasteryForge</a>
+    <nav class="nav" aria-label="Main">
+      <ul>
+        <li><a href="library.html">Library</a></li>
+        <li><a href="products/metal-cut-file-vault.html">Cut Files</a></li>
+        <li><a href="free-sample.html">Free Sample</a></li>
+        <li><a href="guarantee.html">Guarantee</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- /section: site-header -->
+
+<main id="main">
+
+<!-- section: opener -->
+<section class="section bp-grid">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Accessibility · our commitment</p>
+      <h1>Accessibility statement</h1>
+      <p class="lede">MasteryForge Crafts is committed to a website everyone can use. This page states our target, what we build with, and how to tell us when something blocks you.</p>
+    </div>
+  </div>
+</section>
+<!-- /section: opener -->
+
+<!-- section: doc -->
+<section class="section band">
+  <div class="wrap">
+    <div class="leg-doc reveal">
+
+      <h2><span class="leg-no">01</span>Our target</h2>
+      <p>This site targets conformance with <strong>WCAG 2.2 Level AA</strong>. The European Accessibility Act (in force since June 28, 2025) applies to sellers serving EU consumers. We build to WCAG 2.2 AA and review this statement as the site evolves.</p>
+      <ul class="leg-meta">
+        <li>WCAG 2.2 AA</li>
+        <li>Last reviewed · July 20, 2026</li>
+        <li>Static site · no overlays</li>
+      </ul>
+
+      <h2><span class="leg-no">02</span>What this site is built with</h2>
+      <p>Accessibility is not a plugin here — it is the markup. The measures below are part of the site's code, and each one can be checked on any page:</p>
+      <ul class="leg-list">
+        <li>Semantic HTML with one <code>&lt;h1&gt;</code> per page and a logical heading order.</li>
+        <li>A skip link as the first focusable element on every page.</li>
+        <li>Full keyboard operability with a visible focus ring that is never covered by sticky elements.</li>
+        <li>Text contrast of at least 4.5:1 and non-text contrast of at least 3:1, enforced through fixed design tokens that are never lightened.</li>
+        <li>Touch targets of at least 24px; primary buttons are 48px tall.</li>
+        <li>No horizontal scrolling at 320px width, and the layout stays usable at 200% zoom.</li>
+        <li><code>prefers-reduced-motion</code> honored sitewide — every animation switches off when you ask for less motion.</li>
+        <li>Informative alt text on every product and build image; purely decorative blueprint drawings are hidden from assistive technology.</li>
+        <li>FAQs built on native <code>&lt;details&gt;</code> elements — the answers exist in the HTML and need no script to be read.</li>
+        <li>No autoplaying media anywhere: the build video plays only when you press play.</li>
+        <li>No cookies, no trackers, and no accessibility overlay widgets.</li>
+      </ul>
+
+      <h2><span class="leg-no">03</span>Known limitations</h2>
+      <p>The downloadable PDF plan sheets are technical drawings optimized for print; they are not yet fully tagged for screen readers. The build video has no spoken audio, so captions are not required; if narration is added, captions will ship with it.</p>
+
+      <h2><span class="leg-no">04</span>Feedback</h2>
+      <p>Found a barrier? Tell us and we will fix it or work around it with you. Email us through the store's contact page — we aim to respond within 5 business days.</p>
+      <p><a class="tlink" href="https://masteryforgecrafts.com/pages/contact">Open the contact page</a></p>
+
+      <h2><span class="leg-no">05</span>Formal notes</h2>
+      <p>This statement was prepared on July 20, 2026. This website is a set of static files; the checkout runs on our Shopify store, and the accessibility of the checkout itself is the platform's responsibility. Because we serve customers in the European Union, we align with the European Accessibility Act and review this page as the site changes.</p>
+
+    </div>
+  </div>
+</section>
+<!-- /section: doc -->
+
+</main>
+
+<!-- section: site-footer -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-in">
+      <div>
+        <a class="brand" href="index.html"><span class="notch" aria-hidden="true"></span>MasteryForge</a>
+        <p class="fine mt-lg">Dimensioned project files for people who build. Designed on paper, proven at the bench.</p>
+      </div>
+      <nav aria-label="Shop">
+        <h2>Shop</h2>
+        <ul>
+          <li><a href="index.html">Metal Plans</a></li>
+          <li><a href="products/metal-cut-file-vault.html">Cut-File Vault</a></li>
+          <li><a href="products/commercial-license.html">Commercial License</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Support">
+        <h2>Support</h2>
+        <ul>
+          <li><a href="free-sample.html">Free sample plan</a></li>
+          <li><a href="guarantee.html">30-day guarantee</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Legal">
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="legal/privacy.html">Privacy</a></li>
+          <li><a href="legal/terms.html">Terms</a></li>
+          <li><a href="legal/refunds.html">Refunds</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-fine">
+      <span>© <span data-year>2026</span> MasteryForge Crafts · Digital products, instant download</span>
+      <span>Checkout handled securely by Shopify · masteryforgecrafts.com</span>
+    </div>
+  </div>
+</footer>
+<!-- /section: site-footer -->
+
+</body>
+</html>

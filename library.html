@@ -27,22 +27,29 @@
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/site.css">
 <script src="assets/js/site.js" defer></script>
+<script type="speculationrules">
+{
+  "prerender": [
+    { "where": { "href_matches": "/*.html" }, "eagerness": "moderate" }
+  ]
+}
+</script>
 
-<!-- Page-scoped styles (.mfx-lib-*) — library.html only, shared CSS untouched -->
 <style>
-.mfx-lib-hero .hero-in{padding-block:calc(var(--pad-hero)*.55)}
-.mfx-lib-grid{display:grid;gap:var(--sp-lg);grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr))}
-.mfx-lib-motif{aspect-ratio:1/1;display:block;background:var(--bg2);border-bottom:1px solid var(--line)}
-.mfx-lib-motif svg{width:100%;height:100%;display:block}
+/* Page-scoped styles (.p-library) — library.html only, shared CSS untouched */
+.p-library .mfx-lib-hero .hero-in{padding-block:calc(var(--pad-hero)*.55)}
+.p-library .mfx-lib-grid{display:grid;gap:var(--sp-lg);grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr))}
+.p-library .mfx-lib-motif{aspect-ratio:1/1;display:block;background:var(--bg2);border-bottom:1px solid var(--line)}
+.p-library .mfx-lib-motif svg{width:100%;height:100%;display:block}
 @media (prefers-reduced-motion:no-preference){
-  .pcard{will-change:transform}
+  .p-library .pcard{will-change:transform}
 }
 </style>
 </head>
-<body>
+<body class="p-library">
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- ===================== HEADER ===================== -->
+<!-- section: site-header -->
 <header class="hdr">
   <div class="wrap hdr-in">
     <a class="brand" href="index.html" aria-label="MasteryForge Crafts — home"><span class="notch" aria-hidden="true"></span>MasteryForge</a>
@@ -57,10 +64,11 @@
     </nav>
   </div>
 </header>
+<!-- /section: site-header -->
 
 <main id="main">
 
-<!-- ===================== 1 · COMPACT HERO ===================== -->
+<!-- section: hero -->
 <section class="hero bp-grid mfx-lib-hero">
   <div class="wrap hero-in">
     <div>
@@ -70,8 +78,9 @@
     </div>
   </div>
 </section>
+<!-- /section: hero -->
 
-<!-- ===================== 2 · THE METAL LINE ===================== -->
+<!-- section: shop -->
 <section class="section" id="shop">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -145,18 +154,20 @@
     </div>
   </div>
 </section>
+<!-- /section: shop -->
 
-<!-- ===================== 3 · HONEST CLOSER ===================== -->
+<!-- section: closer -->
 <section class="section band">
   <div class="wrap center">
     <p class="lede reveal" style="margin-inline:auto">Wood, Laser &amp; Clay vaults are in the works — the metal line comes first.</p>
     <p class="mt-lg reveal"><a class="tlink" href="assets/downloads/free-sample-plan.pdf" download>Not sure yet? Grab the free sample plan first</a></p>
   </div>
 </section>
+<!-- /section: closer -->
 
 </main>
 
-<!-- ===================== FOOTER ===================== -->
+<!-- section: site-footer -->
 <footer class="footer">
   <div class="wrap">
     <div class="footer-in">
@@ -165,7 +176,7 @@
         <p class="fine mt-lg">Dimensioned project files for people who build. Designed on paper, proven at the bench.</p>
       </div>
       <nav aria-label="Shop">
-        <h3>Shop</h3>
+        <h2>Shop</h2>
         <ul>
           <li><a href="index.html">Metal Plans</a></li>
           <li><a href="products/metal-cut-file-vault.html">Cut-File Vault</a></li>
@@ -173,15 +184,16 @@
         </ul>
       </nav>
       <nav aria-label="Support">
-        <h3>Support</h3>
+        <h2>Support</h2>
         <ul>
           <li><a href="free-sample.html">Free sample plan</a></li>
           <li><a href="guarantee.html">30-day guarantee</a></li>
           <li><a href="faq.html">FAQ</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
         </ul>
       </nav>
       <nav aria-label="Legal">
-        <h3>Legal</h3>
+        <h2>Legal</h2>
         <ul>
           <li><a href="legal/privacy.html">Privacy</a></li>
           <li><a href="legal/terms.html">Terms</a></li>
@@ -195,6 +207,7 @@
     </div>
   </div>
 </footer>
+<!-- /section: site-footer -->
 
 </body>
 </html>

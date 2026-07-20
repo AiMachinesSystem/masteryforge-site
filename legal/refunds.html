@@ -27,24 +27,31 @@
 <link rel="stylesheet" href="../assets/css/tokens.css">
 <link rel="stylesheet" href="../assets/css/site.css">
 <script src="../assets/js/site.js" defer></script>
+<script type="speculationrules">
+{
+  "prerender": [
+    { "where": { "href_matches": "/*.html" }, "eagerness": "moderate" }
+  ]
+}
+</script>
 <style>
-/* Page-scoped legal styles — prefix leg-. Shared system lives in ../assets/css/site.css */
-.leg-doc{max-width:72ch}
-.leg-meta{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:1.4rem 0 0;padding:0}
-.leg-meta li{font-family:var(--mono);font-size:var(--fs-chip);letter-spacing:var(--ls-chip);text-transform:uppercase;color:var(--steel);border:1px solid var(--line);border-radius:var(--r-pill);padding:.4em 1em}
-.leg-doc h3{display:flex;gap:.7rem;align-items:baseline;margin:var(--sp-xl) 0 .8rem;padding-top:var(--sp-lg);border-top:1px solid var(--line)}
-.leg-no{font-family:var(--mono);font-size:var(--fs-micro);letter-spacing:var(--ls-chip);color:var(--steel);flex:none}
-.leg-doc p,.leg-doc li{max-width:68ch}
-.leg-list{margin:.4rem 0 1rem;padding-left:1.2em}
-.leg-list li{margin:.45rem 0}
-.leg-xlinks .chip{text-decoration:none}
-.leg-doc h3.leg-flush{border-top:0;padding-top:0;margin-top:0}
+/* Page-scoped legal styles — prefix leg-, scoped under body class. Shared system lives in ../assets/css/site.css */
+.p-legal .leg-doc{max-width:72ch}
+.p-legal .leg-meta{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:1.4rem 0 0;padding:0}
+.p-legal .leg-meta li{font-family:var(--mono);font-size:var(--fs-chip);letter-spacing:var(--ls-chip);text-transform:uppercase;color:var(--steel);border:1px solid var(--line);border-radius:var(--r-pill);padding:.4em 1em}
+.p-legal .leg-doc h2{display:flex;gap:.7rem;align-items:baseline;margin:var(--sp-xl) 0 .8rem;padding-top:var(--sp-lg);border-top:1px solid var(--line);font-size:var(--fs-h3);letter-spacing:var(--ls-h3)}
+.p-legal .leg-no{font-family:var(--mono);font-size:var(--fs-micro);letter-spacing:var(--ls-chip);color:var(--steel);flex:none}
+.p-legal .leg-doc p,.p-legal .leg-doc li{max-width:68ch}
+.p-legal .leg-list{margin:.4rem 0 1rem;padding-left:1.2em}
+.p-legal .leg-list li{margin:.45rem 0}
+.p-legal .leg-xlinks .chip{text-decoration:none}
+.p-legal .leg-doc h2.leg-flush{border-top:0;padding-top:0;margin-top:0}
 </style>
 </head>
-<body>
+<body class="p-legal">
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- ===================== HEADER ===================== -->
+<!-- section: site-header -->
 <header class="hdr">
   <div class="wrap hdr-in">
     <a class="brand" href="../index.html" aria-label="MasteryForge Crafts — home"><span class="notch" aria-hidden="true"></span>MasteryForge</a>
@@ -59,10 +66,11 @@
     </nav>
   </div>
 </header>
+<!-- /section: site-header -->
 
 <main id="main">
 
-<!-- ===================== REFUND POLICY ===================== -->
+<!-- section: doc -->
 <section class="section bp-grid">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -88,35 +96,36 @@
         <text x="100" y="138" text-anchor="middle" class="days">DAYS · FULL REFUND</text>
       </svg>
       <div class="leg-doc">
-        <h3 class="leg-flush"><span class="leg-no">01</span>The short version</h3>
+        <h2 class="leg-flush"><span class="leg-no">01</span>The short version</h2>
         <p>Email us within 30 days of purchase and we refund you in full. No hostile questions, no hoops, no partial-credit games. The fastest route: reply directly to your order confirmation email — it already contains everything we need to find your order.</p>
       </div>
     </div>
 
     <div class="leg-doc reveal">
-      <h3><span class="leg-no">02</span>How to ask</h3>
+      <h2><span class="leg-no">02</span>How to ask</h2>
       <ul class="leg-list">
         <li><strong>Fastest:</strong> reply to your order confirmation email. Your order details are right there in the thread.</li>
         <li><strong>Otherwise:</strong> email the support address shown on your receipt, with your order number if you have it.</li>
       </ul>
       <p>A sentence about what went wrong helps us fix things — but it is never a condition of the refund. "It wasn't for me" is a complete answer.</p>
 
-      <h3><span class="leg-no">03</span>No physical returns</h3>
+      <h2><span class="leg-no">03</span>No physical returns</h2>
       <p>Everything we sell is a digital download. There is nothing to box up and ship back — no return label, no restocking fee, no RMA number. The refund closes the matter. We would rather you delete the files afterward, but there is no shipment and no inspection.</p>
 
-      <h3><span class="leg-no">04</span>When the money lands</h3>
+      <h2><span class="leg-no">04</span>When the money lands</h2>
       <p>We process refunds promptly — typically within a few business days of your email. After that, the timing is out of our hands: your bank or payment provider decides when the credit shows up. Realistically, that takes about <strong>5–10 business days</strong> depending on the payment method; card refunds often post faster than bank transfers. If ten business days pass and nothing has arrived, write back and we will chase it from our side.</p>
 
-      <h3><span class="leg-no">05</span>What it covers</h3>
+      <h2><span class="leg-no">05</span>What it covers</h2>
       <p>Every digital product sold through this site and the linked store — the build plans, the cut-file vault, the Commercial License, everything. The 30 days start on the day of purchase. One honest note: the guarantee exists so you can judge the files with the risk on us, not on you. Please do not treat it as a free rental — we are a small workshop, and the system runs on trust.</p>
 
-      <h3><span class="leg-no">06</span>Why we can offer this</h3>
+      <h2><span class="leg-no">06</span>Why we can offer this</h2>
       <p>Because the files are the product, and we know how they are made: every plan is drafted, dimensioned and checked by a human before it goes in the vault. The <a class="tlink" href="../free-sample.html">free sample plan</a> shows that standard before you spend anything. The guarantee exists for the makers who try the files in good faith and find they are not a fit — everyone else never needs this page.</p>
     </div>
   </div>
 </section>
+<!-- /section: doc -->
 
-<!-- ===================== CROSS-LINKS ===================== -->
+<!-- section: cross-links -->
 <section class="section band">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -133,10 +142,11 @@
     </nav>
   </div>
 </section>
+<!-- /section: cross-links -->
 
 </main>
 
-<!-- ===================== FOOTER ===================== -->
+<!-- section: site-footer -->
 <footer class="footer">
   <div class="wrap">
     <div class="footer-in">
@@ -145,7 +155,7 @@
         <p class="fine mt-lg">Dimensioned project files for people who build. Designed on paper, proven at the bench.</p>
       </div>
       <nav aria-label="Shop">
-        <h3>Shop</h3>
+        <h2>Shop</h2>
         <ul>
           <li><a href="../index.html">Metal Plans</a></li>
           <li><a href="../products/metal-cut-file-vault.html">Cut-File Vault</a></li>
@@ -153,15 +163,16 @@
         </ul>
       </nav>
       <nav aria-label="Support">
-        <h3>Support</h3>
+        <h2>Support</h2>
         <ul>
           <li><a href="../free-sample.html">Free sample plan</a></li>
           <li><a href="../guarantee.html">30-day guarantee</a></li>
           <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="../accessibility.html">Accessibility</a></li>
         </ul>
       </nav>
       <nav aria-label="Legal">
-        <h3>Legal</h3>
+        <h2>Legal</h2>
         <ul>
           <li><a href="privacy.html">Privacy</a></li>
           <li><a href="terms.html">Terms</a></li>
@@ -175,6 +186,7 @@
     </div>
   </div>
 </footer>
+<!-- /section: site-footer -->
 
 </body>
 </html>

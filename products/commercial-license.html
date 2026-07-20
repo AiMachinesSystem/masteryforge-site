@@ -27,6 +27,18 @@
 <link rel="stylesheet" href="../assets/css/tokens.css">
 <link rel="stylesheet" href="../assets/css/site.css">
 <script src="../assets/js/site.js" defer></script>
+<script type="speculationrules">
+{
+  "prerender": [
+    { "where": { "href_matches": "/*.html" }, "eagerness": "moderate" }
+  ]
+}
+</script>
+
+<!-- Page-scoped styles (v3 — scoped under body class; shared system lives in ../assets/css/site.css) -->
+<style>
+.p-license .final-in{display:block;max-width:32rem;margin-inline:auto;text-align:center}
+</style>
 
 <script type="application/ld+json">
 {
@@ -48,10 +60,10 @@
 }
 </script>
 </head>
-<body>
+<body class="p-license has-stickybar">
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- ===================== HEADER ===================== -->
+<!-- section: site-header -->
 <header class="hdr">
   <div class="wrap hdr-in">
     <a class="brand" href="../index.html" aria-label="MasteryForge Crafts — home"><span class="notch" aria-hidden="true"></span>MasteryForge</a>
@@ -66,10 +78,11 @@
     </nav>
   </div>
 </header>
+<!-- /section: site-header -->
 
 <main id="main">
 
-<!-- ===================== 1 · HERO ===================== -->
+<!-- section: hero -->
 <section class="hero bp-grid">
   <div class="wrap hero-in">
     <div>
@@ -106,8 +119,9 @@
     </figure>
   </div>
 </section>
+<!-- /section: hero -->
 
-<!-- ===================== 2 · COVERS / DOES NOT COVER ===================== -->
+<!-- section: covers -->
 <section class="section band">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -136,8 +150,9 @@
     </div>
   </div>
 </section>
+<!-- /section: covers -->
 
-<!-- ===================== 3 · STANDALONE PRICE ===================== -->
+<!-- section: price -->
 <section class="section">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -152,14 +167,16 @@
       <div class="card reveal">
         <h3>Buying à la carte?</h3>
         <p>Add the license whenever you are ready to sell. It is a one-time purchase, lifetime, and it applies retroactively to every MasteryForge library you already own.</p>
+        <p class="mt-lg"><span class="price-now">$15</span> <span class="price-note">ONE PAYMENT — YOURS FOR LIFE</span></p>
         <p class="mt-lg"><a class="btn btn-ember" href="https://masteryforgecrafts.com/cart/58133406679343:1">Add to Cart — $15</a></p>
         <p class="microtrust">Instant download · Lifetime updates · 30-day money-back guarantee</p>
       </div>
     </div>
   </div>
 </section>
+<!-- /section: price -->
 
-<!-- ===================== 4 · SHORT FAQ ===================== -->
+<!-- section: faq -->
 <section class="section band">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -178,24 +195,22 @@
     </div>
   </div>
 </section>
+<!-- /section: faq -->
 
-<!-- ===================== 5 · FINAL CTA (dark) ===================== -->
+<!-- section: final-cta -->
 <section class="final">
   <div class="wrap final-in">
-    <div>
-      <p class="eyebrow">Commercial License</p>
-      <h2>Build it. Sell it.<br><span class="price-now">$15</span>, once, forever.</h2>
-      <p class="microtrust">Instant download · Lifetime updates · 30-day money-back guarantee</p>
-    </div>
-    <div>
-      <a class="btn btn-ember btn-lg" href="https://masteryforgecrafts.com/cart/58133406679343:1">Get the License — $15</a>
-    </div>
+    <p class="eyebrow">Commercial License</p>
+    <h2>Build it. Sell it.<br><span class="price-now">$15</span>, once, forever.</h2>
+    <p class="mt-lg"><a class="btn btn-ember btn-lg" href="https://masteryforgecrafts.com/cart/58133406679343:1">Get the License — $15</a></p>
+    <p class="microtrust">Instant download · Lifetime updates · 30-day money-back guarantee</p>
   </div>
 </section>
+<!-- /section: final-cta -->
 
 </main>
 
-<!-- ===================== FOOTER ===================== -->
+<!-- section: site-footer -->
 <footer class="footer">
   <div class="wrap">
     <div class="footer-in">
@@ -204,7 +219,7 @@
         <p class="fine mt-lg">Dimensioned project files for people who build. Designed on paper, proven at the bench.</p>
       </div>
       <nav aria-label="Shop">
-        <h3>Shop</h3>
+        <h2>Shop</h2>
         <ul>
           <li><a href="../index.html">Metal Plans</a></li>
           <li><a href="metal-cut-file-vault.html">Cut-File Vault</a></li>
@@ -212,15 +227,16 @@
         </ul>
       </nav>
       <nav aria-label="Support">
-        <h3>Support</h3>
+        <h2>Support</h2>
         <ul>
           <li><a href="../free-sample.html">Free sample plan</a></li>
           <li><a href="../guarantee.html">30-day guarantee</a></li>
           <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="../accessibility.html">Accessibility</a></li>
         </ul>
       </nav>
       <nav aria-label="Legal">
-        <h3>Legal</h3>
+        <h2>Legal</h2>
         <ul>
           <li><a href="../legal/privacy.html">Privacy</a></li>
           <li><a href="../legal/terms.html">Terms</a></li>
@@ -234,12 +250,14 @@
     </div>
   </div>
 </footer>
+<!-- /section: site-footer -->
 
-<!-- Sticky CTA bar (mobile, appears after 60% scroll) -->
+<!-- section: sticky-cta -->
 <div class="stickybar" role="complementary" aria-label="Quick buy">
   <span class="sb-price">$15</span>
   <a class="btn btn-ember btn-sm" href="https://masteryforgecrafts.com/cart/58133406679343:1">Get the License</a>
 </div>
+<!-- /section: sticky-cta -->
 
 </body>
 </html>

@@ -27,6 +27,13 @@
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/site.css">
 <script src="assets/js/site.js" defer></script>
+<script type="speculationrules">
+{
+  "prerender": [
+    { "where": { "href_matches": "/*.html" }, "eagerness": "moderate" }
+  ]
+}
+</script>
 
 <style>
 /* Page-scoped additions (.p-faq) — reported to QA, no shared files touched */
@@ -82,10 +89,10 @@
 }
 </script>
 </head>
-<body class="p-faq">
+<body class="p-faq has-stickybar">
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- ===================== HEADER ===================== -->
+<!-- section: site-header -->
 <header class="hdr">
   <div class="wrap hdr-in">
     <a class="brand" href="index.html" aria-label="MasteryForge Crafts — home"><span class="notch" aria-hidden="true"></span>MasteryForge</a>
@@ -100,10 +107,11 @@
     </nav>
   </div>
 </header>
+<!-- /section: site-header -->
 
 <main id="main">
 
-<!-- ===================== 1 · OPENER ===================== -->
+<!-- section: opener -->
 <section class="section bp-grid">
   <div class="wrap">
     <div class="sec-head reveal mb-0">
@@ -113,8 +121,9 @@
     </div>
   </div>
 </section>
+<!-- /section: opener -->
 
-<!-- ===================== 2 · THE 7 ANTI-OBJECTION ANSWERS ===================== -->
+<!-- section: faq -->
 <section class="section band">
   <div class="wrap">
     <div class="faq reveal">
@@ -169,8 +178,9 @@
     </div>
   </div>
 </section>
+<!-- /section: faq -->
 
-<!-- ===================== 3 · STILL DECIDING ===================== -->
+<!-- section: next -->
 <section class="section">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -199,10 +209,11 @@
     </div>
   </div>
 </section>
+<!-- /section: next -->
 
 </main>
 
-<!-- ===================== FOOTER ===================== -->
+<!-- section: site-footer -->
 <footer class="footer">
   <div class="wrap">
     <div class="footer-in">
@@ -211,7 +222,7 @@
         <p class="fine mt-lg">Dimensioned project files for people who build. Designed on paper, proven at the bench.</p>
       </div>
       <nav aria-label="Shop">
-        <h3>Shop</h3>
+        <h2>Shop</h2>
         <ul>
           <li><a href="index.html">Metal Plans</a></li>
           <li><a href="products/metal-cut-file-vault.html">Cut-File Vault</a></li>
@@ -219,15 +230,16 @@
         </ul>
       </nav>
       <nav aria-label="Support">
-        <h3>Support</h3>
+        <h2>Support</h2>
         <ul>
           <li><a href="free-sample.html">Free sample plan</a></li>
           <li><a href="guarantee.html">30-day guarantee</a></li>
           <li><a href="faq.html">FAQ</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
         </ul>
       </nav>
       <nav aria-label="Legal">
-        <h3>Legal</h3>
+        <h2>Legal</h2>
         <ul>
           <li><a href="legal/privacy.html">Privacy</a></li>
           <li><a href="legal/terms.html">Terms</a></li>
@@ -241,12 +253,14 @@
     </div>
   </div>
 </footer>
+<!-- /section: site-footer -->
 
-<!-- Sticky CTA bar (mobile, appears after 60% scroll) -->
+<!-- section: sticky-cta -->
 <div class="stickybar" role="complementary" aria-label="Quick buy">
   <span class="sb-price">$37</span>
   <a class="btn btn-ember btn-sm" href="https://masteryforgecrafts.com/cart/58091624431919:1">Get the Plans</a>
 </div>
+<!-- /section: sticky-cta -->
 
 </body>
 </html>

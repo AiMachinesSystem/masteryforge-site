@@ -27,21 +27,32 @@
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/site.css">
 <script src="assets/js/site.js" defer></script>
+<script type="speculationrules">
+{
+  "prerender": [
+    { "where": { "href_matches": "/*.html" }, "eagerness": "moderate" }
+  ]
+}
+</script>
 
 <style>
-/* Page-scoped additions (.p-gar) — reported to QA, no shared files touched */
-.p-gar .nav a[aria-current="page"]{color:var(--ember2);box-shadow:inset 0 -2px 0 var(--ember2)}
-.p-gar .seal{width:min(300px,72vw);height:auto}
-.p-gar .gar-cards{display:grid;gap:var(--sp-lg)}
-@media(min-width:820px){.p-gar .gar-cards{grid-template-columns:repeat(3,1fr)}}
-.p-gar .gar-cards .card h3{margin:.5rem 0 .6rem}
-.p-gar .gar-cards .card p:last-child{margin-bottom:0}
+/* Page-scoped additions (.p-guarantee) — reported to QA, no shared files touched */
+.p-guarantee .nav a[aria-current="page"]{color:var(--ember2);box-shadow:inset 0 -2px 0 var(--ember2)}
+.p-guarantee .seal{width:min(300px,72vw);height:auto}
+.p-guarantee .gar-cards{display:grid;gap:var(--sp-lg)}
+@media(min-width:820px){.p-guarantee .gar-cards{grid-template-columns:repeat(3,1fr)}}
+.p-guarantee .gar-cards .card h3{margin:.5rem 0 .6rem}
+.p-guarantee .gar-cards .card p:last-child{margin-bottom:0}
+/* Final CTA (cta25 rhythm): single centered narrow column */
+.p-guarantee .final-in{display:block;max-width:32rem;margin-inline:auto;text-align:center}
+.p-guarantee .final .eyebrow{align-items:center}
+.p-guarantee .final .btn{margin-top:1.4rem}
 </style>
 </head>
-<body class="p-gar">
+<body class="p-guarantee">
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- ===================== HEADER ===================== -->
+<!-- section: site-header -->
 <header class="hdr">
   <div class="wrap hdr-in">
     <a class="brand" href="index.html" aria-label="MasteryForge Crafts — home"><span class="notch" aria-hidden="true"></span>MasteryForge</a>
@@ -56,10 +67,11 @@
     </nav>
   </div>
 </header>
+<!-- /section: site-header -->
 
 <main id="main">
 
-<!-- ===================== 1 · HERO — THE PROMISE ===================== -->
+<!-- section: hero -->
 <section class="hero bp-grid">
   <div class="wrap hero-in">
     <div>
@@ -89,8 +101,9 @@
     </div>
   </div>
 </section>
+<!-- /section: hero -->
 
-<!-- ===================== 2 · HOW TO REQUEST ===================== -->
+<!-- section: how -->
 <section class="section band" id="how">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -116,8 +129,9 @@
     </div>
   </div>
 </section>
+<!-- /section: how -->
 
-<!-- ===================== 3 · PLAIN ENGLISH ===================== -->
+<!-- section: plain -->
 <section class="section">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -140,8 +154,9 @@
     </div>
   </div>
 </section>
+<!-- /section: plain -->
 
-<!-- ===================== 4 · WHERE TO REACH US ===================== -->
+<!-- section: contact -->
 <section class="section band">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -170,25 +185,23 @@
     <p class="fine mt-xl reveal">Both links live on masteryforgecrafts.com — the same Shopify store that handles checkout and your order confirmation.</p>
   </div>
 </section>
+<!-- /section: contact -->
 
-<!-- ===================== 5 · FINAL CTA (dark) ===================== -->
+<!-- section: final-cta -->
 <section class="final">
   <div class="wrap final-in">
-    <div>
-      <p class="eyebrow">Covered either way</p>
-      <h2>500+ metal build plans — <span class="price-now">$37</span>.<br>Guaranteed for 30 days.</h2>
-      <p class="lede mt-lg">Download everything, judge the sheets at the bench, and let the guarantee do its job if we don't do ours.</p>
-      <p class="microtrust">Instant download · Lifetime updates · 30-day money-back guarantee</p>
-    </div>
-    <div>
-      <a class="btn btn-ember btn-lg" href="https://masteryforgecrafts.com/cart/58091624431919:1">Get the Metal Plans — $37</a>
-    </div>
+    <p class="eyebrow">Covered either way</p>
+    <h2>500+ metal build plans — <span class="price-now">$37</span>. Guaranteed for 30 days.</h2>
+    <p class="lede mt-lg">Download everything, judge the sheets at the bench, and let the guarantee do its job if we don't do ours.</p>
+    <a class="btn btn-ember btn-lg" href="https://masteryforgecrafts.com/cart/58091624431919:1">Get the Metal Plans — $37</a>
+    <p class="microtrust">Instant download · Lifetime updates · 30-day money-back guarantee</p>
   </div>
 </section>
+<!-- /section: final-cta -->
 
 </main>
 
-<!-- ===================== FOOTER ===================== -->
+<!-- section: site-footer -->
 <footer class="footer">
   <div class="wrap">
     <div class="footer-in">
@@ -197,7 +210,7 @@
         <p class="fine mt-lg">Dimensioned project files for people who build. Designed on paper, proven at the bench.</p>
       </div>
       <nav aria-label="Shop">
-        <h3>Shop</h3>
+        <h2>Shop</h2>
         <ul>
           <li><a href="index.html">Metal Plans</a></li>
           <li><a href="products/metal-cut-file-vault.html">Cut-File Vault</a></li>
@@ -205,15 +218,16 @@
         </ul>
       </nav>
       <nav aria-label="Support">
-        <h3>Support</h3>
+        <h2>Support</h2>
         <ul>
           <li><a href="free-sample.html">Free sample plan</a></li>
           <li><a href="guarantee.html">30-day guarantee</a></li>
           <li><a href="faq.html">FAQ</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
         </ul>
       </nav>
       <nav aria-label="Legal">
-        <h3>Legal</h3>
+        <h2>Legal</h2>
         <ul>
           <li><a href="legal/privacy.html">Privacy</a></li>
           <li><a href="legal/terms.html">Terms</a></li>
@@ -227,6 +241,7 @@
     </div>
   </div>
 </footer>
+<!-- /section: site-footer -->
 
 </body>
 </html>

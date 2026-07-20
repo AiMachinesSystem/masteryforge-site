@@ -26,9 +26,18 @@
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/site.css">
 <script src="assets/js/site.js" defer></script>
+<script type="speculationrules">
+{
+  "prerender": [
+    { "where": { "href_matches": "/*.html" }, "eagerness": "moderate" }
+  ]
+}
+</script>
 </head>
-<body>
+<body class="p-404">
 <a class="skip" href="#main">Skip to content</a>
+
+<!-- section: site-header -->
 <header class="hdr">
   <div class="wrap hdr-in">
     <a class="brand" href="index.html" aria-label="MasteryForge Crafts — home"><span class="notch" aria-hidden="true"></span>MasteryForge</a>
@@ -43,8 +52,11 @@
     </nav>
   </div>
 </header>
+<!-- /section: site-header -->
 
 <main id="main">
+
+<!-- section: error -->
 <section class="section bp-grid">
   <div class="wrap center">
     <p class="eyebrow" style="align-items:center">Error 404 · off the cut list</p>
@@ -63,8 +75,11 @@
     </ul>
   </div>
 </section>
+<!-- /section: error -->
+
 </main>
 
+<!-- section: site-footer -->
 <footer class="footer">
   <div class="wrap">
     <div class="footer-in">
@@ -73,7 +88,7 @@
         <p class="fine mt-lg">Dimensioned project files for people who build. Designed on paper, proven at the bench.</p>
       </div>
       <nav aria-label="Shop">
-        <h3>Shop</h3>
+        <h2>Shop</h2>
         <ul>
           <li><a href="index.html">Metal Plans</a></li>
           <li><a href="products/metal-cut-file-vault.html">Cut-File Vault</a></li>
@@ -81,15 +96,16 @@
         </ul>
       </nav>
       <nav aria-label="Support">
-        <h3>Support</h3>
+        <h2>Support</h2>
         <ul>
           <li><a href="free-sample.html">Free sample plan</a></li>
           <li><a href="guarantee.html">30-day guarantee</a></li>
           <li><a href="faq.html">FAQ</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
         </ul>
       </nav>
       <nav aria-label="Legal">
-        <h3>Legal</h3>
+        <h2>Legal</h2>
         <ul>
           <li><a href="legal/privacy.html">Privacy</a></li>
           <li><a href="legal/terms.html">Terms</a></li>
@@ -103,5 +119,7 @@
     </div>
   </div>
 </footer>
+<!-- /section: site-footer -->
+
 </body>
 </html>

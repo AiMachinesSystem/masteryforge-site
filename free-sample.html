@@ -27,20 +27,32 @@
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/site.css">
 <script src="assets/js/site.js" defer></script>
+<script type="speculationrules">
+{
+  "prerender": [
+    { "where": { "href_matches": "/*.html" }, "eagerness": "moderate" }
+  ]
+}
+</script>
 
 <style>
-/* Page-scoped additions (.p-fs) — reported to QA, no shared files touched */
-.p-fs .hero-in{padding-block:clamp(2.4rem,6vw,3.8rem)}
-.p-fs .nav a[aria-current="page"]{color:var(--ember2);box-shadow:inset 0 -2px 0 var(--ember2)}
+/* Page-scoped additions (.p-free) — reported to QA, no shared files touched */
+.p-free .hero-in{padding-block:clamp(2.4rem,6vw,3.8rem)}
+.p-free .nav a[aria-current="page"]{color:var(--ember2);box-shadow:inset 0 -2px 0 var(--ember2)}
+/* Final CTA (cta25 rhythm): single centered narrow column */
+.p-free .final-in{display:block;max-width:32rem;margin-inline:auto;text-align:center}
+.p-free .final .eyebrow{align-items:center}
+.p-free .final .btn{margin-top:1.4rem}
+.p-free .final .tlink{display:inline-block;margin-top:1.2rem}
 /* .tlink default (--steel) fails AA on dark --deep: swap to approved dark-surface text color */
-.p-fs .final .tlink{color:var(--deep-text);border-color:var(--deep-text)}
-.p-fs .final .tlink:hover{color:var(--ember);border-color:var(--ember)}
+.p-free .final .tlink{color:var(--deep-text);border-color:var(--deep-text)}
+.p-free .final .tlink:hover{color:var(--ember);border-color:var(--ember)}
 </style>
 </head>
-<body class="p-fs">
+<body class="p-free has-stickybar">
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- ===================== HEADER ===================== -->
+<!-- section: site-header -->
 <header class="hdr">
   <div class="wrap hdr-in">
     <a class="brand" href="index.html" aria-label="MasteryForge Crafts — home"><span class="notch" aria-hidden="true"></span>MasteryForge</a>
@@ -55,10 +67,11 @@
     </nav>
   </div>
 </header>
+<!-- /section: site-header -->
 
 <main id="main">
 
-<!-- ===================== 1 · HERO (compact) ===================== -->
+<!-- section: hero -->
 <section class="hero bp-grid">
   <div class="wrap hero-in">
     <div>
@@ -104,8 +117,9 @@
     </figure>
   </div>
 </section>
+<!-- /section: hero -->
 
-<!-- ===================== 2 · INSIDE THE PDF ===================== -->
+<!-- section: inside -->
 <section class="section" id="inside">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -181,8 +195,9 @@
     </div>
   </div>
 </section>
+<!-- /section: inside -->
 
-<!-- ===================== 3 · MEDIA BAND ===================== -->
+<!-- section: media -->
 <section class="section band">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -200,26 +215,24 @@
     </figure>
   </div>
 </section>
+<!-- /section: media -->
 
-<!-- ===================== 4 · READY FOR MORE (dark final) ===================== -->
+<!-- section: final-cta -->
 <section class="final">
   <div class="wrap final-in">
-    <div>
-      <p class="eyebrow">Ready for more?</p>
-      <h2>500+ metal plans.<br>Same standard. <span class="price-now">$37</span>.</h2>
-      <p class="lede mt-lg">The Metalworking Project Plans: 500+ step-by-step build plans in PDF — checked dimensions, complete cut lists and ordered assembly steps. Instant download, yours for life. This fire pit is Starter Plan 01. The steel coffee table is Starter Plan 02.</p>
-      <p class="microtrust">Instant download · Lifetime updates · 30-day money-back guarantee</p>
-    </div>
-    <div>
-      <a class="btn btn-ember btn-lg" href="https://masteryforgecrafts.com/cart/58091624431919:1">Get the Metal Plans — $37</a>
-      <p class="mt-lg mb-0"><a class="tlink" href="index.html">Read the Metal Plans offer first</a></p>
-    </div>
+    <p class="eyebrow">Ready for more?</p>
+    <h2>500+ metal plans. Same standard. <span class="price-now">$37</span>.</h2>
+    <p class="lede mt-lg">The Metalworking Project Plans: 500+ step-by-step build plans in PDF — checked dimensions, complete cut lists and ordered assembly steps. Instant download, yours for life. This fire pit is Starter Plan 01. The steel coffee table is Starter Plan 02.</p>
+    <a class="btn btn-ember btn-lg" href="https://masteryforgecrafts.com/cart/58091624431919:1">Get the Metal Plans — $37</a>
+    <p class="microtrust">Instant download · Lifetime updates · 30-day money-back guarantee</p>
+    <p class="mb-0"><a class="tlink" href="index.html">Read the Metal Plans offer first</a></p>
   </div>
 </section>
+<!-- /section: final-cta -->
 
 </main>
 
-<!-- ===================== FOOTER ===================== -->
+<!-- section: site-footer -->
 <footer class="footer">
   <div class="wrap">
     <div class="footer-in">
@@ -228,7 +241,7 @@
         <p class="fine mt-lg">Dimensioned project files for people who build. Designed on paper, proven at the bench.</p>
       </div>
       <nav aria-label="Shop">
-        <h3>Shop</h3>
+        <h2>Shop</h2>
         <ul>
           <li><a href="index.html">Metal Plans</a></li>
           <li><a href="products/metal-cut-file-vault.html">Cut-File Vault</a></li>
@@ -236,15 +249,16 @@
         </ul>
       </nav>
       <nav aria-label="Support">
-        <h3>Support</h3>
+        <h2>Support</h2>
         <ul>
           <li><a href="free-sample.html">Free sample plan</a></li>
           <li><a href="guarantee.html">30-day guarantee</a></li>
           <li><a href="faq.html">FAQ</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
         </ul>
       </nav>
       <nav aria-label="Legal">
-        <h3>Legal</h3>
+        <h2>Legal</h2>
         <ul>
           <li><a href="legal/privacy.html">Privacy</a></li>
           <li><a href="legal/terms.html">Terms</a></li>
@@ -258,12 +272,14 @@
     </div>
   </div>
 </footer>
+<!-- /section: site-footer -->
 
-<!-- Sticky download bar (mobile, appears after 60% scroll) -->
+<!-- section: sticky-cta -->
 <div class="stickybar" role="complementary" aria-label="Free download">
   <span class="sb-price">FREE · PDF</span>
   <a class="btn btn-ember btn-sm" href="assets/downloads/free-sample-plan.pdf" download>Download the Plan</a>
 </div>
+<!-- /section: sticky-cta -->
 
 </body>
 </html>

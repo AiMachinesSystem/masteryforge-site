@@ -27,23 +27,30 @@
 <link rel="stylesheet" href="../assets/css/tokens.css">
 <link rel="stylesheet" href="../assets/css/site.css">
 <script src="../assets/js/site.js" defer></script>
+<script type="speculationrules">
+{
+  "prerender": [
+    { "where": { "href_matches": "/*.html" }, "eagerness": "moderate" }
+  ]
+}
+</script>
 <style>
-/* Page-scoped legal styles — prefix leg-. Shared system lives in ../assets/css/site.css */
-.leg-doc{max-width:72ch}
-.leg-meta{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:1.4rem 0 0;padding:0}
-.leg-meta li{font-family:var(--mono);font-size:var(--fs-chip);letter-spacing:var(--ls-chip);text-transform:uppercase;color:var(--steel);border:1px solid var(--line);border-radius:var(--r-pill);padding:.4em 1em}
-.leg-doc h3{display:flex;gap:.7rem;align-items:baseline;margin:var(--sp-xl) 0 .8rem;padding-top:var(--sp-lg);border-top:1px solid var(--line)}
-.leg-no{font-family:var(--mono);font-size:var(--fs-micro);letter-spacing:var(--ls-chip);color:var(--steel);flex:none}
-.leg-doc p,.leg-doc li{max-width:68ch}
-.leg-list{margin:.4rem 0 1rem;padding-left:1.2em}
-.leg-list li{margin:.45rem 0}
-.leg-xlinks .chip{text-decoration:none}
+/* Page-scoped legal styles — prefix leg-, scoped under body class. Shared system lives in ../assets/css/site.css */
+.p-legal .leg-doc{max-width:72ch}
+.p-legal .leg-meta{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:1.4rem 0 0;padding:0}
+.p-legal .leg-meta li{font-family:var(--mono);font-size:var(--fs-chip);letter-spacing:var(--ls-chip);text-transform:uppercase;color:var(--steel);border:1px solid var(--line);border-radius:var(--r-pill);padding:.4em 1em}
+.p-legal .leg-doc h2{display:flex;gap:.7rem;align-items:baseline;margin:var(--sp-xl) 0 .8rem;padding-top:var(--sp-lg);border-top:1px solid var(--line);font-size:var(--fs-h3);letter-spacing:var(--ls-h3)}
+.p-legal .leg-no{font-family:var(--mono);font-size:var(--fs-micro);letter-spacing:var(--ls-chip);color:var(--steel);flex:none}
+.p-legal .leg-doc p,.p-legal .leg-doc li{max-width:68ch}
+.p-legal .leg-list{margin:.4rem 0 1rem;padding-left:1.2em}
+.p-legal .leg-list li{margin:.45rem 0}
+.p-legal .leg-xlinks .chip{text-decoration:none}
 </style>
 </head>
-<body>
+<body class="p-legal">
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- ===================== HEADER ===================== -->
+<!-- section: site-header -->
 <header class="hdr">
   <div class="wrap hdr-in">
     <a class="brand" href="../index.html" aria-label="MasteryForge Crafts — home"><span class="notch" aria-hidden="true"></span>MasteryForge</a>
@@ -58,10 +65,11 @@
     </nav>
   </div>
 </header>
+<!-- /section: site-header -->
 
 <main id="main">
 
-<!-- ===================== TERMS & FILE LICENSE ===================== -->
+<!-- section: doc -->
 <section class="section bp-grid">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -76,10 +84,10 @@
     </div>
 
     <div class="leg-doc reveal">
-      <h3><span class="leg-no">01</span>What you are buying</h3>
+      <h2><span class="leg-no">01</span>What you are buying</h2>
       <p>Every MasteryForge product is a digital download — cut files and build plans in DXF, SVG or PDF, depending on the product. Nothing physical ships. You get instant access after checkout and lifetime re-downloads, including every future update to the library you bought.</p>
 
-      <h3><span class="leg-no">02</span>The license included with every purchase</h3>
+      <h2><span class="leg-no">02</span>The license included with every purchase</h2>
       <p>Every purchase includes a <strong>personal-use license</strong>. In plain terms, you may:</p>
       <ul class="leg-list">
         <li>Build as many pieces as you like, for yourself.</li>
@@ -89,11 +97,11 @@
       </ul>
       <p>One purchase, one maker. Passing the files themselves around is the one thing this license does not cover — see section 04.</p>
 
-      <h3><span class="leg-no">03</span>Selling what you make</h3>
+      <h2><span class="leg-no">03</span>Selling what you make</h2>
       <p>Selling finished pieces made from our files requires the <strong>Commercial License</strong>. It costs $15 once, covers one maker or a shop of up to two people, and lasts for life. It licenses the <em>finished physical pieces</em> you produce, never the files themselves.</p>
       <p>Full details: <a class="tlink" href="../products/commercial-license.html">Commercial License — Sell What You Make</a>.</p>
 
-      <h3><span class="leg-no">04</span>What is never allowed</h3>
+      <h2><span class="leg-no">04</span>What is never allowed</h2>
       <p>These hold with or without a Commercial License:</p>
       <ul class="leg-list">
         <li>Do not share, resell, redistribute or give away the digital files — in any form, original or modified, paid or free.</li>
@@ -102,7 +110,7 @@
       </ul>
       <p>If someone you know wants the files, send them to the store. That is the honest route — and it is what keeps the libraries growing and updated for everyone.</p>
 
-      <h3><span class="leg-no">05</span>"As measured" — check before you cut</h3>
+      <h2><span class="leg-no">05</span>"As measured" — check before you cut</h2>
       <p>Every plan is drafted, dimensioned and checked by a human before it goes in the vault, with dimensions in inches and centimeters. Even so, files are provided <strong>as measured</strong> — not as a guarantee of fit for your specific machine, material, kerf or setup. Before you cut stock you paid for:</p>
       <ul class="leg-list">
         <li>Test-cut in cardboard, foam or scrap first.</li>
@@ -111,22 +119,23 @@
       </ul>
       <p>A two-minute check beats a ruined sheet of steel. That was true in every shop that ever existed.</p>
 
-      <h3><span class="leg-no">06</span>Workshop safety</h3>
+      <h2><span class="leg-no">06</span>Workshop safety</h2>
       <p>Plans do not weld for you. You are responsible for working safely: eye and ear protection, ventilation, machine guards, and the right tool for the operation. If a step is beyond your experience, learn it first or ask someone who knows it. We write the plans; shop discipline is yours.</p>
 
-      <h3><span class="leg-no">07</span>This website</h3>
+      <h2><span class="leg-no">07</span>This website</h2>
       <p>This site is provided as is. We work to keep every fact on it accurate — prices, file counts, formats — but the linked store is the final word at checkout. If anything here is ever out of date, the store listing wins, and we fix the page.</p>
 
-      <h3><span class="leg-no">08</span>Refunds</h3>
+      <h2><span class="leg-no">08</span>Refunds</h2>
       <p>Every purchase is covered by the 30-day money-back guarantee: email within 30 days, full refund, no hostile questions. The details live on their own page: <a class="tlink" href="refunds.html">Refund Policy</a>.</p>
 
-      <h3><span class="leg-no">09</span>Changes and contact</h3>
+      <h2><span class="leg-no">09</span>Changes and contact</h2>
       <p>These terms can change; the date at the top tells you when they last did. A purchase made after a change is covered by the terms in force that day. Questions: reply to your order confirmation email — a human reads it.</p>
     </div>
   </div>
 </section>
+<!-- /section: doc -->
 
-<!-- ===================== CROSS-LINKS ===================== -->
+<!-- section: cross-links -->
 <section class="section band">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -144,10 +153,11 @@
     </nav>
   </div>
 </section>
+<!-- /section: cross-links -->
 
 </main>
 
-<!-- ===================== FOOTER ===================== -->
+<!-- section: site-footer -->
 <footer class="footer">
   <div class="wrap">
     <div class="footer-in">
@@ -156,7 +166,7 @@
         <p class="fine mt-lg">Dimensioned project files for people who build. Designed on paper, proven at the bench.</p>
       </div>
       <nav aria-label="Shop">
-        <h3>Shop</h3>
+        <h2>Shop</h2>
         <ul>
           <li><a href="../index.html">Metal Plans</a></li>
           <li><a href="../products/metal-cut-file-vault.html">Cut-File Vault</a></li>
@@ -164,15 +174,16 @@
         </ul>
       </nav>
       <nav aria-label="Support">
-        <h3>Support</h3>
+        <h2>Support</h2>
         <ul>
           <li><a href="../free-sample.html">Free sample plan</a></li>
           <li><a href="../guarantee.html">30-day guarantee</a></li>
           <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="../accessibility.html">Accessibility</a></li>
         </ul>
       </nav>
       <nav aria-label="Legal">
-        <h3>Legal</h3>
+        <h2>Legal</h2>
         <ul>
           <li><a href="privacy.html">Privacy</a></li>
           <li><a href="terms.html">Terms</a></li>
@@ -186,6 +197,7 @@
     </div>
   </div>
 </footer>
+<!-- /section: site-footer -->
 
 </body>
 </html>

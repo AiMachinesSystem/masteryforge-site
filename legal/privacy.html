@@ -27,23 +27,30 @@
 <link rel="stylesheet" href="../assets/css/tokens.css">
 <link rel="stylesheet" href="../assets/css/site.css">
 <script src="../assets/js/site.js" defer></script>
+<script type="speculationrules">
+{
+  "prerender": [
+    { "where": { "href_matches": "/*.html" }, "eagerness": "moderate" }
+  ]
+}
+</script>
 <style>
-/* Page-scoped legal styles — prefix leg-. Shared system lives in ../assets/css/site.css */
-.leg-doc{max-width:72ch}
-.leg-meta{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:1.4rem 0 0;padding:0}
-.leg-meta li{font-family:var(--mono);font-size:var(--fs-chip);letter-spacing:var(--ls-chip);text-transform:uppercase;color:var(--steel);border:1px solid var(--line);border-radius:var(--r-pill);padding:.4em 1em}
-.leg-doc h3{display:flex;gap:.7rem;align-items:baseline;margin:var(--sp-xl) 0 .8rem;padding-top:var(--sp-lg);border-top:1px solid var(--line)}
-.leg-no{font-family:var(--mono);font-size:var(--fs-micro);letter-spacing:var(--ls-chip);color:var(--steel);flex:none}
-.leg-doc p,.leg-doc li{max-width:68ch}
-.leg-list{margin:.4rem 0 1rem;padding-left:1.2em}
-.leg-list li{margin:.45rem 0}
-.leg-xlinks .chip{text-decoration:none}
+/* Page-scoped legal styles — prefix leg-, scoped under body class. Shared system lives in ../assets/css/site.css */
+.p-legal .leg-doc{max-width:72ch}
+.p-legal .leg-meta{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:1.4rem 0 0;padding:0}
+.p-legal .leg-meta li{font-family:var(--mono);font-size:var(--fs-chip);letter-spacing:var(--ls-chip);text-transform:uppercase;color:var(--steel);border:1px solid var(--line);border-radius:var(--r-pill);padding:.4em 1em}
+.p-legal .leg-doc h2{display:flex;gap:.7rem;align-items:baseline;margin:var(--sp-xl) 0 .8rem;padding-top:var(--sp-lg);border-top:1px solid var(--line);font-size:var(--fs-h3);letter-spacing:var(--ls-h3)}
+.p-legal .leg-no{font-family:var(--mono);font-size:var(--fs-micro);letter-spacing:var(--ls-chip);color:var(--steel);flex:none}
+.p-legal .leg-doc p,.p-legal .leg-doc li{max-width:68ch}
+.p-legal .leg-list{margin:.4rem 0 1rem;padding-left:1.2em}
+.p-legal .leg-list li{margin:.45rem 0}
+.p-legal .leg-xlinks .chip{text-decoration:none}
 </style>
 </head>
-<body>
+<body class="p-legal">
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- ===================== HEADER ===================== -->
+<!-- section: site-header -->
 <header class="hdr">
   <div class="wrap hdr-in">
     <a class="brand" href="../index.html" aria-label="MasteryForge Crafts — home"><span class="notch" aria-hidden="true"></span>MasteryForge</a>
@@ -58,10 +65,11 @@
     </nav>
   </div>
 </header>
+<!-- /section: site-header -->
 
 <main id="main">
 
-<!-- ===================== PRIVACY POLICY ===================== -->
+<!-- section: doc -->
 <section class="section bp-grid">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -76,10 +84,10 @@
     </div>
 
     <div class="leg-doc reveal">
-      <h3><span class="leg-no">01</span>The short version</h3>
+      <h2><span class="leg-no">01</span>The short version</h2>
       <p>This site is a folder of static files — HTML, CSS and a few kilobytes of JavaScript, served as-is. There is no account system, no database of visitors and nothing on these pages that identifies you. You can read every word on this site without giving us anything at all.</p>
 
-      <h3><span class="leg-no">02</span>What this site collects</h3>
+      <h2><span class="leg-no">02</span>What this site collects</h2>
       <p>Nothing. To be specific:</p>
       <ul class="leg-list">
         <li><strong>No cookies.</strong> These pages set none and read none — which is why you see no cookie banner.</li>
@@ -88,26 +96,27 @@
         <li><strong>No fingerprinting.</strong> The only JavaScript on these pages fades sections in as you scroll and shows a buy bar on small screens. It talks to nobody.</li>
       </ul>
 
-      <h3><span class="leg-no">03</span>Where your purchase data goes</h3>
+      <h2><span class="leg-no">03</span>Where your purchase data goes</h2>
       <p>When you click a buy button you leave this site and land on the checkout of our Shopify store. Everything you enter there — name, address, payment details — is collected and processed by Shopify under its own privacy policy, not this page. We never see your card number.</p>
       <p>Read the policy that applies at checkout: <a class="tlink" href="https://masteryforgecrafts.com/policies/privacy-policy">Shopify store privacy policy</a>.</p>
 
-      <h3><span class="leg-no">04</span>If you email us</h3>
+      <h2><span class="leg-no">04</span>If you email us</h2>
       <p>If you write to us — for a refund, a question, anything — we of course receive your email address and what you wrote. We use it only to answer you. There is no newsletter you didn't ask for and no list that gets sold or shared. The fastest route is replying to your order confirmation email; it reaches a human.</p>
 
-      <h3><span class="leg-no">05</span>Server logs</h3>
+      <h2><span class="leg-no">05</span>Server logs</h2>
       <p>Like almost every website, the host that serves these files may keep standard technical logs — IP address, browser type, page requested, time of day. Those logs keep the server running and secure. They are not tied to any profile, and we do not use them to track, follow or re-identify anyone.</p>
 
-      <h3><span class="leg-no">06</span>Changes to this page</h3>
+      <h2><span class="leg-no">06</span>Changes to this page</h2>
       <p>If this policy changes, the date at the top changes. The principle will not: this site stays a static, no-collection website.</p>
 
-      <h3><span class="leg-no">07</span>Questions</h3>
+      <h2><span class="leg-no">07</span>Questions</h2>
       <p>Reply to your order confirmation email, or write to the store through its contact channels. A human reads it — usually the same one who dimensioned the plans.</p>
     </div>
   </div>
 </section>
+<!-- /section: doc -->
 
-<!-- ===================== CROSS-LINKS ===================== -->
+<!-- section: cross-links -->
 <section class="section band">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -124,10 +133,11 @@
     </nav>
   </div>
 </section>
+<!-- /section: cross-links -->
 
 </main>
 
-<!-- ===================== FOOTER ===================== -->
+<!-- section: site-footer -->
 <footer class="footer">
   <div class="wrap">
     <div class="footer-in">
@@ -136,7 +146,7 @@
         <p class="fine mt-lg">Dimensioned project files for people who build. Designed on paper, proven at the bench.</p>
       </div>
       <nav aria-label="Shop">
-        <h3>Shop</h3>
+        <h2>Shop</h2>
         <ul>
           <li><a href="../index.html">Metal Plans</a></li>
           <li><a href="../products/metal-cut-file-vault.html">Cut-File Vault</a></li>
@@ -144,15 +154,16 @@
         </ul>
       </nav>
       <nav aria-label="Support">
-        <h3>Support</h3>
+        <h2>Support</h2>
         <ul>
           <li><a href="../free-sample.html">Free sample plan</a></li>
           <li><a href="../guarantee.html">30-day guarantee</a></li>
           <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="../accessibility.html">Accessibility</a></li>
         </ul>
       </nav>
       <nav aria-label="Legal">
-        <h3>Legal</h3>
+        <h2>Legal</h2>
         <ul>
           <li><a href="privacy.html">Privacy</a></li>
           <li><a href="terms.html">Terms</a></li>
@@ -166,6 +177,7 @@
     </div>
   </div>
 </footer>
+<!-- /section: site-footer -->
 
 </body>
 </html>

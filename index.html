@@ -28,27 +28,42 @@
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/site.css">
 <script src="assets/js/site.js" defer></script>
+<script type="speculationrules">
+{
+  "prerender": [
+    { "where": { "href_matches": "/*.html" }, "eagerness": "moderate" }
+  ]
+}
+</script>
 
-<!-- Page-scoped styles (v2 metal-first home — prefix .mfx-; shared CSS untouched) -->
+<!-- Page-scoped styles (v3 home — scoped under .p-home per V3_BLUEPRINT §7.2; tokens.css/site.css untouched) -->
 <style>
-.mfx-heroimg img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
-.mfx-proof{display:grid;gap:var(--sp-lg)}
-@media(min-width:820px){.mfx-proof{grid-template-columns:1.05fr .95fr;align-items:center}}
-.mfx-shot{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--r-figure);overflow:hidden}
-.mfx-shot img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
-.mfx-shot figcaption{font-family:var(--mono);font-size:var(--fs-micro);letter-spacing:.06em;color:var(--muted);padding:.7rem .9rem;border-top:1px solid var(--line)}
-.mfx-shot--wide img{aspect-ratio:4/3}
-.mfx-builds{display:grid;gap:var(--sp-lg)}
-@media(min-width:820px){.mfx-builds{grid-template-columns:repeat(3,1fr)}}
-.mfx-pillars{display:grid;gap:var(--sp-lg)}
-@media(min-width:820px){.mfx-pillars{grid-template-columns:repeat(3,1fr);align-items:stretch}}
-.mfx-pillars .card h3{margin-bottom:.6rem}
-.mfx-pillars .card p{margin:0}
-.mfx-num{font-family:var(--mono);font-size:var(--fs-micro);letter-spacing:.14em;color:var(--steel);display:block;margin-bottom:.6rem}
-.mfx-pair{display:grid;gap:var(--sp-lg)}
-@media(min-width:820px){.mfx-pair{grid-template-columns:.9fr 1.1fr;align-items:center}}
-.mfx-pair img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border:1px solid var(--line);border-radius:var(--r-figure)}
-.mfx-mid{display:flex;flex-direction:column;align-items:center;gap:.4rem}
+.p-home .mfx-heroimg img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
+.p-home .mfx-center{max-width:32rem;margin-inline:auto;text-align:center}
+.p-home .mfx-center .eyebrow{align-items:center}
+.p-home .mfx-proof{display:grid;gap:var(--sp-lg)}
+@media(min-width:820px){.p-home .mfx-proof{grid-template-columns:1.05fr .95fr;align-items:center}}
+.p-home .mfx-shot{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--r-figure);overflow:hidden}
+.p-home .mfx-shot img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
+.p-home .mfx-shot figcaption{font-family:var(--mono);font-size:var(--fs-micro);letter-spacing:.06em;color:var(--muted);padding:.7rem .9rem;border-top:1px solid var(--line)}
+.p-home .mfx-shot--wide img{aspect-ratio:4/3}
+.p-home .mfx-builds{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--sp-lg)}
+@media(min-width:1024px){.p-home .mfx-builds{grid-template-columns:repeat(3,1fr)}}
+.p-home .mfx-pillars{display:grid;gap:var(--sp-lg)}
+@media(min-width:820px){.p-home .mfx-pillars{grid-template-columns:repeat(3,1fr);align-items:stretch}}
+.p-home .mfx-pillars .card h3{margin-bottom:.6rem}
+.p-home .mfx-pillars .card p{margin:0}
+.p-home .mfx-num{font-family:var(--mono);font-size:var(--fs-micro);letter-spacing:.14em;color:var(--steel);display:block;margin-bottom:.6rem}
+.p-home .mfx-pair{display:grid;gap:var(--sp-lg)}
+@media(min-width:820px){.p-home .mfx-pair{grid-template-columns:.9fr 1.1fr;align-items:center}}
+.p-home .mfx-pair img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border:1px solid var(--line);border-radius:var(--r-figure)}
+.p-home .mfx-mid{display:flex;flex-direction:column;align-items:center;gap:.4rem}
+/* Final CTA — cta25 rhythm: single centered narrow column on --deep (V3_BLUEPRINT §2.1d) */
+.p-home .final-in{display:block;max-width:32rem;margin-inline:auto;text-align:center}
+.p-home .final .eyebrow{align-items:center}
+.p-home .final .btn{margin-top:1.2rem}
+/* Video — overlay tag pinned to the lower half: the shipped clip carries burn-in text at the top */
+.p-home .video-tag{top:auto;bottom:.7rem}
 </style>
 
 <script type="application/ld+json">
@@ -71,10 +86,10 @@
 }
 </script>
 </head>
-<body>
+<body class="p-home has-stickybar">
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- ===================== HEADER ===================== -->
+<!-- section: site-header -->
 <header class="hdr">
   <div class="wrap hdr-in">
     <a class="brand" href="index.html" aria-label="MasteryForge Crafts — home"><span class="notch" aria-hidden="true"></span>MasteryForge</a>
@@ -89,10 +104,11 @@
     </nav>
   </div>
 </header>
+<!-- /section: site-header -->
 
 <main id="main">
 
-<!-- ===================== 1 · HERO — METAL PLANS $37 ===================== -->
+<!-- section: hero -->
 <section class="hero bp-grid">
   <div class="wrap hero-in">
     <div>
@@ -116,8 +132,9 @@
     </figure>
   </div>
 </section>
+<!-- /section: hero -->
 
-<!-- ===================== 2 · WHAT'S INSIDE + BUY #buy ===================== -->
+<!-- section: whats-inside -->
 <section class="section band" id="buy">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -161,11 +178,12 @@
     </div>
   </div>
 </section>
+<!-- /section: whats-inside -->
 
-<!-- ===================== 3 · PLAN-PROOF ===================== -->
+<!-- section: plan-proof -->
 <section class="section">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head mfx-center reveal">
       <p class="eyebrow eyebrow--steel">Plan proof</p>
       <h2>A real plan sheet, not a thumbnail</h2>
       <p class="lede">Every build plan ships as a technical page: orthographic views, dual-unit dimensions, a complete cut list and ordered assembly steps. This is the standard across the library.</p>
@@ -223,11 +241,12 @@
     </div>
   </div>
 </section>
+<!-- /section: plan-proof -->
 
-<!-- ===================== 4 · BUILT FROM THESE SHEETS ===================== -->
+<!-- section: builds -->
 <section class="section band">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="sec-head mfx-center reveal">
       <p class="eyebrow eyebrow--steel">Built from these sheets</p>
       <h2>Plans in, steel out</h2>
       <p class="lede">Every build below started as a sheet like the one above: views, dimensions, cut list, steps. That is the whole trick — there isn't one.</p>
@@ -272,8 +291,33 @@
     </div>
   </div>
 </section>
+<!-- /section: builds -->
 
-<!-- ===================== 5 · 3 PILLARS ===================== -->
+<!-- section: video -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow eyebrow--steel">Shop footage · real build</p>
+      <h2>Watch a sheet become steel</h2>
+      <p class="lede">No voice-over, no music bed: just the bench, the plan and the cut. This is the same sheet standard you saw above.</p>
+    </div>
+    <figure class="video-frame reveal">
+      <div class="video-shell">
+        <video preload="none" poster="assets/img/video-poster-1280.webp" muted playsinline controls
+               width="1280" height="720"
+               aria-label="Shop footage: cutting and welding a steel project built from a MasteryForge plan sheet">
+          <source src="assets/video/build-hero-720.mp4" type="video/mp4">
+          Sorry, your browser does not support embedded video — the build photos above show the same project.
+        </video>
+        <span class="video-tag" aria-hidden="true">SHOP FOOTAGE · REAL BUILD</span>
+      </div>
+      <figcaption>CUT · SQUARE · TACK · WELD — FILMED AT THE MASTERYFORGE BENCH</figcaption>
+    </figure>
+  </div>
+</section>
+<!-- /section: video -->
+
+<!-- section: pillars -->
 <section class="section">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -304,8 +348,25 @@
     </div>
   </div>
 </section>
+<!-- /section: pillars -->
 
-<!-- ===================== 6 · FREE SAMPLE ===================== -->
+<!-- section: stats -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow eyebrow--steel">The library in numbers</p>
+      <h2>Every number here is real</h2>
+    </div>
+    <div class="stats-strip reveal">
+      <div class="stat"><p class="stat-num">500+</p><span class="stat-label">Step-by-step build plans (PDF)</span></div>
+      <div class="stat"><p class="stat-num">2</p><span class="stat-label">Fully worked starter plans</span></div>
+      <div class="stat"><p class="stat-num">30</p><span class="stat-label">Day money-back guarantee</span></div>
+    </div>
+  </div>
+</section>
+<!-- /section: stats -->
+
+<!-- section: free-sample -->
 <section class="section band">
   <div class="wrap">
     <div class="grid2">
@@ -321,8 +382,9 @@
     </div>
   </div>
 </section>
+<!-- /section: free-sample -->
 
-<!-- ===================== 7 · COMPANION ===================== -->
+<!-- section: companion -->
 <section class="section">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -348,8 +410,9 @@
     </div>
   </div>
 </section>
+<!-- /section: companion -->
 
-<!-- ===================== 8 · TRUST ===================== -->
+<!-- section: trust -->
 <section class="section band">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -369,17 +432,65 @@
       </svg>
       <div class="reveal">
         <p class="lede">Email us within 30 days of purchase and you get a full refund. No hostile questions, no hoops.</p>
-        <div class="candor mt-lg">
+        <div class="reviews mt-lg">
           <h3>Reviews</h3>
-          <p>Real reviews land here after launch — no borrowed stars, no rented testimonials. When makers post photos of finished builds, you will see them on this page.</p>
+          <p class="reviews-note">Real reviews from real buyers — unedited. Collected on the MasteryForge store after verified purchases.</p>
+          <div class="reviews-avg">
+            <span class="stars" role="img" aria-label="Rated 5 out of 5">
+              <svg viewBox="0 0 110 20" width="110" height="20" aria-hidden="true">
+                <defs><clipPath id="st-avg"><rect x="0" y="0" width="110" height="20"/></clipPath></defs>
+                <g fill="var(--star)">
+                  <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/>
+                  <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z" transform="translate(22.5 0)"/>
+                  <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z" transform="translate(45 0)"/>
+                  <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z" transform="translate(67.5 0)"/>
+                  <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z" transform="translate(90 0)"/>
+                </g>
+                <g fill="var(--ember)" clip-path="url(#st-avg)">
+                  <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/>
+                  <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z" transform="translate(22.5 0)"/>
+                  <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z" transform="translate(45 0)"/>
+                  <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z" transform="translate(67.5 0)"/>
+                  <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z" transform="translate(90 0)"/>
+                </g>
+              </svg>
+            </span>
+            <span class="reviews-avg-num">5.0 out of 5 · 1 verified review</span>
+          </div>
+          <div class="review-grid">
+            <article class="review-card">
+              <span class="stars" role="img" aria-label="Rated 5 out of 5">
+                <svg viewBox="0 0 110 20" width="110" height="20" aria-hidden="true">
+                  <defs><clipPath id="st-r1"><rect x="0" y="0" width="110" height="20"/></clipPath></defs>
+                  <g fill="var(--star)">
+                    <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/>
+                    <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z" transform="translate(22.5 0)"/>
+                    <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z" transform="translate(45 0)"/>
+                    <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z" transform="translate(67.5 0)"/>
+                    <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z" transform="translate(90 0)"/>
+                  </g>
+                  <g fill="var(--ember)" clip-path="url(#st-r1)">
+                    <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/>
+                    <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z" transform="translate(22.5 0)"/>
+                    <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z" transform="translate(45 0)"/>
+                    <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z" transform="translate(67.5 0)"/>
+                    <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z" transform="translate(90 0)"/>
+                  </g>
+                </svg>
+              </span>
+              <p class="review-meta"><strong>John P</strong> · 2 weeks ago · Verified buyer</p>
+              <p class="review-text">"Great value for the price. The plans are well organized, easy to follow, and include useful details like measurements, cut lists, and project categories. Perfect if you want metalworking ideas for furniture, shop storage, carts, and garage builds without wasting time searching everywhere."</p>
+            </article>
+          </div>
         </div>
         <p class="founder mt-xl">MasteryForge is run by makers, not a content farm. Every plan in the library is drafted, dimensioned and checked by a human before it goes in the vault — the same standard you see in the free sample.<span class="who">— THE MASTERYFORGE WORKSHOP</span></p>
       </div>
     </div>
   </div>
 </section>
+<!-- /section: trust -->
 
-<!-- ===================== 9 · FAQ 7 ===================== -->
+<!-- section: faq -->
 <section class="section">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -418,24 +529,22 @@
     </div>
   </div>
 </section>
+<!-- /section: faq -->
 
-<!-- ===================== 10 · FINAL CTA (dark) ===================== -->
+<!-- section: final-cta -->
 <section class="final">
   <div class="wrap final-in">
-    <div>
-      <p class="eyebrow">Metalworking Project Plans</p>
-      <h2>500+ build plans.<br><span class="price-now">$37</span>, once.</h2>
-      <p class="microtrust">Instant download · Lifetime updates · 30-day money-back guarantee</p>
-    </div>
-    <div>
-      <a class="btn btn-ember btn-lg" href="https://masteryforgecrafts.com/cart/58091624431919:1">Get the Metal Plans — $37</a>
-    </div>
+    <p class="eyebrow">Metalworking Project Plans</p>
+    <h2>500+ build plans.<br><span class="price-now">$37</span>, once.</h2>
+    <a class="btn btn-ember btn-lg" href="https://masteryforgecrafts.com/cart/58091624431919:1">Get the Metal Plans — $37</a>
+    <p class="microtrust">Instant download · Lifetime updates · 30-day money-back guarantee</p>
   </div>
 </section>
+<!-- /section: final-cta -->
 
 </main>
 
-<!-- ===================== FOOTER ===================== -->
+<!-- section: site-footer -->
 <footer class="footer">
   <div class="wrap">
     <div class="footer-in">
@@ -444,7 +553,7 @@
         <p class="fine mt-lg">Dimensioned project files for people who build. Designed on paper, proven at the bench.</p>
       </div>
       <nav aria-label="Shop">
-        <h3>Shop</h3>
+        <h2>Shop</h2>
         <ul>
           <li><a href="index.html">Metal Plans</a></li>
           <li><a href="products/metal-cut-file-vault.html">Cut-File Vault</a></li>
@@ -452,15 +561,16 @@
         </ul>
       </nav>
       <nav aria-label="Support">
-        <h3>Support</h3>
+        <h2>Support</h2>
         <ul>
           <li><a href="free-sample.html">Free sample plan</a></li>
           <li><a href="guarantee.html">30-day guarantee</a></li>
           <li><a href="faq.html">FAQ</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
         </ul>
       </nav>
       <nav aria-label="Legal">
-        <h3>Legal</h3>
+        <h2>Legal</h2>
         <ul>
           <li><a href="legal/privacy.html">Privacy</a></li>
           <li><a href="legal/terms.html">Terms</a></li>
@@ -474,12 +584,14 @@
     </div>
   </div>
 </footer>
+<!-- /section: site-footer -->
 
-<!-- Sticky CTA bar (mobile, appears after 60% scroll) -->
+<!-- section: sticky-cta — mobile quick-buy bar, appears after 60% scroll (site.js) -->
 <div class="stickybar" role="complementary" aria-label="Quick buy">
   <span class="sb-price">$37</span>
   <a class="btn btn-ember btn-sm" href="https://masteryforgecrafts.com/cart/58091624431919:1">Get the Plans</a>
 </div>
+<!-- /section: sticky-cta -->
 
 </body>
 </html>
