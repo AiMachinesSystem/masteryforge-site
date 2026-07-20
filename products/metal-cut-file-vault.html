@@ -24,9 +24,15 @@
 
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="preload" href="../assets/fonts/oswald-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="../assets/img/cutfiles-hero-780.webp" fetchpriority="high">
 <link rel="stylesheet" href="../assets/css/tokens.css">
 <link rel="stylesheet" href="../assets/css/site.css">
 <script src="../assets/js/site.js" defer></script>
+
+<!-- Page-scoped styles (v2 metal-first — prefix .mfx-; shared CSS untouched) -->
+<style>
+.mfx-heroimg img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
+</style>
 
 <script type="application/ld+json">
 {
@@ -58,7 +64,7 @@
     <nav class="nav" aria-label="Main">
       <ul>
         <li><a href="../library.html">Library</a></li>
-        <li><a href="../index.html#offer">Bundle</a></li>
+        <li><a href="metal-cut-file-vault.html" aria-current="page">Cut Files</a></li>
         <li><a href="../free-sample.html">Free Sample</a></li>
         <li><a href="../guarantee.html">Guarantee</a></li>
         <li><a href="../faq.html">FAQ</a></li>
@@ -88,31 +94,13 @@
       <p class="microtrust">Instant download · Lifetime updates · 30-day money-back guarantee</p>
     </div>
 
-    <figure class="hero-figure bp-grid--soft" aria-label="Technical front view of a plasma-cut decorative panel with dimension lines">
-      <svg viewBox="0 0 640 480" width="640" height="480" role="img" aria-hidden="true">
-        <!-- ground baseline -->
-        <line x1="110" y1="392" x2="530" y2="392" stroke="var(--steel)" stroke-width="1" stroke-dasharray="4 5"/>
-        <!-- panel -->
-        <rect x="190" y="120" width="260" height="272" fill="none" stroke="var(--paper)" stroke-width="2.5"/>
-        <!-- cut pattern: center medallion + rails -->
-        <circle cx="320" cy="256" r="64" fill="none" stroke="var(--steel)" stroke-width="1.5"/>
-        <circle cx="320" cy="256" r="30" fill="none" stroke="var(--steel)" stroke-width="1.25"/>
-        <path d="M214 152 h212 M214 360 h212" stroke="var(--steel)" stroke-width="1.5"/>
-        <path d="M320 192 v-40 M320 320 v40 M256 256 h-42 M384 256 h42" stroke="var(--steel)" stroke-width="1.25"/>
-        <!-- kerf note ticks -->
-        <path d="M190 120 l-14 -14 M450 120 l14 -14" stroke="var(--steel)" stroke-width="1"/>
-        <!-- top dimension: 600 MM -->
-        <line x1="190" y1="76" x2="450" y2="76" stroke="var(--steel)" stroke-width="1"/>
-        <path d="M190 68 v16 M450 68 v16" stroke="var(--steel)" stroke-width="1"/>
-        <text x="320" y="62" text-anchor="middle" class="svg-dim">600 MM — 23.6 IN</text>
-        <!-- right dimension -->
-        <line x1="510" y1="120" x2="510" y2="392" stroke="var(--steel)" stroke-width="1"/>
-        <path d="M502 120 h16 M502 392 h16" stroke="var(--steel)" stroke-width="1"/>
-        <text x="530" y="260" text-anchor="middle" class="svg-dim" transform="rotate(90 530 260)">900 MM — 35.4 IN</text>
-        <!-- labels -->
-        <text x="320" y="452" text-anchor="middle" class="svg-label">GATE PANEL · FILE 0427 · DXF + SVG</text>
-        <text x="320" y="34" text-anchor="middle" class="svg-title">EVERY FILE MACHINE-READY</text>
-      </svg>
+    <figure class="hero-figure bp-grid--soft mfx-heroimg" aria-label="The Metal Cut-File Vault: 500+ machine-ready DXF and SVG files for plasma, laser and CNC">
+      <img src="../assets/img/cutfiles-hero-780.webp"
+           srcset="../assets/img/cutfiles-hero-390.webp 390w, ../assets/img/cutfiles-hero-780.webp 780w, ../assets/img/cutfiles-hero-1024.webp 1024w"
+           sizes="(max-width: 880px) 100vw, 460px"
+           width="780" height="780"
+           alt="The Metal Cut-File Vault — 500+ machine-ready DXF and SVG files for plasma, laser and CNC tables"
+           fetchpriority="high" decoding="async">
     </figure>
   </div>
 </section>
@@ -176,11 +164,11 @@
       <div class="card reveal">
         <h3>Metalworking Project Plans — $37</h3>
         <p>500+ step-by-step build plans on PDF: orthographic views, dual-unit dimensions, complete cut lists and ordered assembly steps. The vault cuts the parts; the plans build the projects.</p>
-        <p class="mt-lg"><a class="tlink" href="metalworking-project-plans.html">See Metalworking Project Plans</a></p>
+        <p class="mt-lg"><a class="tlink" href="../index.html">See Metalworking Project Plans</a></p>
       </div>
       <div class="callout reveal">
-        <p><strong>Included in the Whole Workshop</strong><br><span class="fine">This vault is part of the Whole Workshop bundle — 950+ designs across 4 crafts plus the Commercial License, $89 instead of $145.</span></p>
-        <a class="btn btn-ghost btn-sm" href="../index.html#offer">See the bundle offer</a>
+        <p><strong>Selling what you cut?</strong><br><span class="fine">The Commercial License ($15) covers lifetime resale rights on the finished pieces you make — one maker or shop up to 2 people, in plain English.</span></p>
+        <a class="btn btn-ghost btn-sm" href="commercial-license.html">Read the license — $15</a>
       </div>
     </div>
   </div>
@@ -224,10 +212,9 @@
       <nav aria-label="Shop">
         <h3>Shop</h3>
         <ul>
-          <li><a href="../index.html#offer">Whole Workshop Bundle</a></li>
-          <li><a href="../library.html">Full library</a></li>
-          <li><a href="metalworking-project-plans.html">Metalworking plans</a></li>
-          <li><a href="https://masteryforgecrafts.com/collections/all">Store catalog</a></li>
+          <li><a href="../index.html">Metal Plans</a></li>
+          <li><a href="metal-cut-file-vault.html">Cut-File Vault</a></li>
+          <li><a href="commercial-license.html">Commercial License</a></li>
         </ul>
       </nav>
       <nav aria-label="Support">

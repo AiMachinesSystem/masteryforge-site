@@ -11,7 +11,7 @@ Pubblica **tutto il contenuto di `SITE/`** TRANNE:
 
 `robots.txt` già esclude `/_build/` dai crawler, ma la regola resta: non caricarlo proprio.
 
-File chiave nella root: `index.html`, `sitemap.xml`, `robots.txt`, `404.html`, `favicon.svg`, `assets/` (css, js, fonts, img, downloads), `library.html`, `free-sample.html`, `guarantee.html`, `faq.html`, `products/` (6 schede), `legal/` (3 pagine).
+File chiave nella root: `index.html`, `sitemap.xml`, `robots.txt`, `404.html`, `favicon.svg`, `assets/` (css, js, fonts, img, downloads), `library.html`, `free-sample.html`, `guarantee.html`, `faq.html`, `products/` (2 schede metal), `legal/` (3 pagine).
 
 ---
 
@@ -65,12 +65,12 @@ Di fabbrica, canonical, Open Graph, Twitter card, `sitemap.xml` e `robots.txt` p
 
 ## Aggiornare prezzi e CTA (fonte unica)
 
-La fonte di verità è **`_build/COPY_GUIDE.md` §1** (tabella con prezzi, anchor e cart-permalink verificati). Quando un prezzo o un variant ID cambia sullo store:
+La fonte di verità è **`_build/COPY_GUIDE.md` §1** (tabella con prezzi, anchor e cart-permalink verificati). Nota v2 (metal-first): sul sito restano SOLO 3 prodotti — Metalworking Project Plans **$37** (`/cart/58091624431919:1`), Metal Cut-File Vault **$19** (`/cart/58142503076143:1`), Commercial License **$15** (`/cart/58133406679343:1`). I bundle restano sullo store Shopify ma non sul sito. Quando un prezzo o un variant ID cambia sullo store:
 
 1. Aggiorna la tabella in `_build/COPY_GUIDE.md` §1.
-2. Cerca il vecchio cart-permalink (es. `/cart/58155075109167:1`) in tutti gli `.html` e sostituiscilo col nuovo.
-3. Aggiorna il prezzo visibile nei testi (bottoni "— $89", `price-now`, `price-was`) e, sulle pagine prodotto, anche nel blocco **JSON-LD** (`offers.price`).
-4. Anchor price ammessi: solo le somme vere **$145** (Whole Workshop) e **$74** (bundle minori). Mai inventare sconti.
+2. Cerca il vecchio cart-permalink (es. `/cart/58091624431919:1`) in tutti gli `.html` e sostituiscilo col nuovo.
+3. Aggiorna il prezzo visibile nei testi (bottoni "— $37", `price-now`) e, sulle pagine prodotto, anche nel blocco **JSON-LD** (`offers.price`).
+4. v2: **nessun anchor/was-price** sul sito (prodotti singoli, prezzo pieno). Mai inventare sconti.
 5. Sotto ogni CTA d'acquisto deve restare la micro-trust string esatta: `Instant download · Lifetime updates · 30-day money-back guarantee`.
 
 ## Anteprima locale

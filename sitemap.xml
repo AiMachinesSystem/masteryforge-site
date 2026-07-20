@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Final sitemap (Legal_Pack/W2, 2026-07-19). All planned static pages; 404.html excluded (noindex). -->
+<!-- v2 metal-first sitemap (2026-07-19). Only the 10 live pages; 404.html excluded (noindex). -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://masteryforgecrafts.com/</loc><lastmod>2026-07-19</lastmod><priority>1.0</priority></url>
   <url><loc>https://masteryforgecrafts.com/library.html</loc><lastmod>2026-07-19</lastmod><priority>0.9</priority></url>
-  <url><loc>https://masteryforgecrafts.com/products/metalworking-project-plans.html</loc><lastmod>2026-07-19</lastmod><priority>0.9</priority></url>
-  <url><loc>https://masteryforgecrafts.com/products/wood-pattern-vault.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority></url>
-  <url><loc>https://masteryforgecrafts.com/products/laser-vault.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority></url>
-  <url><loc>https://masteryforgecrafts.com/products/clay-cutter-vault.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority></url>
   <url><loc>https://masteryforgecrafts.com/products/metal-cut-file-vault.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority></url>
   <url><loc>https://masteryforgecrafts.com/products/commercial-license.html</loc><lastmod>2026-07-19</lastmod><priority>0.7</priority></url>
   <url><loc>https://masteryforgecrafts.com/free-sample.html</loc><lastmod>2026-07-19</lastmod><priority>0.7</priority></url>

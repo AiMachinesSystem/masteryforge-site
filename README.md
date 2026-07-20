@@ -4,14 +4,16 @@ Publicable as-is from this folder (`SITE/` = project root). No build step, no fr
 Preview locally: `npm run dev` (vite, dev-only) or any static server, e.g. `python -m http.server`.
 
 ## Structure
-- `index.html` — homepage / Whole Workshop Bundle offer (8 sections)
+- `index.html` — homepage = Metalworking Project Plans offer ($37, v2 metal-first)
+- `library.html` — the metal shop: plans, cut files, license (3 products)
+- `products/metal-cut-file-vault.html` · `products/commercial-license.html` — the 2 metal PDPs
 - `assets/css/tokens.css` — canonical design tokens (copy of `WEBSITE/DESIGN_SYSTEM/tokens.css`, DO NOT EDIT)
 - `assets/css/site.css` — component system (see `_build/COMPONENTS.md`)
 - `assets/js/site.js` — scroll-reveal + sticky mobile bar + footer year (vanilla, defer)
 - `assets/fonts/oswald-latin.woff2` — Oswald variable (latin), self-hosted
-- `assets/img/` — curated webp/png + `og.jpg` (1200×630)
+- `assets/img/` — metal product imagery (webp, 3 sizes) + `og.jpg` (1200×630)
 - `assets/downloads/free-sample-plan.pdf` — lead magnet
-- `_build/` — working docs (BUILD_BRIEF, COPY_GUIDE, PLAN, COMPONENTS, _base.html) — EXCLUDED from deploy
+- `_build/` — working docs (BUILD_BRIEF, COPY_GUIDE, PLAN, COMPONENTS, _base.html, retired v2 pages in `_phase2/`) — EXCLUDED from deploy
 
 ## Fonts
 Oswald downloaded OK (2026-07-19, fonts.gstatic.com): variable latin woff2, 21 KB, weights 200–700,

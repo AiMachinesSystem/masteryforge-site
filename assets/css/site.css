@@ -246,7 +246,7 @@ small,.fine{font-size:var(--fs-fine);line-height:1.5;color:var(--muted)}
 .cutlist .fmt{color:var(--muted)}
 .cutlist tr.total td{border-top:2px solid var(--steel);border-bottom:0;font-weight:700;color:var(--paper)}
 
-/* ---------- Bundle breakdown / offer ---------- */
+/* ---------- Offer breakdown ---------- */
 .offer-grid{display:grid;gap:var(--sp-xl)}
 @media(min-width:880px){.offer-grid{grid-template-columns:1.1fr .9fr;align-items:start}}
 .included{list-style:none;margin:0;padding:0}
@@ -277,7 +277,6 @@ small,.fine{font-size:var(--fs-fine);line-height:1.5;color:var(--muted)}
 }
 .buybox .price-row{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap}
 .price-now{font-family:var(--display);font-weight:700;font-size:var(--fs-price-lg);color:var(--ember2);line-height:1}
-.price-was{font-family:var(--mono);font-size:var(--fs-price);color:var(--muted);text-decoration:line-through}
 .price-note{font-family:var(--mono);font-size:var(--fs-micro);color:var(--ok)}
 .buybox .chips{margin:1.1rem 0}
 .buybox .btn{margin-top:.4rem}
