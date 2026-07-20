@@ -27,6 +27,11 @@
   --muted: #756E62;         /* secondary text, was-prices, fine print/cites on
                                LIGHT surfaces. AA margin is zero (4.52:1 on
                                canvas) — never lighten */
+  --muted-strong: #665F55;  /* --muted upgrade for --bg2 (4.15:1 FAIL) and
+                               ember-soft callout surfaces (3.71:1 FAIL):
+                               5.18:1 on --bg2, 4.64:1 worst callout-on-band.
+                               Scoped via .band/.callout/.candor in site.css
+                               (A11y MANTRA 2026-07-20) */
   --fine: #8A8276;          /* decorative/large text + dark surfaces ONLY —
                                3.79:1 on white FAILS AA for normal text; use
                                --muted there (A11y fix 2026-07-17) */
@@ -36,6 +41,11 @@
   --ember2: #B8430F;        /* strong — accent TEXT, prices, focus, hovers.
                                LAW: ember2 is always DARKER than ember
                                (supersedes .mfx inversion #E4692C) */
+  --ember2-strong: #A63B0C; /* --ember2 on --bg2 = 4.49:1 / on ember-soft =
+                               4.02:1 (both AA FAIL for small text). This:
+                               5.31:1 on --bg2, 4.75:1 worst callout-on-band.
+                               Scoped via .band/.callout/.candor in site.css;
+                               still DARKER than --ember (A11y MANTRA 2026-07-20) */
   --ember-deep: #A8431A;    /* gradient bottoms, .off badge bg */
   --ember-raise: #C24E1E;   /* CTA gradient top. SUPERSEDES live literal #D65A22:
                                white on #D65A22 = 3.93:1 (AA fail); on #C24E1E =
@@ -51,6 +61,10 @@
   --grid-line-soft: rgba(51,82,107,.09); /* figure grid 24px */
   --ok: #2E7D46;            /* trust green — guarantees, checks, FREE.
                                AA margin zero (4.55:1 on canvas) — never lighten */
+  --ok-strong: #27693B;     /* --ok on --bg2 = 4.17:1 / on ember-soft = 3.74:1
+                               FAIL. This: 5.45:1 on --bg2, 4.88:1 worst
+                               callout-on-band. Scoped via .band/.callout/.candor
+                               in site.css (A11y MANTRA 2026-07-20) */
   --pulse: rgba(111,185,132,.7); /* live-dot keyframe ring (observed as-is) */
   --star: #C9C2B6;          /* review stars — khaki, deliberately not gold */
 
