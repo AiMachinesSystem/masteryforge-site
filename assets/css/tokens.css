@@ -30,6 +30,9 @@
   --fine: #8A8276;          /* decorative/large text + dark surfaces ONLY —
                                3.79:1 on white FAILS AA for normal text; use
                                --muted there (A11y fix 2026-07-17) */
+  --muted-band: #655C50;    /* --muted override scoped to .band sections:
+                               --muted on --bg2 = 4.15:1 FAILS AA; this shade
+                               = 5.40:1 on --bg2 (WCAG contrast fix) */
 
   /* -------- Brand voltage (ember) -------- */
   --ember: #CF5A22;         /* base — tints + gradients only, never body text */
@@ -51,14 +54,12 @@
   --grid-line-soft: rgba(51,82,107,.09); /* figure grid 24px */
   --ok: #2E7D46;            /* trust green — guarantees, checks, FREE.
                                AA margin zero (4.55:1 on canvas) — never lighten */
-  --pulse: rgba(111,185,132,.7); /* live-dot keyframe ring (observed as-is) */
   --star: #C9C2B6;          /* review stars — khaki, deliberately not gold */
 
   /* -------- Dark sections -------- */
   --deep: #141414;          /* footer + final CTA bg */
   --deep-line: #262626;     /* dark hairline (was literal) */
   --deep-text: #A9A296;     /* dark-section text (was literal) */
-  --final-raise: #B04818;   /* final CTA gradient top (was literal) */
 
   /* -------- Craft accents (category ID only — NEVER on CTAs/prices) ----- */
   --craft-metal: #3A5A74;
@@ -123,7 +124,6 @@
   --t-micro: .15s ease;     /* hover lift / brightness / border-color */
   --t-bar: .25s ease;       /* sticky-bar slide */
   --t-reveal: .55s;         /* scroll reveal: opacity + translateY(14px) */
-  /* keyframe `pulse`: box-shadow ring var(--pulse) 0→7px→0, 2s / 1.65s */
 
   /* -------- Focus -------- */
   --focus-outline: 2px solid var(--ember2); /* landings canon (mfx used ember) */

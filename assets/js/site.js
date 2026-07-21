@@ -45,9 +45,11 @@
     el.textContent = String(new Date().getFullYear());
   });
 
-  /* 4) Lead popup — native <dialog>, never auto-opens, once per session */
+  /* 4) Lead popup — native <dialog>, never auto-opens, once per session.
+     Skipped entirely when a sticky bar is present on the page: the bar and the
+     popup are competing CTAs and must never be visible at the same time. */
   var pop = document.querySelector("dialog.leadpop");
-  if (pop && typeof pop.showModal === "function") {
+  if (pop && typeof pop.showModal === "function" && !document.querySelector(".stickybar")) {
     var KEY = "mf_leadpop", lastFocus = null, seen = false;
     try { seen = !!sessionStorage.getItem(KEY); } catch (e) {}
     function openPop(){

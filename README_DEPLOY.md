@@ -65,7 +65,7 @@ Di fabbrica, canonical, Open Graph, Twitter card, `sitemap.xml` e `robots.txt` p
 
 ## Aggiornare prezzi e CTA (fonte unica)
 
-La fonte di verità è **`_build/COPY_GUIDE.md` §1** (tabella con prezzi, anchor e cart-permalink verificati). Nota v2 (metal-first): sul sito restano SOLO 3 prodotti — Metalworking Project Plans **$37** (`/cart/58091624431919:1`), Metal Cut-File Vault **$19** (`/cart/58142503076143:1`), Commercial License **$15** (`/cart/58133406679343:1`). I bundle restano sullo store Shopify ma non sul sito. Quando un prezzo o un variant ID cambia sullo store:
+La fonte di verità è **`_build/COPY_GUIDE.md` §1** (tabella con prezzi, anchor e cart-permalink verificati). Nota v2 (metal-first): sul sito restano SOLO 3 prodotti — Metalworking Project Plans **$37** (`/cart/58091624431919:1`), Metal Cut-File Vault **$19** (`/cart/58142503076143:1`), Commercial License **$39** (`/cart/58133406679343:1`). I bundle restano sullo store Shopify ma non sul sito. Quando un prezzo o un variant ID cambia sullo store:
 
 1. Aggiorna la tabella in `_build/COPY_GUIDE.md` §1.
 2. Cerca il vecchio cart-permalink (es. `/cart/58091624431919:1`) in tutti gli `.html` e sostituiscilo col nuovo.

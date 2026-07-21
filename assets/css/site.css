@@ -15,7 +15,7 @@
 
 /* ---------- Reset / base ---------- */
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:72px}
 body{
   margin:0;background:var(--bg);color:var(--ink2);
   font-family:var(--sans);font-size:var(--fs-body);line-height:1.6;
@@ -40,7 +40,7 @@ small,.fine{font-size:var(--fs-fine);line-height:1.5;color:var(--muted)}
 /* ---------- Layout primitives ---------- */
 .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad-container)}
 .section{padding-block:var(--pad-section)}
-.band{background:var(--bg2);border-block:1px solid var(--line)}
+.band{background:var(--bg2);border-block:1px solid var(--line);--muted:var(--muted-band)}
 .grid2{display:grid;gap:var(--sp-xl)}
 @media(min-width:820px){.grid2{grid-template-columns:1fr 1fr;align-items:center}}
 .sec-head{max-width:62ch;margin-bottom:var(--sp-xl)}
@@ -77,13 +77,15 @@ small,.fine{font-size:var(--fs-fine);line-height:1.5;color:var(--muted)}
 /* Skip link */
 .skip{
   position:absolute;left:-999px;top:.5rem;z-index:200;
-  background:var(--ember);color:#fff;padding:.6rem 1rem;border-radius:var(--r-sm);
+  background:var(--ember2);color:#fff;padding:.6rem 1rem;border-radius:var(--r-sm);
   font-family:var(--display);text-transform:uppercase;letter-spacing:var(--ls-cta);
   text-decoration:none;
 }
 .skip:focus{left:.5rem}
 
 /* ---------- Header (sticky) ---------- */
+/* NOTE: backdrop-filter here is an approved functional exception — it keeps the
+   sticky bar legible over scrolling content. It is NOT decorative glassmorphism. */
 .hdr{
   position:sticky;top:0;z-index:100;
   background:var(--bg);
@@ -355,6 +357,7 @@ small,.fine{font-size:var(--fs-fine);line-height:1.5;color:var(--muted)}
 .final .lede{color:var(--deep-text)}
 .final .price-now{color:var(--ember)}
 .final .microtrust{color:var(--deep-text)}
+.final .eyebrow{color:var(--ember)} /* ember2 on --deep = 3.38:1 FAIL; ember = 4.51:1 AA */
 .final-in{display:flex;flex-wrap:wrap;gap:var(--sp-xl);align-items:center;justify-content:space-between}
 
 /* ---------- Footer ---------- */
@@ -377,6 +380,7 @@ small,.fine{font-size:var(--fs-fine);line-height:1.5;color:var(--muted)}
   font-size:var(--fs-fine);display:flex;flex-wrap:wrap;gap:.6rem 2rem;
   justify-content:space-between;
 }
+.footer .fine{color:var(--deep-text)} /* muted on --deep = 3.65:1 FAIL; deep-text = 7.28:1 AA */
 
 /* ---------- Sticky CTA bar (mobile only) ---------- */
 .stickybar{
@@ -394,6 +398,18 @@ small,.fine{font-size:var(--fs-fine);line-height:1.5;color:var(--muted)}
 .reveal{opacity:0;transform:translateY(14px);transition:opacity var(--t-reveal) ease,transform var(--t-reveal) ease}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+/* Progressive enhancement: native scroll-driven reveal where supported.
+   Falls back to the .reveal/.in transition above (JS-toggled) elsewhere. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion:no-preference) {
+    .reveal{
+      opacity:1;transform:none;
+      animation:reveal-in linear both;
+      animation-timeline:view();
+    }
+    @keyframes reveal-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  }
+}
 
 /* ---------- Utilities ---------- */
 .center{text-align:center}
@@ -419,7 +435,7 @@ small,.fine{font-size:var(--fs-fine);line-height:1.5;color:var(--muted)}
   body.has-stickybar{padding-bottom:64px}
 }
 
-/* Skip link: anello di focus leggibile su fondo ember */
+/* Skip link: anello di focus leggibile su fondo ember2 */
 .skip:focus-visible{outline:2px solid #fff;outline-offset:2px}
 
 /* Stats strip (Relume section_stats2 [USE] → token MasteryForge) */
