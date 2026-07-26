@@ -41,6 +41,7 @@ small,.fine{font-size:var(--fs-fine);line-height:1.5;color:var(--muted)}
 .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad-container)}
 .section{padding-block:var(--pad-section)}
 .band{background:var(--bg2);border-block:1px solid var(--line);--muted:var(--muted-band)}
+.band .eyebrow{color:var(--ember-deep)} /* ember2 on --bg2 = 4.48:1 FAIL; ember-deep = 4.96:1 AA */
 .grid2{display:grid;gap:var(--sp-xl)}
 @media(min-width:820px){.grid2{grid-template-columns:1fr 1fr;align-items:center}}
 .sec-head{max-width:62ch;margin-bottom:var(--sp-xl)}
@@ -292,6 +293,7 @@ small,.fine{font-size:var(--fs-fine);line-height:1.5;color:var(--muted)}
 }
 .callout p{margin:0}
 .callout strong{color:var(--paper)}
+.callout .fine{color:var(--muted-band)} /* muted on ember-soft tint = 4.02:1 FAIL; muted-band = 5.24:1 AA */
 
 /* ---------- Exploded view ---------- */
 .exploded{display:grid;gap:var(--sp-xl)}
@@ -395,19 +397,23 @@ small,.fine{font-size:var(--fs-fine);line-height:1.5;color:var(--muted)}
 @media(min-width:880px){.stickybar{display:none}}
 
 /* ---------- Scroll reveal ---------- */
-.reveal{opacity:0;transform:translateY(14px);transition:opacity var(--t-reveal) ease,transform var(--t-reveal) ease}
-.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+/* Transform-only by design: an opacity fade leaves text at intermediate
+   alpha whenever the page is sampled mid-animation (axe/Lighthouse read the
+   blended color and fail WCAG contrast on text that is fine at rest). */
+.reveal{transform:translateY(14px);transition:transform var(--t-reveal) ease}
+.reveal.in{transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{transform:none;transition:none}}
 /* Progressive enhancement: native scroll-driven reveal where supported.
    Falls back to the .reveal/.in transition above (JS-toggled) elsewhere. */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion:no-preference) {
     .reveal{
-      opacity:1;transform:none;
+      transform:none;
       animation:reveal-in linear both;
       animation-timeline:view();
+      animation-range:entry 0% entry 60%;
     }
-    @keyframes reveal-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+    @keyframes reveal-in{from{transform:translateY(14px)}to{transform:none}}
   }
 }
 
