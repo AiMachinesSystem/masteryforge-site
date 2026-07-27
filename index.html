@@ -85,7 +85,10 @@ section{padding-block:var(--sp)}
 /* header */
 header.site{position:sticky;top:0;z-index:50;background:rgba(246,242,236,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--hairline)}
 .hbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:58px}
-.wordmark{display:flex;align-items:baseline;gap:.5em;text-decoration:none}
+.wordmark{display:flex;align-items:center;gap:.45em;text-decoration:none}
+.mk-i{width:1.55em;height:1.55em;flex:0 0 auto;color:#1C1A17;display:block}
+footer.site .mk-i,.endcap .mk-i{color:#F6F2EC}
+
 .wordmark .wm{font-family:var(--disp);font-weight:700;font-size:1.25rem;text-transform:uppercase;letter-spacing:.02em;color:var(--ink)}
 .wordmark .wm .forge{color:var(--ember)}
 .wordmark .crafts{font:600 .6rem var(--mono);letter-spacing:.3em;text-transform:uppercase;color:var(--steel)}
@@ -96,7 +99,7 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(246,242,236,.92);ba
 @keyframes pulse{0%{transform:scale(.5);opacity:1}100%{transform:scale(1.4);opacity:0}}
 .hbar .btn{white-space:nowrap}
 @media(max-width:519px){.secure{display:none}.hbar .btn{font-size:.78rem;padding:.55em .95em}}
-@media(max-width:379px){.hbar{gap:.5rem}.wordmark .wm{font-size:1.02rem}.wordmark .crafts{display:none}.hbar .btn{font-size:.66rem;padding:.5em .65em;letter-spacing:.02em}.buybar{gap:.5rem}.buybar .btn{font-size:.7rem;padding:.5em .75em}.buybar .p{font-size:1.05rem}.buybar .secure{display:none}}
+@media(max-width:439px){.hbar{gap:.5rem}.wordmark .wm{font-size:1.02rem}.wordmark .crafts{display:none}.hbar .mk-i{width:1.35em;height:1.35em}.hbar .btn{font-size:.66rem;padding:.5em .65em;letter-spacing:.02em}.buybar{gap:.5rem}.buybar .btn{font-size:.7rem;padding:.5em .75em}.buybar .p{font-size:1.05rem}.buybar .secure{display:none}}
 @media(max-width:759px){.hero{padding-block:1.8rem 1.2rem}.plan-figure{padding:.55rem .7rem}.plan-figure svg{max-height:295px}.fig-cap{margin-top:.35rem}.fig-stage{margin-top:-.4rem}#buy{padding-top:1.9rem}#buy .sec-head p{margin-bottom:.4rem}}
 
 /* blueprint grid + hero */
@@ -171,6 +174,13 @@ repeating-linear-gradient(90deg,rgba(51,82,107,.12) 0 1px,transparent 1px 40px);
 .trio .t h3{font-size:.95rem;margin:0 0 .3rem;display:flex;gap:.5em;align-items:center}
 .trio .t h3 svg{width:18px;height:18px;color:var(--success);flex:0 0 auto}
 .trio .t p{margin:0;font-size:.9rem}
+/* provenance: the wedge against anonymous operators */
+.prov{margin-top:1.6rem;background:var(--card);border:1px solid var(--hairline);border-left:4px solid var(--steel);border-radius:12px;padding:1.3rem clamp(1.1rem,3vw,1.6rem)}
+.prov h3{font-size:1rem;margin:0 0 .9rem;color:var(--ink)}
+.prov dl{display:grid;gap:.85rem;margin:0}
+@media(min-width:760px){.prov dl{grid-template-columns:1fr 1fr;gap:1.1rem 2rem}}
+.prov dt{font:600 .68rem var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--steel);margin-bottom:.2rem}
+.prov dd{margin:0;font-size:.93rem;color:var(--body);line-height:1.5}
 .sec-head{max-width:640px}
 .sec-head h2{margin-bottom:.4rem}
 .sec-head .lede{margin:0}
@@ -257,7 +267,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--dark-hairline);col
 @media(min-width:760px){footer.site{padding-bottom:2.6rem}}
 .fgrid{display:grid;gap:1.8rem}
 @media(min-width:640px){.fgrid{grid-template-columns:2fr 1fr 1fr}}
-footer.site .wm{font-family:var(--disp);font-weight:700;font-size:1.15rem;text-transform:uppercase;color:var(--on-dark)}
+footer.site .wm{display:flex;align-items:center;gap:.45em;font-family:var(--disp);font-weight:700;font-size:1.15rem;text-transform:uppercase;color:var(--on-dark)}
 footer.site .wm .forge{color:var(--ember)}
 footer.site h3{color:var(--on-dark);font-size:.8rem;letter-spacing:.14em}
 footer.site ul{list-style:none;margin:0;padding:0}
@@ -282,7 +292,7 @@ footer.site .fine{color:var(--dark-text)}
 <header class="site">
   <div class="wrap hbar">
     <a class="wordmark" href="/" aria-label="MasteryForge Crafts home">
-      <span class="wm">Mastery<span class="forge">Forge</span></span>
+      <svg class="mk-i" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 57 25v33H7V25z" fill="none" stroke="#CF5A22" stroke-width="5" stroke-linejoin="round"/><path d="M15 31h30v6H37l-1 5 7 6v3H21v-3l7-6-1-5h-8z" fill="currentColor"/></svg><span class="wm">Mastery<span class="forge">Forge</span></span>
       <span class="crafts">Crafts</span>
     </a>
     <div class="hcta">
@@ -431,6 +441,16 @@ footer.site .fine{color:var(--dark-text)}
       <div class="t rv"><h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 8.6-8 11-4.6-2.4-8-6-8-11V5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>A real guarantee</h3><p>30 days, honored, refund to your original payment method. The policy is public.</p></div>
       <div class="t rv"><h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5l4 4 12-11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Real reviews or none</h3><p>Reviews come from the store's review app or they do not appear. Never fabricated.</p></div>
       <div class="t rv"><h3><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Zero fake urgency</h3><p>No countdowns and no invented scarcity on digital files.</p></div>
+    </div>
+
+    <div class="prov rv">
+      <h3>Who you are buying from</h3>
+      <dl>
+        <div><dt>Who draws these</dt><dd>We do. Every drawing in the library is original in-house work, not resold clip-art or a scraped pack.</dd></div>
+        <div><dt>Where the store is</dt><dd>Checkout runs on our own Shopify store at shop.masteryforgecrafts.com. You see the real domain before you pay.</dd></div>
+        <div><dt>Who answers you</dt><dd>A real inbox: <a href="mailto:support@masteryforgecrafts.com">support@masteryforgecrafts.com</a>, the same address printed in our policies.</dd></div>
+        <div><dt>What you can check first</dt><dd>A complete plan, free, before you spend anything. <a href="free-sample.html">Take the sample</a> and judge the work.</dd></div>
+      </dl>
     </div>
   </div>
 </section>
@@ -589,7 +609,7 @@ footer.site .fine{color:var(--dark-text)}
 <footer class="site">
   <div class="wrap fgrid">
     <div>
-      <p class="wm">Mastery<span class="forge">Forge</span> <span style="font:600 .6rem var(--mono);letter-spacing:.3em;color:var(--dark-text)">CRAFTS</span></p>
+      <p class="wm"><svg class="mk-i" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 57 25v33H7V25z" fill="none" stroke="#CF5A22" stroke-width="5" stroke-linejoin="round"/><path d="M15 31h30v6H37l-1 5 7 6v3H21v-3l7-6-1-5h-8z" fill="currentColor"/></svg>Mastery<span class="forge">Forge</span> <span style="font:600 .6rem var(--mono);letter-spacing:.3em;color:var(--dark-text)">CRAFTS</span></p>
       <p style="max-width:38ch">Original digital build plans and cut files, drawn in-house. Digital products only, nothing ships.</p>
       <p><a href="mailto:support@masteryforgecrafts.com">support@masteryforgecrafts.com</a></p>
     </div>
@@ -741,11 +761,24 @@ function mfMotion(){
      .fromTo(stamp,{scale:1.06,opacity:0},{scale:1,opacity:1,duration:.35},2.3);
     return t;
   }
-  /* one-shot hero copy entrance on load (copy is never part of the scrub) */
-  gsap.from('.hero-copy > *',{opacity:0,y:14,duration:.6,stagger:.07,ease:'power2.out',clearProps:'all'});
+  /* NO hero-copy entrance. Removed 2026-07-27 (H10 review A1/A2): `gsap.from('.hero-copy > *')`
+     set opacity:0 on exactly the six elements S1/D8a requires VISIBLE at t=0, and because this
+     function early-returns without setting .done until GSAP arrives, a slow CDN (mobile, where
+     every real purchase came from) painted the H1 + buy CTA, then BLANKED them at 'load' and
+     faded them back — the re-hide flash BUILD_LOG #22 claims was killed. The contract never
+     asked for an entrance; the signature motion is the figure scrub below. Do not re-add. */
   /* branch bound ONCE at load (no matchMedia teardown: an emulator/rotation resize was
-     observed killing the mobile timeline mid-play — frozen half-drawn figure) */
-  if(window.innerWidth>=760){
+     observed killing the mobile timeline mid-play — frozen half-drawn figure).
+     NOT width-only (H10 review A3): G7 mandates the light arm for mobile AND coarse-pointer
+     AND low-end AND data-saver, so an iPhone in landscape (innerWidth 844) no longer gets a
+     1000px pinned scrub on a 390px-tall viewport. */
+  var conn=navigator.connection||{};
+  var lite=window.innerWidth<760
+        ||matchMedia('(pointer:coarse)').matches
+        ||(navigator.hardwareConcurrency||8)<=4
+        ||conn.saveData===true
+        ||/^(slow-2g|2g|3g)$/.test(conn.effectiveType||'');
+  if(!lite){
     var t=buildTl();
     ScrollTrigger.create({
       trigger:'.hero',start:'top top',end:'+=1000',pin:true,scrub:1,anticipatePin:1,
