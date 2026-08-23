@@ -13,6 +13,7 @@
 <meta property="og:image" content="https://masteryforgecrafts.com/assets/og-card.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js')</script>
 <!-- GA4 (owner order 2026-07-26) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPLH8JQ6FC"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CPLH8JQ6FC');</script>
@@ -22,11 +23,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&display=swap"></noscript>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","name":"MasteryForge Crafts","url":"https://masteryforgecrafts.com/","logo":"https://masteryforgecrafts.com/assets/mark.svg","email":"support@masteryforgecrafts.com"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://masteryforgecrafts.com/"},{"@type":"ListItem","position":2,"name":"Free Sample Plan","item":"https://masteryforgecrafts.com/free-sample.html"}]}
+]}
+</script>
 <style>
 :root{--canvas:#F6F2EC;--band:#EFE8DE;--card:#FFFFFF;--dark:#141414;--hairline:#DED5C6;--dark-hairline:#262626;--ink:#1C1A17;--body:#4A443C;--muted:#756E62;--dark-text:#A9A296;--on-dark:#F6F2EC;--ember:#CF5A22;--ember-raise:#C24E1E;--ember-strong:#B8430F;--ember-deep:#A8431A;--steel:#33526B;--success:#2E7D46;
 --disp:'Oswald','Oswald-fb','Bahnschrift SemiCondensed','Arial Narrow','Helvetica Neue',Arial,sans-serif;--sans:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;--mono:ui-monospace,'SFMono-Regular','Cascadia Mono',Menlo,Consolas,monospace}
 @font-face{font-family:'Oswald-fb';src:local('Arial Narrow'),local('Arial');size-adjust:87%;ascent-override:105%;descent-override:26%;}
 *,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:calc(3.2rem + 16px)}
+@media(max-width:720px){html{scroll-padding-top:calc(5.5rem + 16px)}}
 body{margin:0;background:var(--canvas);color:var(--body);font:400 1rem/1.6 var(--sans)}
 h1,h2{color:var(--ink);font-family:var(--disp);text-transform:uppercase;line-height:1.08;margin:0 0 .5em;text-wrap:pretty}
 h1{font-size:clamp(1.9rem,5.6vw,2.8rem);font-weight:700}
@@ -62,7 +71,7 @@ section{padding-block:clamp(2.6rem,6vw,4rem)}
 footer.site{background:var(--dark);border-top:1px solid var(--dark-hairline);color:var(--dark-text);padding:2rem 0}
 footer.site a{color:var(--dark-text)}
 :focus-visible{outline:3px solid rgba(184,67,15,.55);outline-offset:2px}
-.skip{position:absolute;left:-999px;top:0;background:var(--ember-strong);color:#fff;padding:.6em 1em;z-index:99}
+.skip{position:absolute;left:-999px;top:0;background:var(--ember-deep);color:#fff;padding:.6em 1em;z-index:99}
 .skip:focus{left:8px;top:8px}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -113,6 +122,7 @@ footer.site a{color:var(--dark-text)}
 <footer class="site">
   <div class="wrap">
     <p style="margin:0">© 2026 MasteryForge Crafts · <a href="/">Home</a> · <a href="https://shop.masteryforgecrafts.com/policies/refund-policy">Refund Policy</a> · <a href="mailto:support@masteryforgecrafts.com">support@masteryforgecrafts.com</a></p>
+    <!-- LEGAL_TODO (owner action): publish the legal seller identity (business name, registered address, VAT/tax ID where applicable). Tracked in COMPLIANCE_TODO.md. -->
   </div>
 </footer>
 </body>
