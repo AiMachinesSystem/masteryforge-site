@@ -13,6 +13,7 @@
 <meta property="og:image" content="https://masteryforgecrafts.com/assets/og-card.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js')</script>
 
 <!-- GA4 (owner order 2026-07-26: measurement ID G-CPLH8JQ6FC) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPLH8JQ6FC"></script>
@@ -29,6 +30,12 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Product","name":"MasteryForge Metalworking Project Plans: 500+ Step-by-Step Build Plans","description":"500+ dimensioned metalworking project plans with cut lists and material specs. Instant digital download with lifetime updates and a 30-day money-back guarantee.","brand":{"@type":"Brand","name":"MasteryForge Crafts"},"image":"https://masteryforgecrafts.com/assets/og-card.png","offers":{"@type":"Offer","url":"https://masteryforgecrafts.com/","priceCurrency":"USD","price":"37.00","availability":"https://schema.org/InStock"}}
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","name":"MasteryForge Crafts","url":"https://masteryforgecrafts.com/","logo":"https://masteryforgecrafts.com/assets/mark.svg","email":"support@masteryforgecrafts.com"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://masteryforgecrafts.com/"}]}
+]}
+</script>
 
 <style>
 /* ===== MasteryForge design system (WEBSITE/DESIGN_SYSTEM/masteryforge_DESIGN.md) ===== */
@@ -39,6 +46,7 @@
 --ember:#CF5A22;--ember-raise:#C24E1E;--ember-strong:#B8430F;--ember-deep:#A8431A;
 --ember-tint:rgba(207,90,34,.10);--ember-border:rgba(207,90,34,.45);--ember-dashed:rgba(207,90,34,.5);
 --steel:#33526B;--success:#2E7D46;--star:#C9C2B6;--pulse:rgba(111,185,132,.7);
+--muted-strong:#665F55;--ember2-strong:#A63B0C;--ok-strong:#27693B; /* MANTRA AA tokens: headroom variants for tinted surfaces */
 --disp:'Oswald','Oswald-fb','Bahnschrift SemiCondensed','Arial Narrow','Helvetica Neue',Arial,sans-serif;
 --sans:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
 --mono:ui-monospace,'SFMono-Regular','Cascadia Mono',Menlo,Consolas,monospace;
@@ -47,7 +55,8 @@
 }
 @font-face{font-family:'Oswald-fb';src:local('Arial Narrow'),local('Arial');size-adjust:87%;ascent-override:105%;descent-override:26%;}
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:calc(3.2rem + 16px)}
+@media(max-width:720px){html{scroll-padding-top:calc(5.5rem + 16px)}}
 body{margin:0;background:var(--canvas);color:var(--body);font:400 1rem/1.6 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 img,svg{max-width:100%;height:auto}
 h1,h2,h3{color:var(--ink);font-family:var(--disp);text-transform:uppercase;line-height:1.08;letter-spacing:.005em;margin:0 0 .6em;text-wrap:pretty}
@@ -58,7 +67,7 @@ p{margin:0 0 1em}
 a{color:var(--ember-strong)}
 .wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--pad)}
 section{padding-block:var(--sp)}
-.skip{position:absolute;left:-999px;top:0;background:var(--ember-strong);color:#fff;padding:.6em 1em;z-index:99;font-family:var(--disp);text-transform:uppercase}
+.skip{position:absolute;left:-999px;top:0;background:var(--ember-deep);color:#fff;padding:.6em 1em;z-index:99;font-family:var(--disp);text-transform:uppercase}
 .skip:focus{left:8px;top:8px}
 :focus-visible{outline:3px solid #B8430F;outline-offset:2px}
 
@@ -93,7 +102,7 @@ footer.site .mk-i,.endcap .mk-i{color:#F6F2EC}
 .wordmark .wm .forge{color:var(--ember)}
 .wordmark .crafts{font:600 .6rem var(--mono);letter-spacing:.3em;text-transform:uppercase;color:var(--steel)}
 .hcta{display:flex;align-items:center;gap:.9rem}
-.secure{display:inline-flex;align-items:center;gap:.45em;font:600 .68rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--success)}
+.secure{display:inline-flex;align-items:center;gap:.45em;font:600 .68rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ok-strong)}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--success);position:relative}
 .dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--pulse);animation:pulse 2s ease-out infinite}
 @keyframes pulse{0%{transform:scale(.5);opacity:1}100%{transform:scale(1.4);opacity:0}}
@@ -130,6 +139,8 @@ repeating-linear-gradient(90deg,rgba(51,82,107,.12) 0 1px,transparent 1px 40px);
 
 /* offer card + buy box */
 .band{background:var(--band)}
+/* MANTRA AA: muted/ember-strong fail 4.5:1 on tinted surfaces (4.15/4.49 on band) — scoped token swap */
+.band,.candor{--muted:var(--muted-strong);--ember-strong:var(--ember2-strong)}
 .offer{max-width:560px;margin-inline:auto;background:linear-gradient(180deg,var(--ember-tint),transparent 45%) var(--card);border:1px solid var(--ember-border);border-radius:16px;box-shadow:var(--sh-card);padding:1.8rem clamp(1.1rem,4vw,2rem)}
 .offer .pname{font:600 .72rem var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--steel);margin:0 0 .4rem}
 .offer .ptitle{font-family:var(--disp);font-weight:600;font-size:1.35rem;text-transform:uppercase;color:var(--ink);line-height:1.15;margin:0 0 .9rem}
