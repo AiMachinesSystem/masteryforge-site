@@ -15,10 +15,13 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <script>document.documentElement.classList.add('js')</script>
 <!-- GA4 (owner order 2026-07-26) -->
+<!-- Consent (2026-09-19): visitors in the EEA, UK and Switzerland start DENIED until they choose (Google Consent Mode v2 region default + Meta consent revoke). The choice is kept in localStorage, never in a cookie of ours. Banner: assets/consent.js -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var R=['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IS','IE','IT','LV','LI','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','GB','CH'],G={ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'},D={ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'},c=null,eu=false;try{c=localStorage.getItem('mf_consent')}catch(e){}try{eu=/^(Europe\/|Atlantic\/(Reykjavik|Canary|Madeira|Azores|Faroe))/.test(Intl.DateTimeFormat().resolvedOptions().timeZone||'')}catch(e){}gtag('consent','default',G);gtag('consent','default',Object.assign({region:R,wait_for_update:500},D));if(c==='granted')gtag('consent','update',G);if(c==='denied')gtag('consent','update',D);window.MFC={eu:eu,choice:c,G:G,D:D};})();</script>
+<script defer src="/assets/consent.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPLH8JQ6FC"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CPLH8JQ6FC');</script>
 <!-- Meta base pixel (owner order 2026-07-26) -->
-<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','2163098587590612');fbq('track','PageView');</script>
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');if(window.MFC&&(window.MFC.choice==='denied'||(window.MFC.eu&&window.MFC.choice!=='granted')))fbq('consent','revoke');fbq('init','2163098587590612');fbq('track','PageView');</script>
 <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=2163098587590612&ev=PageView&noscript=1"></noscript>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&display=swap" media="print" onload="this.media='all'">
@@ -55,6 +58,8 @@ footer.site .mk-i,.endcap .mk-i{color:#F6F2EC}
 .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--hairline)}
 .btn-ghost:hover{transform:translateY(-2px);border-color:var(--ember-strong)}
 .btn-sm{font-size:.82rem;padding:.55em .95em;border-radius:8px}
+@media(max-width:420px){.hbar{gap:.5rem}.hbar .btn-sm{padding:.5em .7em;letter-spacing:.03em}}
+@media(max-width:360px){.wordmark .crafts{display:none}.wordmark .wm{font-size:1.05rem}.hbar .btn-sm{font-size:.74rem}}
 section{padding-block:clamp(2.6rem,6vw,4rem)}
 .eyebrow{display:inline-block;font:600 .72rem var(--mono);letter-spacing:.26em;text-transform:uppercase;color:var(--ember-strong)}
 .lede{font-size:clamp(1.02rem,2.2vw,1.18rem);max-width:52ch}
@@ -84,7 +89,7 @@ footer.site a{color:var(--dark-text)}
       <svg class="mk-i" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 57 25v33H7V25z" fill="none" stroke="#CF5A22" stroke-width="5" stroke-linejoin="round"/><path d="M15 31h30v6H37l-1 5 7 6v3H21v-3l7-6-1-5h-8z" fill="currentColor"/></svg><span class="wm">Mastery<span class="forge">Forge</span></span>
       <span class="crafts">Crafts</span>
     </a>
-    <a class="btn btn-primary btn-sm" href="/#buy">Get all 500+ plans · $37</a>
+    <a class="btn btn-primary btn-sm" href="/#buy">Get the plans · $37</a>
   </div>
 </header>
 <main id="main">
@@ -111,7 +116,7 @@ footer.site a{color:var(--dark-text)}
         </ul>
         <div class="cta-col">
           <a class="btn btn-primary" href="assets/MasteryForge_sample-plan_square-fire-pit.pdf" download>Download the free plan (PDF)</a>
-          <a class="btn btn-ghost" href="/#buy">Get all 500+ plans for $37</a>
+          <a class="btn btn-ghost" href="/#buy">Get the plan library for $37</a>
           <p class="fine">Safety note: welding and cutting are hazardous. Wear proper protection and verify dimensions against your own setup before cutting.</p>
         </div>
       </div>
@@ -121,7 +126,7 @@ footer.site a{color:var(--dark-text)}
 </main>
 <footer class="site">
   <div class="wrap">
-    <p style="margin:0">© 2026 MasteryForge Crafts · <a href="/">Home</a> · <a href="https://shop.masteryforgecrafts.com/policies/refund-policy">Refund Policy</a> · <a href="mailto:support@masteryforgecrafts.com">support@masteryforgecrafts.com</a></p>
+    <p style="margin:0">© 2026 MasteryForge Crafts · <a href="/">Home</a> · <a href="https://shop.masteryforgecrafts.com/policies/refund-policy">Refund Policy</a> · <a href="https://shop.masteryforgecrafts.com/policies/privacy-policy">Privacy Policy</a> · <a href="https://shop.masteryforgecrafts.com/policies/terms-of-service">Terms</a> · <a href="#cookie-settings" role="button" data-mf-consent>Cookie settings</a> · <a href="mailto:support@masteryforgecrafts.com">support@masteryforgecrafts.com</a></p>
   </div>
 </footer>
 </body>
