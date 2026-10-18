@@ -1,27 +1,28 @@
 # MasteryForge Crafts website
 
-Static marketing website for MasteryForge Crafts (metalworking project plans),
-deployed via GitHub Pages to `masteryforgecrafts.com`. It is plain HTML/CSS/JS
-with no build step, package manager, or backend.
+Static site served at https://www.masteryforgecrafts.com through GitHub Pages.
+The existing host configuration redirects www to the apex domain.
+There is no build step; `.nojekyll` preserves the static files.
 
-## Cursor Cloud specific instructions
+## Homepage import — 2026-10-18
 
-- This is a pure static site. There are no dependencies to install, no lint
-  step, no automated tests, and no build/bundling step. HTML/CSS/JS are
-  hand-authored and served as-is (note `.nojekyll`, so GitHub Pages does not
-  process the files).
-- To run it in development, serve the repo root over HTTP (do NOT open files via
-  `file://`, because pages use root-absolute links like `/#buy` and
-  `/free-sample.html`). Example: `python3 -m http.server 8000` from the repo
-  root, then browse `http://127.0.0.1:8000/`.
-- Pages: `index.html` (landing/sales page), `free-sample.html` (free PDF
-  download), `accessibility.html`, and `404.html`.
-- Checkout is external (Shopify at `shop.masteryforgecrafts.com`); analytics
-  (GA4/Meta Pixel) and Google Fonts load from third-party CDNs. These external
-  requests may be blocked by network egress policy while running locally, which
-  is expected and does not affect the local dev workflow.
-- Client-side JS in `index.html` (inline `<script>` at the bottom) drives: FAQ
-  accordions (single-open), scroll-reveal animations (`.rv`), count-up numbers,
-  the mobile sticky buy bar, and the order-bump checkbox (`#bumpBox`) which
-  swaps every `[data-mf-cta]` checkout link between `window.MF.MAIN` and
-  `window.MF.WITH_BUMP`.
+The homepage comes from the user-supplied `MasteryForge-Crafts.gempages`.
+Source SHA-256: `00becee520acb2e5e0ef4495542c724113658eeabf4d8702cb5caeed49efed70`.
+
+All 14 Custom Code sections retain their original HTML, scoped CSS,
+JavaScript, images, text, prices, and order. GemPages root-class placeholders
+are resolved to stable classes for standalone hosting.
+
+- `index.html`: the only published HTML page.
+- `assets/home-gempages.css`: imported scoped section styles.
+- `assets/home-gempages.js`: imported section interactions.
+- `assets/consent.js`: existing consent handling; existing analytics retained.
+- `sitemap.xml`: homepage only.
+
+The five previous secondary HTML pages have been removed. Their earlier
+versions remain in Git history. Run locally with `python3 -m http.server 8000`.
+
+The supplied design still says "Master Crafts DIY" and contains its original
+claims and euro prices. Its buy button only changes its label; it does not
+create a cart or start checkout. Footer links are source placeholders.
+These are intentionally left for the next requested content step.
