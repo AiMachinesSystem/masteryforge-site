@@ -9,8 +9,8 @@ There is no build step; `.nojekyll` preserves the static files.
 The homepage comes from the user-supplied `MasteryForge-Crafts.gempages`.
 Source SHA-256: `00becee520acb2e5e0ef4495542c724113658eeabf4d8702cb5caeed49efed70`.
 
-All 14 Custom Code sections retain their original HTML, scoped CSS,
-JavaScript, images, text, prices, and order. GemPages root-class placeholders
+All 14 sections retain the imported page structure and scoped interactions.
+The offer, wording and artwork are adapted to MasteryForge Crafts and 300+ projects. GemPages root-class placeholders
 are resolved to stable classes for standalone hosting.
 
 - `index.html`: the only published HTML page.
@@ -22,7 +22,7 @@ are resolved to stable classes for standalone hosting.
 The five previous secondary HTML pages have been removed. Their earlier
 versions remain in Git history. Run locally with `python3 -m http.server 8000`.
 
-The supplied design still says "Master Crafts DIY" and contains its original
-claims and euro prices. Its buy button only changes its label; it does not
-create a cart or start checkout. Footer links are source placeholders.
-These are intentionally left for the next requested content step.
+The homepage presents the 300+ woodworking project offer and uses the approved MasteryForge Crafts identity throughout its
+navigation, footer, comparison panel, favicon, social metadata and artwork.
+All imagery is hosted in assets/home. The buy button remains the original
+presentation-only interaction; checkout wiring is a separate task.
