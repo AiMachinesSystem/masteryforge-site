@@ -1,0 +1,37 @@
+{
+  "updated": "2026-10-18",
+  "currency": "USD",
+  "new_landings_are_prelaunch_previews": true,
+  "products": {
+    "woodworking": {
+      "product_id": "gid://shopify/Product/16217292538159",
+      "variant_id": "gid://shopify/ProductVariant/58672016589103",
+      "landing": "/",
+      "price_usd": "29.00",
+      "quantity_label": "300+",
+      "status_note": "Existing product; no changes in this update."
+    },
+    "metalworking": {
+      "product_id": "gid://shopify/Product/16217524338991",
+      "variant_id": "gid://shopify/ProductVariant/58673343660335",
+      "landing": "/metalworking/",
+      "handle": "300-metalworking-project-plans",
+      "price_usd": "29.00",
+      "compare_at_usd": "59.00",
+      "quantity_label": "300+",
+      "sku": "MFC-METAL-300-2026",
+      "status": "DRAFT"
+    },
+    "bundle": {
+      "product_id": "gid://shopify/Product/16217524601135",
+      "variant_id": "gid://shopify/ProductVariant/58673344413999",
+      "landing": "/bundle/",
+      "handle": "woodworking-metalworking-bundle",
+      "price_usd": "39.00",
+      "separate_collection_value_usd": "58.00",
+      "quantity_label": "300+ woodworking + 300+ metalworking",
+      "sku": "MFC-WOOD-METAL-BUNDLE-2026",
+      "status": "DRAFT"
+    }
+  }
+}
