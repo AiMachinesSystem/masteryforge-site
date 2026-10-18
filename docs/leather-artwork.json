@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-18",
+  "selected_assets": [
+    {
+      "name": "hero-leatherworking",
+      "path": "assets/leatherworking/hero-leatherworking.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "2a3b706f7eca6e07f6f6b4ecd7c836634d65a137af7a7264ca4c7383eacf2328",
+      "generation": "built-in image_gen",
+      "prompt": "Use case: product-mockup. Create one finished square 1:1 premium ecommerce image (NOT landscape), a photorealistic 3D book / digital PDF mockup on a warm ivory #f7f3ea studio background. Match this series: bold oversized condensed black sans-serif display type, huge antique bronze quantity numerals, neat thin bronze rules, ivory book cover, deep charcoal spine, natural soft shadows, impeccably legible typography. Brand spelling exactly MASTERYFORGE CRAFTS. Domain spelling exactly MASTERYFORGECRAFTS.COM. This is a leathercraft digital collection. Warm cognac, tan and black leather, fine hand-stitched seams, professional but approachable. No competitor, no watermark, no extra promotional claims, no guarantee, no ratings, no wood or metalworking projects, no lasers or CNC. Metal leather rivets or small buckles only are fine. Edge-to-edge square composition with generous safe margins and no cropped title. Primary request: one monumental upright ivory and charcoal book centered, slightly angled to reveal left spine, filling 85% of the square frame. Cover hierarchy: small MASTERYFORGE CRAFTS at top; gigantic bronze 300+; large black LEATHERWORKING on its own line; black PROJECTS below. A tasteful 2x3 photographic grid across bottom of book displays a stitched bifold wallet, minimalist cardholder, cognac tote bag, zippered leather pouch, coiled leather belt, and leather notebook sleeve. At bottom exact domain MASTERYFORGECRAFTS.COM. Four softly fanned PDF sheets stand behind the main book, with small product pictures and abstract outlines of leather pattern pieces; NO dimensions or technical measurements. They are conceptual presentation imagery. One cohesive mockup product photograph. Text verbatim: \"MASTERYFORGE CRAFTS\", \"300+\", \"LEATHERWORKING\", \"PROJECTS\", \"MASTERYFORGECRAFTS.COM\"."
+    },
+    {
+      "name": "project-collection",
+      "path": "assets/leatherworking/project-collection.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "4675f5bc0806f8b22f9c2feffa016942962ea4b4c3d0a9e83c39b8e1369a6b6d",
+      "generation": "built-in image_gen",
+      "prompt": "Use case: product-mockup. Create one finished square 1:1 premium ecommerce image (NOT landscape), a photorealistic 3D book / digital PDF mockup on a warm ivory #f7f3ea studio background. Match this series: bold oversized condensed black sans-serif display type, huge antique bronze quantity numerals, neat thin bronze rules, ivory book cover, deep charcoal spine, natural soft shadows, impeccably legible typography. Brand spelling exactly MASTERYFORGE CRAFTS. Domain spelling exactly MASTERYFORGECRAFTS.COM. This is a leathercraft digital collection. Warm cognac, tan and black leather, fine hand-stitched seams, professional but approachable. No competitor, no watermark, no extra promotional claims, no guarantee, no ratings, no wood or metalworking projects, no lasers or CNC. Metal leather rivets or small buckles only are fine. Edge-to-edge square composition with generous safe margins and no cropped title. Primary request: a coherent collection of three premium upright ivory PDF book mockups, the main book large in the middle and two smaller supporting volumes behind it. Main center cover exact text MASTERYFORGE CRAFTS at top, huge bronze 300+, large black LEATHERWORKING PROJECTS, MASTERYFORGECRAFTS.COM at bottom. Center book cover photo collage of stitched leather wallet, black cardholder, cognac tote and leather belt. Supporting left book exact title WALLETS & SMALL GOODS and photo of cognac bifold wallet and cardholder; supporting right book exact title BAGS & ACCESSORIES and a tan tote and zip pouch photograph. Supporting books brand MASTERYFORGE CRAFTS too, no quantity on side books. A neatly stitched cognac leather cardholder and rolled tan belt in front on ivory studio surface. Focus on collection variety with zero wood or metalworking objects. Square composition, do not crop any book. Text rendered accurately, no extraneous text."
+    },
+    {
+      "name": "project-patterns",
+      "path": "assets/leatherworking/project-patterns.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "a88e73a40d12e94a24cf85d7c0d46d12831d2479001afb5dcec5712c91404c2a",
+      "generation": "built-in image_gen",
+      "prompt": "Use case: product-mockup. Create one finished square 1:1 premium ecommerce image (NOT landscape), a photorealistic 3D book / digital PDF mockup on a warm ivory #f7f3ea studio background. Match this series: bold oversized condensed black sans-serif display type, huge antique bronze quantity numerals, neat thin bronze rules, ivory book cover, deep charcoal spine, natural soft shadows, impeccably legible typography. Brand spelling exactly MASTERYFORGE CRAFTS. Domain spelling exactly MASTERYFORGECRAFTS.COM. This is a leathercraft digital collection. Warm cognac, tan and black leather, fine hand-stitched seams, professional but approachable. No competitor, no watermark, no extra promotional claims, no guarantee, no ratings, no wood or metalworking projects, no lasers or CNC. Metal leather rivets or small buckles only are fine. Edge-to-edge square composition with generous safe margins and no cropped title. Primary request: a clear square ecommerce mockup for conceptual PDF leatherworking project patterns. One upright ivory charcoal-spined book on the left (about 65% frame width), cover exact text MASTERYFORGE CRAFTS at top, big black PROJECT PATTERNS, smaller bronze LEATHERWORKING, and MASTERYFORGECRAFTS.COM at bottom. Cover lower half product photograph of a beautiful cognac hand-stitched bifold wallet next to a black cardholder and small tan zip pouch. Two ivory PDF pages fan on the right in front, containing only clean abstract outline shapes of leather pattern pieces with tiny stitch dots and a small product photograph. These pattern pages are nonfunctional conceptual illustrations: NO measurement numbers, NO scale, NO dimension arrows, NO claims that templates are to-scale or printable. Bronze thin rule accents. One fine stitching needle and thread spool may appear subtly in the foreground. No quantity required in this image. Typography crisp and correct. Square with safe margins."
+    },
+    {
+      "name": "material-guides",
+      "path": "assets/leatherworking/material-guides.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "3fd5d0dc2a9bb25fee42e973f6151fc6553f52dc16d49771592f24cfe9bd5118",
+      "generation": "built-in image_gen",
+      "prompt": "Use case: product-mockup. Asset type: premium square landing-page digital PDF collection mockup. Match the input style reference's refined ivory hardback book, large bold black condensed title, bronze detail, warm off-white background, softly lit photorealistic studio scene. Input image is ONLY a visual style reference; replace ALL metalworking subjects with leathercraft subjects. True SQUARE composition 1:1. One upright large ivory hardcover, three-quarter view and dark charcoal spine, filling 85 percent of frame with enough margin; behind it 2 cream printable sheets with simple abstract pattern outlines and no dimensions or numbers. This is illustrative artwork for a digital product; no fake software interface. Front cover exact top small text \"MASTERYFORGE CRAFTS\". Front cover exact footer large enough to read \"MASTERYFORGECRAFTS.COM\". Only additional heading/text as specified below. No other words or digits. No 500, 600, 700, reviews or verified claims. No metalworking furniture, no wood projects, no lasers or CNC. Leather items and hand tools only. Exact central front-cover title in bold condensed black capitals \"MATERIALS & TOOLS\", above it smaller category line \"LEATHERWORKING\". Under title use a precise editorial arrangement of rolled tan leather, cognac and black leather swatches, a small finished stitched cardholder, stitching awl, diamond stitching chisels, waxed thread, needles and a wooden burnisher. Restrained brass hardware can appear. Make natural leather grain and stitching credible. Bronze fine rules. Warm premium artisan mood."
+    },
+    {
+      "name": "pattern-library",
+      "path": "assets/leatherworking/pattern-library.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "2b05c4de58562989762b2674f743928510b5a80255b497504d3849fbd18ef2a3",
+      "generation": "built-in image_gen",
+      "prompt": "Use case: product-mockup. Asset type: premium square landing-page digital PDF collection mockup. Match the input style reference's refined ivory hardback book, large bold black condensed title, bronze detail, warm off-white background, softly lit photorealistic studio scene. Input image is ONLY a visual style reference; replace ALL metalworking subjects with leathercraft subjects. True SQUARE composition 1:1. One upright large ivory hardcover, three-quarter view and dark charcoal spine, filling 85 percent of frame with enough margin; behind it 2 cream printable sheets with simple abstract pattern outlines and no dimensions or numbers. This is illustrative artwork for a digital product; no fake software interface. Front cover exact top small text \"MASTERYFORGE CRAFTS\". Front cover exact footer large enough to read \"MASTERYFORGECRAFTS.COM\". Only additional heading/text as specified below. No other words or digits. No 500, 600, 700, reviews or verified claims. No metalworking furniture, no wood projects, no lasers or CNC. Leather items and hand tools only. Exact central front-cover title: bronze giant \"300+\" on top, then bold condensed black \"PATTERN LIBRARY\", smaller category line \"LEATHERWORKING\". Under title a tidy 2x3 photographic grid of finished handmade leather items: cognac bifold wallet, black cardholder, tan zip pouch, cognac belt, small structured tan shoulder bag, leather journal cover. Background printable sheets have simple wallet and pouch outlines only; no numeric dimensions. Sophisticated real leather textures and stitching."
+    },
+    {
+      "name": "planning-checklist",
+      "path": "assets/leatherworking/planning-checklist.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "5dabf5bad455af0f75c00ef815309b9ae15a8ef30033519f758d91ab5e99d079",
+      "generation": "built-in image_gen",
+      "prompt": "Use case: product-mockup. Asset type: premium square landing-page digital PDF collection mockup. Match the input style reference's refined ivory hardback book, large bold black condensed title, bronze detail, warm off-white background, softly lit photorealistic studio scene. Input image is ONLY a visual style reference; replace ALL metalworking subjects with leathercraft subjects. True SQUARE composition 1:1. One upright large ivory hardcover, three-quarter view and dark charcoal spine, filling 85 percent of frame with enough margin; behind it 2 cream printable sheets with simple abstract pattern outlines and no dimensions or numbers. This is illustrative artwork for a digital product; no fake software interface. Front cover exact top small text \"MASTERYFORGE CRAFTS\". Front cover exact footer large enough to read \"MASTERYFORGECRAFTS.COM\". Only additional heading/text as specified below. No other words or digits. No 500, 600, 700, reviews or verified claims. No metalworking furniture, no wood projects, no lasers or CNC. Leather items and hand tools only. Exact central front-cover title in bold condensed black capitals split into three lines \"PROJECT\" / \"PLANNING\" / \"CHECKLIST\", above it smaller category line \"LEATHERWORKING\". Under title photographed cognac bifold wallet and tan pouch with waxed thread and a stitching awl beside a cream paper with a few minimal empty checkbox graphics and abstract short rules, no body text. Surrounding printable sheets have simple wallet shapes. The title remains the dominant visual. Restrained bronze accent rule."
+    },
+    {
+      "name": "project-updates",
+      "path": "assets/leatherworking/project-updates.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "72aef19bf5c1c5b87c21c98b7e96b43445ab4179aa9bd0d904a32bcffd4d84d8",
+      "generation": "built-in image_gen",
+      "prompt": "Use case: product-mockup. Asset type: premium square landing-page digital PDF collection mockup. Match the input style reference's refined ivory hardback book, large bold black condensed title, bronze detail, warm off-white background, softly lit photorealistic studio scene. Input image is ONLY a visual style reference; replace ALL metalworking subjects with leathercraft subjects. True SQUARE composition 1:1. One upright large ivory hardcover, three-quarter view and dark charcoal spine, filling 85 percent of frame with enough margin; behind it 2 cream printable sheets with simple abstract pattern outlines and no dimensions or numbers. This is illustrative artwork for a digital product; no fake software interface. Front cover exact top small text \"MASTERYFORGE CRAFTS\". Front cover exact footer large enough to read \"MASTERYFORGECRAFTS.COM\". Only additional heading/text as specified below. No other words or digits. No 500, 600, 700, reviews or verified claims. No metalworking furniture, no wood projects, no lasers or CNC. Leather items and hand tools only. Exact central front-cover title in bold condensed black capitals split into three lines \"NEW PROJECT\" / \"UPDATES\", above it smaller category line \"LEATHERWORKING\". Under title a tidy grid of finished leathercraft designs: cognac satchel, black card wallet, tan glasses sleeve, stitched leather journal cover. Small simple bronze circular arrow emblem optional without words. Surrounding printable sheets have wallet and bag abstract pattern outlines. Title dominant; handmade premium leather grain and neat stitching."
+    },
+    {
+      "name": "leather-wallet",
+      "path": "assets/leatherworking/leather-wallet.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "ef7f1c767e7bbcf398eadd0ae4aa8395cf95c42a3c8ba7fe9ad1240bb81c0ee6",
+      "generation": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset type: square editorial leathercraft inspiration photo for a premium craft project plans website. The final image must be exactly square, one coherent photograph, not a collage or advertisement. Photorealistic fine leather grain and plausible meticulous hand stitching, soft warm daylight, subtle lived-in handmade character, restrained premium warm neutral art direction, ivory and warm stone background, realistic modest depth of field, no text, no logos, no labels, no watermarks, no people or hands, no laser or CNC equipment. No mockup covers or books. Subject: a beautifully crafted cognac vegetable-tanned leather bifold wallet half open beside a matching slim cardholder on a matte ivory tabletop. Close three-quarter view. Carefully burnished edges, straight even saddle stitches, practical realistic construction with card slots visible, subtle natural patina. A quiet warm studio workshop atmosphere. Wallet is the clear main subject."
+    },
+    {
+      "name": "leather-bag",
+      "path": "assets/leatherworking/leather-bag.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "41e84e622a9e56b5c5259599fa90da684860b15939f3bbfa907ea4be43b7baca",
+      "generation": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset type: square editorial leathercraft inspiration photo for a premium craft project plans website. The final image must be exactly square, one coherent photograph, not a collage or advertisement. Photorealistic fine leather grain and plausible meticulous hand stitching, soft warm daylight, subtle lived-in handmade character, restrained premium warm neutral art direction, ivory and warm stone background, realistic modest depth of field, no text, no logos, no labels, no watermarks, no people or hands, no laser or CNC equipment. No mockup covers or books. Subject: one structured tan leather tote bag with two elegant securely stitched leather handles, gusseted sides and impeccable practical construction. Standing upright in a warm neutral studio workshop setting, close three-quarter product view, enough clearance around full bag and handles. Soft natural tan leather with fine grain and smooth burnished edges, neat saddle stitching, hardware minimal. The bag is the clear main subject."
+    },
+    {
+      "name": "leather-tools",
+      "path": "assets/leatherworking/leather-tools.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "1058cb00e5e0536d60f0c8d13f03e71ab71b5813fac0ec116d3a745bfc35cc87",
+      "generation": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset type: square editorial leathercraft inspiration photo for a premium craft project plans website. The final image must be exactly square, one coherent photograph, not a collage or advertisement. Photorealistic fine leather grain and plausible meticulous hand stitching, soft warm daylight, subtle lived-in handmade character, restrained premium warm neutral art direction, ivory and warm stone background, realistic modest depth of field, no text, no logos, no labels, no watermarks, no people or hands, no laser or CNC equipment. No mockup covers or books. Subject: an orderly leathercraft working area, overhead photograph of cognac and tan leather pieces, two stitching chisels, a harness needle with ivory waxed thread, a spool of thread, a simple craft cutting mat, a steel ruler and blank paper pattern templates. The leathercraft work is the sole main subject. Realistically constructed tools and delicate leather grain. Simple composition with breathing room, warm ivory workshop table, no woodworking projects, no printed words or pattern labels. Tools do not overlap implausibly."
+    },
+    {
+      "name": "leather-pouch",
+      "path": "assets/leatherworking/leather-pouch.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "99b6fdb3efadfea5d8d115f01a32d2e30f051f004e5fb4acf2e8f3c42bbf1f6f",
+      "generation": "built-in image_gen",
+      "prompt": "Use case: photorealistic-natural. Asset type: square editorial leathercraft inspiration photo for a premium craft project plans website. The final image must be exactly square, one coherent photograph, not a collage or advertisement. Photorealistic fine leather grain and plausible meticulous hand stitching, soft warm daylight, subtle lived-in handmade character, restrained premium warm neutral art direction, ivory and warm stone background, realistic modest depth of field, no text, no logos, no labels, no watermarks, no people or hands, no laser or CNC equipment. No mockup covers or books. Subject: one elegant zippered cognac leather pencil pouch beside a small matching square leather accessory tray with realistic secured corner folds. Close three-quarter view on a warm ivory tabletop. A simple straight metal zipper with one pull and a plausible seam, impeccable evenly spaced ivory saddle stitches and burnished edges. Rich fine leather grain with subtle handmade character, the pouch is the main subject. No pencils protruding and no unrelated props."
+    }
+  ]
+}

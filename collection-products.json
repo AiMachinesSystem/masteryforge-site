@@ -32,6 +32,17 @@
       "quantity_label": "300+ woodworking + 300+ metalworking",
       "sku": "MFC-WOOD-METAL-BUNDLE-2026",
       "status": "DRAFT"
+    },
+    "leatherworking": {
+      "product_id": "gid://shopify/Product/16217654001967",
+      "variant_id": "gid://shopify/ProductVariant/58674074288431",
+      "landing": "/leatherworking/",
+      "handle": "300-leatherworking-project-patterns",
+      "price_usd": "29.00",
+      "compare_at_usd": "59.00",
+      "quantity_label": "300+",
+      "sku": "MFC-LEATHER-300-2026",
+      "status": "DRAFT"
     }
   }
 }

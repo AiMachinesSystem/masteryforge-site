@@ -16,6 +16,7 @@ are resolved to stable classes for standalone hosting.
 - `index.html`: the existing woodworking homepage.
 - `metalworking/index.html`: the 300+ metalworking pre-launch landing.
 - `bundle/index.html`: the combined wood + metal pre-launch landing.
+- `leatherworking/index.html`: the 300+ leatherworking pre-launch landing.
 - `assets/home-gempages.css`: imported scoped section styles.
 - `assets/home-gempages.js`: imported section interactions.
 - `assets/consent.js`: existing consent handling; existing analytics retained.
@@ -45,3 +46,12 @@ left for the next launch step. No order is created by either preview.
 `collection-products.json` records the product and variant IDs for later integration.
 The bundle is a single digital product that is intended to deliver both collections;
 it is not yet connected to inventory bundles or downloadable files.
+
+## Leatherworking landing preview — 2026-10-18
+
+The leatherworking collection follows the same 14-section layout at `/leatherworking/`,
+with dedicated pattern-cover mockups and leathercraft inspiration photographs in
+`assets/leatherworking`. The standalone offer is $29, with the Shopify product kept
+in DRAFT until the final files and delivery workflow are ready. This preview carries
+noindex and an explicitly disabled purchase button. Other collection pages and products
+are unchanged. Final artwork provenance is recorded in `docs/leather-artwork.json`.
