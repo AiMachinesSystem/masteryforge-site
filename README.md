@@ -17,6 +17,7 @@ are resolved to stable classes for standalone hosting.
 - `metalworking/index.html`: the 300+ metalworking pre-launch landing.
 - `bundle/index.html`: the combined wood + metal pre-launch landing.
 - `leatherworking/index.html`: the 300+ leatherworking pre-launch landing.
+- `laser-cutting/index.html`: the 300+ laser cutting pre-launch landing.
 - `assets/home-gempages.css`: imported scoped section styles.
 - `assets/home-gempages.js`: imported section interactions.
 - `assets/consent.js`: existing consent handling; existing analytics retained.
@@ -55,3 +56,20 @@ with dedicated pattern-cover mockups and leathercraft inspiration photographs in
 in DRAFT until the final files and delivery workflow are ready. This preview carries
 noindex and an explicitly disabled purchase button. Other collection pages and products
 are unchanged. Final artwork provenance is recorded in `docs/leather-artwork.json`.
+
+## Laser cutting landing preview — 2026-10-18
+
+The next collection preview is available at `/laser-cutting/`, following the same
+14-section layout. Seven dedicated digital-product mockups and four inspiration
+photographs live in `assets/laser-cutting`; their prompts and hashes are recorded
+in `docs/laser-artwork.json`. Planned offer: 300+ laser cutting designs in SVG/DXF,
+$29 USD (compare-at $59). The Shopify product is DRAFT, has no physical shipping
+and no tracked inventory. Its files and digital delivery remain pending.
+The landing has `noindex,follow`, an explicitly disabled purchase button, and
+copy that identifies it as a preview. Compatibility is subject to file, software,
+machine and material review. Other collection pages are unchanged.
+
+`docs/category-recovery.md` records the recovered 29-category research list and
+clearly distinguishes it from the original 52–53-product roadmap, which was not
+located. Laser cutting is the chosen next production category, not a verified
+position in that missing roadmap.

@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-18",
+  "selected_assets": [
+    {
+      "name": "hero-laser-cutting",
+      "path": "assets/laser-cutting/hero-laser-cutting.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "908fe94e21a347fd71c5a52739c22d65e2b85dc6ae430c4049619646b58077ed",
+      "generation": "built-in image_gen",
+      "prompt": "Use case: product-mockup. Create a new square premium digital project collection product image, matching the style of the provided reference: one tall ivory hardcover book almost fills frame, charcoal left spine, softly textured warm ivory seamless studio background, natural soft shadows, elegant bronze and black type. New category LASER CUTTING, no leather. Front cover exact typography: top small condensed \"MASTERYFORGE CRAFTS\"; huge bronze \"300+\"; very large black condensed two-line headline \"LASER CUTTING\" then \"PROJECTS\"; bottom centered small \"MASTERYFORGECRAFTS.COM\". The lower cover has a crisp 2 by 3 photo grid of attractive finished laser-cut objects: floral fretwork plywood wall panel, finger-jointed storage box, wooden holiday ornaments, compact desktop organizer, layered botanical medallion, geometric coaster set. Behind the book, fanned ivory SVG/DXF-design presentation sheets show abstract vector cutting outlines and small finished-object photos, without measurements or additional readable text. Spine only says MASTERYFORGE CRAFTS in bronze. Ensure all visible text is spelled exactly. Photorealistically printed cover, straight polished design, warm crafted product palette. No other brands, no ratings, no guarantees, no other numbers, no machine, no laser beam, no watermarks. The output is one cohesive 1:1 product image, not a contact sheet of multiple ad alternatives."
+    },
+    {
+      "name": "project-collection",
+      "path": "assets/laser-cutting/project-collection.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "9926e761c0fb37d3444779e5b0ae3753498c5fbbddab2b003af3be0c3811049b",
+      "generation": "built-in image_gen",
+      "prompt": "Use case: product-mockup. Generate one new square premium LASER CUTTING digital project collection product mockup in the same family as the reference: upright ivory hardback book with charcoal spine, natural soft studio lighting, warm ivory seamless background, bronze accent rules, bold black condensed type. Compose the book slightly angled to the right, with a finished small finger-jointed plywood keepsake box and an elegant laser-cut botanical wooden ornament resting in foreground, and subtly fanned ivory project presentation sheets behind. Exact printed front-cover text: \"MASTERYFORGE CRAFTS\" at top; large bronze \"300+\"; large black condensed headline on two lines \"PROJECT\" and \"COLLECTION\"; smaller category \"LASER CUTTING\"; footer \"MASTERYFORGECRAFTS.COM\". Lower half of book cover has a refined four-photo grid: geometric wall panel, fingerjoint storage box, festive wooden ornaments, layered desk organizer. Sheets behind depict abstract clean vector cut-pattern outlines without dimensions or readable tiny labels. All finished pieces look realistically laser-cut from thin birch ply with dark cut edges. Spine only \"MASTERYFORGE CRAFTS\". Spell every visible word exactly. No leather, no metalwork, no other brands, no other numbers, no ratings, no laser machine, no active beam. One polished commercial image."
+    },
+    {
+      "name": "cut-files",
+      "path": "assets/laser-cutting/cut-files.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "2927e081155ab0915e9d48bd4e8280bc850506054fc09eebc8f42906555db5e2",
+      "generation": "built-in image_gen",
+      "prompt": "Use case: product-mockup. Generate one square high-end digital-cut-file library mockup, same design family as provided style reference: substantial ivory hardback reference book with charcoal left spine, warm ivory studio backdrop, warm bronze typography accents, oversized black condensed headline, soft natural product shadows. Composition is a three-quarter view of the book slightly left of center with a tidy fan of ivory vector-pattern sheets to right and behind; a small realistic finger-jointed laser-cut birch plywood box and a framed delicate floral laser-cut panel provide physical examples. Exact printed cover text only: top \"MASTERYFORGE CRAFTS\"; main headline \"SVG & DXF\" then \"CUT FILES\"; smaller line \"LASER CUTTING\"; bottom footer \"MASTERYFORGECRAFTS.COM\". Cover includes a clean photographic inset of decorative fretwork and slotted box with abstract vector line-art motif. Pattern sheets contain elegant abstract floral, geometric and slotted outlines; no dimensions, no numerical labels, no extra readable copy. Spine \"MASTERYFORGE CRAFTS\". The image should feel premium, tangible, credible and cohesive with an ivory/bronze/charcoal craft brand. All words exact, no competing brands, no numbers, no ratings, no badges, no machine and no beam. One image, not a collage of ad alternatives."
+    },
+    {
+      "name": "material-guides",
+      "path": "assets/laser-cutting/material-guides.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "1188da1097240b2d4d0a87ba5fadf8d84da6ce453e8406cb4f399a3a9d276da2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "source": "/workspace/scratch/b31af73a2e2f/generated_images/exec-7d8502ba-b1ee-4782-849e-95e2183ef562.png"
+      },
+      "prompt": "Use case: product-mockup. Produce one square premium photorealistic product mockup for MasteryForge Crafts, matching a coherent luxury educational craft collection. A large ivory linen hardback book with a charcoal black spine and fine bronze rules dominates the square warm ivory studio composition. Clear bold black condensed sans-serif cover typography, tasteful bronze accents, highly realistic tactile paper, soft warm lighting and clean shadows. Camera three-quarter front, book readable, no distortion. Put only these exact texts on the cover: top \"MASTERYFORGE CRAFTS\"; small category \"LASER CUTTING\"; large title as specified; footer \"MASTERYFORGECRAFTS.COM\". If any spine lettering is visible it reads \"MASTERYFORGE CRAFTS\". No other brands, numbers, counts, reviews, ratings, promises or small writing. The book is a marketing mockup for a digital design collection, not an actual technical manual. All accompanying cut sheets show only conceptual geometric or floral vector outlines with no dimensions, instructions, measurements or labels. No active laser, no beam, no fire, no people, no operating machine. Standalone square high quality final image, not a collage or contact sheet.\nLarge title exactly on two lines: \"MATERIAL\" / \"PLANNING\". Main book cover lower half has an elegant still life of birch plywood sheets with varied warm tones, a small laser-cut finger-joint box and delicate floral plywood coasters. Behind the book are two conceptual sheets of abstract nested cut shapes, plus a few wood swatches in the foreground. Materials and planning theme. Book angled slightly to the right with visible left spine, crisp generous margins."
+    },
+    {
+      "name": "design-library",
+      "path": "assets/laser-cutting/design-library.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "b8a0be58b674ff41cbd913ad7d364ac8c7e6a3eceaaa58b1e47e8e459428c226",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "source": "/workspace/scratch/b31af73a2e2f/generated_images/exec-da22e500-eb90-4a72-8684-b7799c770b13.png"
+      },
+      "prompt": "Use case: product-mockup. Produce one square premium photorealistic product mockup for MasteryForge Crafts, matching a coherent luxury educational craft collection. A large ivory linen hardback book with a charcoal black spine and fine bronze rules dominates the square warm ivory studio composition. Clear bold black condensed sans-serif cover typography, tasteful bronze accents, highly realistic tactile paper, soft warm lighting and clean shadows. Camera three-quarter front, book readable, no distortion. Put only these exact texts on the cover: top \"MASTERYFORGE CRAFTS\"; small category \"LASER CUTTING\"; large title as specified; footer \"MASTERYFORGECRAFTS.COM\". If any spine lettering is visible it reads \"MASTERYFORGE CRAFTS\". No other brands, numbers, counts, reviews, ratings, promises or small writing. The book is a marketing mockup for a digital design collection, not an actual technical manual. All accompanying cut sheets show only conceptual geometric or floral vector outlines with no dimensions, instructions, measurements or labels. No active laser, no beam, no fire, no people, no operating machine. Standalone square high quality final image, not a collage or contact sheet.\nLarge title exactly on two lines: \"DESIGN\" / \"LIBRARY\". Main book cover lower half features intricate laser-cut floral wall panels, geometric plywood ornaments and a miniature finger-joint box. Behind the book a modest fan of three conceptual vector outline sheets, no text, beautifully arranged. One small laser-cut floral medallion in foreground. Book nearly front facing with subtle visible charcoal left spine. Clear curated collection theme."
+    },
+    {
+      "name": "planning-checklist",
+      "path": "assets/laser-cutting/planning-checklist.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "951edd5098ec70eb99d5379ba4098c893aef58e2b6e64196ab4cbbadd5942bef",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "source": "/workspace/scratch/b31af73a2e2f/generated_images/exec-0d75f828-68ce-4bf6-b356-6e5d0b3f2b7e.png"
+      },
+      "prompt": "Use case: product-mockup. Produce one square premium photorealistic product mockup for MasteryForge Crafts, matching a coherent luxury educational craft collection. A large ivory linen hardback book with a charcoal black spine and fine bronze rules dominates the square warm ivory studio composition. Clear bold black condensed sans-serif cover typography, tasteful bronze accents, highly realistic tactile paper, soft warm lighting and clean shadows. Camera three-quarter front, book readable, no distortion. Put only these exact texts on the cover: top \"MASTERYFORGE CRAFTS\"; small category \"LASER CUTTING\"; large title as specified; footer \"MASTERYFORGECRAFTS.COM\". If any spine lettering is visible it reads \"MASTERYFORGE CRAFTS\". No other brands, numbers, counts, reviews, ratings, promises or small writing. The book is a marketing mockup for a digital design collection, not an actual technical manual. All accompanying cut sheets show only conceptual geometric or floral vector outlines with no dimensions, instructions, measurements or labels. No active laser, no beam, no fire, no people, no operating machine. Standalone square high quality final image, not a collage or contact sheet.\nLarge title exactly on three lines: \"PROJECT\" / \"PLANNING\" / \"CHECKLIST\". Lower book cover features a neatly arranged small finger-joint plywood box, slotted wooden stand, plain pencil and conceptual outline sheet with geometric shapes only. A modest unlabelled clipboard and a floral plywood ornament rest beside the book. No checkboxes with text, no added words, no dimensions. Camera gently elevated, book at slight left angle with visible spine, restrained planning desk composition."
+    },
+    {
+      "name": "project-updates",
+      "path": "assets/laser-cutting/project-updates.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "28403568a205c8135a2f207083048a835f820995385144bc8a00fa454487247d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "source": "/workspace/scratch/b31af73a2e2f/generated_images/exec-338fe135-ff0f-46f7-81d2-da051e2145af.png"
+      },
+      "prompt": "Use case: product-mockup. Produce one square premium photorealistic product mockup for MasteryForge Crafts, matching a coherent luxury educational craft collection. A large ivory linen hardback book with a charcoal black spine and fine bronze rules dominates the square warm ivory studio composition. Clear bold black condensed sans-serif cover typography, tasteful bronze accents, highly realistic tactile paper, soft warm lighting and clean shadows. Camera three-quarter front, book readable, no distortion. Put only these exact texts on the cover: top \"MASTERYFORGE CRAFTS\"; small category \"LASER CUTTING\"; large title as specified; footer \"MASTERYFORGECRAFTS.COM\". If any spine lettering is visible it reads \"MASTERYFORGE CRAFTS\". No other brands, numbers, counts, reviews, ratings, promises or small writing. The book is a marketing mockup for a digital design collection, not an actual technical manual. All accompanying cut sheets show only conceptual geometric or floral vector outlines with no dimensions, instructions, measurements or labels. No active laser, no beam, no fire, no people, no operating machine. Standalone square high quality final image, not a collage or contact sheet.\nLarge title exactly on two lines: \"NEW PROJECT\" / \"UPDATES\". Lower book cover features a beautiful layered laser-cut botanical plywood panel with warm bronze-brown edges, small intricate ornaments and a curved slotted plywood sculpture. Behind the book stand two simple conceptual floral vector cut sheets. One decorative geometric wooden star in foreground. Book upright at slight right angle with visible charcoal left spine. Contemporary fresh collection composition."
+    },
+    {
+      "name": "laser-panel",
+      "path": "assets/laser-cutting/laser-panel.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "d19f6d12b645bde641ccc8b0ff854be4c9c3ebf3a7fd9f9f99d5cbac5852c054",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "mode": "built-in",
+        "source_path": "/workspace/scratch/b31af73a2e2f/generated_images/exec-de8d948a-b70c-490c-bc08-e630662dd6d0.png",
+        "calls": 1
+      },
+      "prompt": "Use case: photorealistic-natural. Asset type: square editorial inspiration photograph for a premium laser-cut craft collection landing page. New subject, not a leather image. Scene: a beautifully laser-cut natural birch plywood decorative floral mandala panel, photographed close three-quarter view leaning against a warm ivory limewash wall on a light natural workbench. Fine believable dark laser-cut edges, elegant precise botanical negative-space pattern, natural pale wood grain, subtly visible plywood layers, realistic construction, entire panel mostly visible. Warm soft window daylight, refined premium craft editorial photography, cream and warm-neutral palette, realistic lens depth and materials. Square 1:1 composition at highest available resolution. No words, no text, no numbers, no logos, no watermark, no book mockup, no people, no active laser beam, no flame, no operating machinery. This is an inspiration image, not a technical plan."
+    },
+    {
+      "name": "laser-box",
+      "path": "assets/laser-cutting/laser-box.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "d12e3857694928446da4c10105b97096f1e7381d78dc34e0f1d7ce3c5063bdad",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "mode": "built-in",
+        "source_path": "/workspace/scratch/b31af73a2e2f/generated_images/exec-6b224a69-98ed-4282-a1e7-9a92b9bf3c7c.png",
+        "calls": 1
+      },
+      "prompt": "Use case: photorealistic-natural. Asset type: square premium craft editorial inspiration photograph for a laser-cut collection website. Subject: one elegant natural birch plywood storage box with a precisely fitted removable lid and believable square interlocking finger-joint joinery. Lid is partly open beside the box, revealing the empty clean interior; subtle fine botanical leaf cut-out detail on the lid with an inner inset layer. Three-quarter close composition, entire box and lid visible, natural warm ivory workbench and softly textured cream studio wall. Soft warm daylight from the left, realistic fine wood grain and plywood edge layers, clean precise slightly dark laser-cut edges. Calm sophisticated artisanal aesthetic, shallow background depth, no excessive props. Square 1:1 photograph at highest available resolution. No lettering, no words, no numbers, no logo, no watermark, no books or mockup packaging, no people, no operating machinery, no laser beam or fire. Inspiration photo, not a technical plan."
+    },
+    {
+      "name": "laser-workbench",
+      "path": "assets/laser-cutting/laser-workbench.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "8f8323ac83c94d5aa8806adb4719246a0748cbe86b83f7e2b5be625c0754f548",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "mode": "built-in",
+        "source_path": "/workspace/scratch/b31af73a2e2f/generated_images/exec-80c25c00-ced9-4d87-baee-c0b93eaec680.png",
+        "calls": 1
+      },
+      "prompt": "Use case: photorealistic-natural. Asset type: square editorial craft inspiration photograph for a premium laser-cut design collection website. Subject: tidy overhead flat lay on a warm ivory workbench. A completed small desk organizer made of pale birch plywood with precise laser-cut finger joints stands at upper center, two simple compartments and a pen slot. Around it lie a few separate flat rectangular plywood assembly parts with slot-and-tab edges, a blank cream pattern sheet, a simple metal caliper, a wooden-handled small hand tool and a neutral pencil. Balanced uncluttered arrangement, plausible scale and functional assembly geometry, realistic thin plywood layers and darker cut edges, natural wood grain. Soft warm window daylight, subtle realistic shadows, refined cream and honey neutral palette. Top-down square 1:1 photograph at highest available resolution. No text, letters, labels, numbers or visible measurement markings, no brand, no logo, no watermark, no people, no active machine, no laser beam, no fire. This is an inspiration photo, not an included technical plan."
+    },
+    {
+      "name": "laser-ornaments",
+      "path": "assets/laser-cutting/laser-ornaments.webp",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "8fd30bf606a5f270849469926cb995e292cbb1429b5de355f648b7243087827f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "mode": "built-in",
+        "source_path": "/workspace/scratch/b31af73a2e2f/generated_images/exec-a65621e1-6fb7-4633-a00e-eb9b644cd46c.png",
+        "calls": 1
+      },
+      "prompt": "Use case: photorealistic-natural. Asset type: premium editorial craft inspiration photograph for a laser-cut design collection website. Subject: a tasteful arrangement of five thin natural birch plywood pendant ornaments on a warm ivory tabletop, with elegant short natural cotton hanging cords attached through small clean holes. Ornaments include a delicate botanical leaf oval, a simple geometric radial circle, a teardrop leaf motif, a small restrained floral silhouette, and an angular geometric diamond. Precise realistic laser cutouts and lightly darkened cut edges, visibly thin plywood, true natural grain, soft tactile cotton cords in loose graceful loops. Close overhead editorial composition, ornaments spaced without excessive clutter, muted warm daylight and soft shadows, cream and pale honey palette, sophisticated handmade craft feel. Square 1:1 photograph at highest available resolution. No words, no letters, no numbers, no labels, no logos, no watermark, no book mockups, no people, no machine, no laser beam, no fire. Inspiration image rather than technical proof of included files."
+    }
+  ]
+}
